@@ -124,7 +124,7 @@ export const Register = () => {
                                 onChange={(e) => setConfirmPassword(e.target.value)} 
                                 className="form-control"/>
                         </div>
-                        {/* Seletor de Departamento */}
+                        {/* Selecionar Departamento */}
                         <select className="form-select" value={department} onChange={(e) => setDepartment(e.target.value)}>
                             <option value="">Select your Department</option>
                             {Object.keys(departmentTeams).map((dep) => (
@@ -132,7 +132,7 @@ export const Register = () => {
                             ))}
                         </select>
 
-                        {/* Seletor de Equipe (aparece somente quando um departamento é selecionado) */}
+                        {/* Selecionar Equipa (aparece quando um departamento é selecionado) */}
                         {department && (
                             <select className="form-select mt-2" value={team} onChange={(e) => setTeam(e.target.value)}>
                                 <option value="">Select your Team</option>

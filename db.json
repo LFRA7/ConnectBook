@@ -204,6 +204,14 @@
       "confirmPassword": "ty",
       "department": "IT Services",
       "team": "Networking"
+    },
+    {
+      "name": "wefrgthy",
+      "email": "lucasfralvjyhtgrfdsaes88@gmail.com",
+      "password": "yu",
+      "confirmPassword": "yu",
+      "department": "Marketing",
+      "team": "SEO"
     }
   ]
 }
