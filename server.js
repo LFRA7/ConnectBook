@@ -52,6 +52,30 @@ app.post('/users', async (req, res) => {
     res.status(201).json(user);
 });
 
+// POST endpoint to handle login
+app.post('/login', (req, res) => {
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+        return res.status(400).json({ error: 'Por favor, forneça email e senha.' });
+    }
+
+    // Find user by email
+    const user = db.data.users.find(user => user.email === email);
+
+    if (!user) {
+        return res.status(400).json({ error: 'Email não encontrado.' });
+    }
+
+    // Check if password matches
+    if (user.password !== password) {
+        return res.status(400).json({ error: 'Senha incorreta.' });
+    }
+
+    // Login successful
+    res.status(200).json({ message: 'Login bem-sucedido' });
+});
+
 // Start the server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
