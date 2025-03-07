@@ -1,0 +1,96 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: #4a90e2; /* Garante que o fundo azul cubra tudo */
+}
+  
+.btn-primary{
+  background-color: #2c3e50;
+  border-radius: 9999px;
+  padding: 0.5rem 2rem;
+  margin-top:-20px;
+}
+
+.btn-light{
+  background-color: white;
+  border-radius: 9999px;
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem; /* Aumenta o tamanho da fonte */
+  font-weight: bold; /* Deixa a fonte mais destacada */
+  color:#2c3e50;
+  margin-top:-20px;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex; /* Garante que o layout funcione corretamente */
+  flex-direction: column;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between; /* Garante espaçamento entre os grupos */
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1rem; /* Aumenta o espaçamento entre os botões */
+  margin-left: 750px;
+}
+
+.nav-link {
+  padding-left: 20px;
+  background-color: #2c3e50;
+  color: white;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #34495e;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  background-color: #4a90e2; /* Cor de fundo azul */
+}
+
+.center-box {
+  background-color: #1a2a50; /* Cor do fundo do card */
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.btn:hover {
+  background-color: #ddd;
+}
+

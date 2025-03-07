@@ -1,0 +1,56 @@
+/* Fundo azul cobrindo toda a tela */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #4a90e2;
+  }
+  
+  /* Caixa central de registro */
+  .register-box {
+    background-color: #1a2a50;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+  }
+  
+  /* Título "Register" */
+  .register-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* Inputs do formulário */
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    color: black;
+  }
+  
+  /* Botão de cadastro */
+  .register-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  /* Efeito ao passar o mouse */
+  .register-button:hover {
+    background-color: #357abd;
+  }
