@@ -11,6 +11,7 @@ export const Shop = () => {
     }, []);
 
     return (
+        <>
         <div className="shop-container">
             <h1>Sticker Shop</h1>
             <div className="stickers-grid">
@@ -21,5 +22,7 @@ export const Shop = () => {
                 ))}
             </div>
         </div>
+
+        </>
     );
 };
