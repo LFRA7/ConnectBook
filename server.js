@@ -16,19 +16,19 @@ app.use(cors());
 app.use(express.json());
 
 // GET endpoint to retrieve all pets
-app.get('/pets', (req, res) => {
-    res.json(db.data.pets);
+app.get('/users', (req, res) => {
+    res.json(db.data.users);
 });
 
 // POST endpoint to add a new pet
-app.post('/pets', async (req, res) => {
-    const pet = req.body;
-    db.data.pets.push(pet);
+app.post('/users', async (req, res) => {
+    const user = req.body;
+    db.data.users.push(user);
     await db.write();
-    res.status(201).json(pet);
+    res.status(201).json(user);
 });
 
 // Start the server
 app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+    console.log(`Server running at http://localhost:${port}`);
 });

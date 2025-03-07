@@ -14,7 +14,7 @@ export const Register = () => {
           return;
         }
     
-        fetch('http://localhost:3000/pets', {
+        fetch('http://localhost:3000/users', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -34,7 +34,7 @@ export const Register = () => {
       };
     
       useEffect(() => {
-        fetch('http://localhost:3000/pets')
+        fetch('http://localhost:3000/users')
           .then(response => response.json())
           .then(data => console.log(data));
       });
