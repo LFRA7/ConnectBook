@@ -8,10 +8,6 @@ const defaultData = { users: [] }
 const port = 3000;
 const SECRET_KEY = 'passelucas';
 
-const stickers = [
-    { id: 1, url: '/stickers/Sticker1.png' },
-];
-
 // Set up lowdb with a JSON file adapter
 const db = await JSONFilePreset('db.json', defaultData);
 
@@ -95,6 +91,21 @@ const authenticateToken = (req, res, next) => {
 // Rota protegida: /shop
 app.get('/shop', authenticateToken, (req, res) => {
     res.json({ stickers: stickers });
+});
+
+// Rota protegida: /departments
+app.get('/departments', authenticateToken, (req, res) => {
+    res.json({ departments: departments });
+});
+
+
+// Rota protegida: /profile
+app.get('/profile', authenticateToken, (req, res) => {
+    const stickers = [
+        { id: 1, url: '/stickers/Sticker1.png' },
+    ];
+    
+    res.json({ message: `Hello, ${req.user.name}`, stickers });
 });
 
 // Start the server

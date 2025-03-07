@@ -10,6 +10,7 @@ import { Departments } from './departments.jsx';
 import { isAuthenticated } from './auth.js';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import { AccessDenied } from './access-denied.jsx';
+import { Profile } from './profile.jsx';
 
 const PrivateRoute = ({ element }) => {
   return isAuthenticated() ? element : <Navigate to="/access-denied" replace/>;
@@ -22,7 +23,8 @@ createRoot(document.getElementById('root')).render(
       <Route path="/register" element={<Register />} />    
       <Route path="/login" element={<Login />} />   
       <Route path="/shop" element={<PrivateRoute element={<Shop />} />} />
-      <Route path="/departments" element={<Departments />} />
+      <Route path="/profile" element={<PrivateRoute element={<Profile />} />} />
+      <Route path="/departments" element={<PrivateRoute element={<Departments />} />} />
       <Route path="/access-denied" element={<AccessDenied />} />
 
     </Routes>

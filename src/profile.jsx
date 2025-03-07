@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { isAuthenticated } from './auth';
 
-export const Shop = () => {
+export const Profile = () => {
     const [stickers, setStickers] = useState([]);
     const navigate = useNavigate();
 
@@ -38,9 +38,7 @@ export const Shop = () => {
     return (
         <div className="shop-container">
             <button onClick={handleLogout} className="btn btn-danger">Logout</button>
-            <h1>Sticker Shop</h1>
-            <div className="stickers-grid">
-            </div>
+            <h1>Profile</h1>
         </div>
     );
 };
