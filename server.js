@@ -6,6 +6,10 @@ const app = express();
 const defaultData = { users: [] }
 const port = 3000;
 
+const stickers = [
+    { id: 1, url: '/stickers/Sticker1.png' },
+];
+
 // Set up lowdb with a JSON file adapter
 const db = await JSONFilePreset('db.json', defaultData);
 
@@ -14,6 +18,8 @@ app.use(cors());
 
 // Middleware to parse JSON bodies
 app.use(express.json());
+
+app.use('/stickers', express.static('public/stickers'));
 
 // GET endpoint to retrieve all users
 app.get('/users', (req, res) => {
@@ -74,6 +80,10 @@ app.post('/login', (req, res) => {
 
     // Login successful
     res.status(200).json({ message: 'Login bem-sucedido' });
+});
+
+app.get('/shop', (req, res) => {
+    res.json(stickers);
 });
 
 // Start the server
