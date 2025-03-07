@@ -167,6 +167,43 @@
       "email": "lucasfralvmnbvcxes7@gmail.com",
       "password": "gh",
       "confirmPassword": "gh"
+    },
+    {
+      "name": "joaquimynhbgtvrfc",
+      "email": "lucasfralvegvfcdsedds7@gmail.com",
+      "password": "t",
+      "confirmPassword": "t"
+    },
+    {
+      "name": "joaquimjyhtgrfeds",
+      "email": "lucasfralvhgtfrvdsaefrgthyujes7@gmail.com",
+      "password": "yu",
+      "confirmPassword": "yu",
+      "department": "Human Resources"
+    },
+    {
+      "name": "joaquimkjmhngfvdsxa",
+      "email": "lucasfralvkujhgfdsxaes7@gmail.com",
+      "password": "tt",
+      "confirmPassword": "tt",
+      "department": "Human Resources",
+      "team": "Training"
+    },
+    {
+      "name": "joaquimhgf",
+      "email": "lucasfralvesnhgfvdsx7@gmail.com",
+      "password": "yy",
+      "confirmPassword": "yy",
+      "department": "IT Services",
+      "team": "Support"
+    },
+    {
+      "name": "aaa",
+      "email": "al784yhngfbvds64@alunos.utad.tgrfept",
+      "password": "ty",
+      "confirmPassword": "ty",
+      "department": "IT Services",
+      "team": "Networking"
     }
   ]
 }

@@ -54,3 +54,8 @@
   .register-button:hover {
     background-color: #357abd;
   }
+
+  .form-select{
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }

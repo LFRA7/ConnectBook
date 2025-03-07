@@ -26,9 +26,9 @@ app.get('/users', (req, res) => {
 
 // POST endpoint to add a new user
 app.post('/users', async (req, res) => {
-    const { name, email, password, confirmPassword } = req.body;
+    const { name, email, password, confirmPassword, department, team} = req.body;
 
-    if (!name || !email || !password || !confirmPassword) {
+    if (!name || !email || !password || !confirmPassword || !department || !team) {
         return res.status(400).json({ error: 'Missing required fields' });
     }
 
@@ -50,7 +50,7 @@ app.post('/users', async (req, res) => {
     }
 
     // Add the new user to the database
-    const user = { name, email, password, confirmPassword };
+    const user = { name, email, password, confirmPassword, department, team };
     db.data.users.push(user);
     await db.write();
     res.status(201).json(user);

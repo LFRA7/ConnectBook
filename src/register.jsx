@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import './Register.css';
 import { useNavigate } from 'react-router-dom';
 import { NavLink } from "react-router-dom"; 
@@ -8,12 +8,22 @@ export const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmpassword, setConfirmPassword] = useState('');
+    const [department, setDepartment] = useState('');
+    const [team, setTeam] = useState('');
     const navigate = useNavigate();
+
+    const departmentTeams = {
+        "Human Resources": ["Recruitment", "Employee Relations", "Training", "Payroll", "Compliance"],
+        "Financial": ["Accounting", "Auditing", "Budgeting", "Investments", "Taxation"],
+        "IT Services": ["Development", "Cybersecurity", "Support", "Cloud Services", "Networking"],
+        "Marketing": ["Social Media", "SEO", "Branding", "Advertising", "Events"],
+        "Administration": ["Office Management", "Legal", "Logistics", "Procurement", "Customer Service"]
+    };
 
     const addUser = (event) => {
         event.preventDefault(); // Evita que a página seja recarregada(estava a dar erro quando redirecionava para o login)
 
-        if (!username.trim() || !email.trim() || !password.trim() || !confirmpassword.trim()) {
+        if (!username.trim() || !email.trim() || !password.trim() || !confirmpassword.trim() || !department.trim() || !team.trim()) {
             alert("Por favor, preencha todos os campos");
             return;
         }
@@ -32,7 +42,9 @@ export const Register = () => {
                 name: username,
                 email: email,
                 password: password,
-                confirmPassword: confirmpassword
+                confirmPassword: confirmpassword,
+                department: department,
+                team: team
             })
         })
         .then(response => response.json())
@@ -51,6 +63,12 @@ export const Register = () => {
             .then(response => response.json())
             .then(data => console.log(data));
     }, []); // [] evita loop infinito
+
+    useEffect(() => {
+        if (department) {
+            setTeam('');
+        }
+    }, [department]);
 
     return (
         <div className="app-container">
@@ -106,6 +124,23 @@ export const Register = () => {
                                 onChange={(e) => setConfirmPassword(e.target.value)} 
                                 className="form-control"/>
                         </div>
+                        {/* Seletor de Departamento */}
+                        <select className="form-select" value={department} onChange={(e) => setDepartment(e.target.value)}>
+                            <option value="">Select your Department</option>
+                            {Object.keys(departmentTeams).map((dep) => (
+                                <option key={dep} value={dep}>{dep}</option>
+                            ))}
+                        </select>
+
+                        {/* Seletor de Equipe (aparece somente quando um departamento é selecionado) */}
+                        {department && (
+                            <select className="form-select mt-2" value={team} onChange={(e) => setTeam(e.target.value)}>
+                                <option value="">Select your Team</option>
+                                {departmentTeams[department].map((teamName) => (
+                                    <option key={teamName} value={teamName}>{teamName}</option>
+                                ))}
+                            </select>
+                        )}
                         <button type="submit" className="register-button" onClick={addUser}>
                             Sign Up
                         </button>
