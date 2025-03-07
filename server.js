@@ -1,10 +1,12 @@
 import express from 'express';
 import cors from 'cors';
 import { JSONFilePreset } from 'lowdb/node';
+import jwt from 'jsonwebtoken';
 
 const app = express();
 const defaultData = { users: [] }
 const port = 3000;
+const SECRET_KEY = 'passelucas';
 
 const stickers = [
     { id: 1, url: '/stickers/Sticker1.png' },
@@ -66,24 +68,33 @@ app.post('/login', (req, res) => {
         return res.status(400).json({ error: 'Por favor, forneça email e senha.' });
     }
 
-    // Find user by email
     const user = db.data.users.find(user => user.email === email);
-
-    if (!user) {
-        return res.status(400).json({ error: 'Email não encontrado.' });
+    if (!user || user.password !== password) {
+        return res.status(400).json({ error: 'Credenciais inválidas.' });
     }
 
-    // Check if password matches
-    if (user.password !== password) {
-        return res.status(400).json({ error: 'Senha incorreta.' });
-    }
+    // Gerar Token JWT
+    const token = jwt.sign({ email: user.email, name: user.name }, SECRET_KEY, { expiresIn: '1h' });
 
-    // Login successful
-    res.status(200).json({ message: 'Login bem-sucedido' });
+    res.status(200).json({ message: 'Login bem-sucedido', token });
 });
 
-app.get('/shop', (req, res) => {
-    res.json(stickers);
+// Middleware para verificar token
+const authenticateToken = (req, res, next) => {
+    const token = req.headers.authorization?.split(" ")[1];
+    if (!token) return res.status(403).json({ error: "Acesso negado" });
+
+    jwt.verify(token, SECRET_KEY, (err, user) => {
+        if (err) return res.status(403).json({ error: "Token inválido ou expirado" });
+
+        req.user = user;
+        next();
+    });
+};
+
+// Rota protegida: /shop
+app.get('/shop', authenticateToken, (req, res) => {
+    res.json({ stickers: stickers });
 });
 
 // Start the server

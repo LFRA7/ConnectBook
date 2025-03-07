@@ -33,6 +33,7 @@ export const Login = () => {
     })
     .then(data => {
       console.log('Login bem-sucedido!', data);
+      localStorage.setItem('token', data.token); // Salva o token no localStorage
       navigate('/shop'); // Redireciona para a página /shop
     })
     .catch(error => {
