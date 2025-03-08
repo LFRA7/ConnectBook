@@ -96,3 +96,24 @@ h2 {
   background-color: white; /* Defina a cor de fundo da barra, altere conforme necessário */
   left: 0; /* Garante que a barra comece na borda esquerda */
 }
+
+.stickers-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.stickers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.sticker-item {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+}

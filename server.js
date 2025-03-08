@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import { JSONFilePreset } from 'lowdb/node';
 import jwt from 'jsonwebtoken';
+import fs from 'fs';
+import path from 'path';
 
 const app = express();
 const defaultData = { users: [] }
@@ -102,9 +104,20 @@ app.get('/shop', authenticateToken, (req, res) => {
     });
 });
 
-// POST endpoint para processar a compra de um pack
+// Função para obter uma lista de stickers disponíveis
+const getAvailableStickers = () => {
+    const stickersDir = path.join(process.cwd(), 'public/stickers');
+    try {
+        return fs.readdirSync(stickersDir).map(file => `/stickers/${file}`);
+    } catch (error) {
+        console.error("Erro ao ler a pasta de stickers:", error);
+        return [];
+    }
+};
+
+// POST endpoint para processar a compra de um pack e atribuir stickers
 app.post('/buy-pack', authenticateToken, async (req, res) => {
-    const { packPrice } = req.body; // Recebe o preço do pack da requisição
+    const { packPrice, stickerCount } = req.body; // Preço e quantidade de stickers no pack
 
     const user = db.data.users.find(u => u.email === req.user.email);
     if (!user) {
@@ -115,11 +128,32 @@ app.post('/buy-pack', authenticateToken, async (req, res) => {
         return res.status(400).json({ error: 'Créditos insuficientes para esta compra.' });
     }
 
-    // Deduz os créditos do usuário
+    // Deduzir créditos
     user.credits -= packPrice;
+
+    // Obter stickers disponíveis e escolher aleatoriamente
+    const availableStickers = getAvailableStickers();
+    if (availableStickers.length === 0) {
+        return res.status(500).json({ error: "Nenhum sticker disponível para compra." });
+    }
+
+    const userStickers = availableStickers
+        .sort(() => 0.5 - Math.random()) // Embaralha a lista
+        .slice(0, stickerCount); // Pega a quantidade necessária
+
+    // Salvar os stickers no perfil do usuário
+    if (!user.stickers) {
+        user.stickers = [];
+    }
+    user.stickers.push(...userStickers);
+
     await db.write();
 
-    res.json({ message: `Compra realizada! Créditos restantes: ${user.credits}`, credits: user.credits });
+    res.json({ 
+        message: `Compra realizada! Créditos restantes: ${user.credits}`, 
+        credits: user.credits, 
+        stickers: userStickers 
+    });
 });
 
 
@@ -135,11 +169,13 @@ app.get('/departments', authenticateToken, (req, res) => {
 
 // Rota protegida: /profile
 app.get('/profile', authenticateToken, (req, res) => {
-    const stickers = [
-        { id: 1, url: '/stickers/Sticker1.png' },
-    ];
-    
-    res.json({ stickers });
+    const user = db.data.users.find(u => u.email === req.user.email);
+
+    if (!user) {
+        return res.status(404).json({ error: 'Usuário não encontrado' });
+    }
+
+    res.json({ stickers: user.stickers });
 });
 
 // Start the server

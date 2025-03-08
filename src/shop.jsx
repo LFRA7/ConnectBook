@@ -7,8 +7,8 @@ export const Shop = () => {
     const navigate = useNavigate();
     const [userData, setUserData] = useState({ name: '', credits: 0 });
     const [selectedPack, setSelectedPack] = useState(null);
-
-
+    const [userStickers, setUserStickers] = useState([]);
+    const [showStickerModal, setShowStickerModal] = useState(false); //Controlo do pop up
 
     useEffect(() => {
         const fetchShop = async () => {
@@ -61,14 +61,14 @@ export const Shop = () => {
     // Função chamada quando o usuário confirma a compra
     const confirmPurchase = async () => {
         if (!selectedPack) return;
-
+    
         const token = localStorage.getItem("token");
         if (!token) {
             alert("Você precisa estar logado para comprar um pack.");
             navigate("/login");
             return;
         }
-
+    
         try {
             const response = await fetch("http://localhost:3000/buy-pack", {
                 method: "POST",
@@ -76,20 +76,25 @@ export const Shop = () => {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${token}`,
                 },
-                body: JSON.stringify({ packPrice: selectedPack.price }),
+                body: JSON.stringify({ 
+                    packPrice: selectedPack.price, 
+                    stickerCount: selectedPack.stickers 
+                }),
             });
-
+    
             const data = await response.json();
             if (response.ok) {
                 alert(`Você comprou o ${selectedPack.name} e recebeu ${selectedPack.stickers} stickers!`);
-                setUserData((prev) => ({ ...prev, credits: data.credits })); // Atualiza os créditos na tela
+                setUserData((prev) => ({ ...prev, credits: data.credits })); // Atualiza os créditos
+                setUserStickers(data.stickers); // Atualiza os stickers recebidos
+                setShowStickerModal(true); // Exibe o popup com os stickers
             } else {
-                alert(data.error); // Exibe erro (por exemplo, créditos insuficientes)
+                alert(data.error);
             }
         } catch (error) {
             console.error("Erro ao processar a compra:", error);
         }
-
+    
         setSelectedPack(null); // Fecha o modal
     };
 
@@ -135,7 +140,22 @@ export const Shop = () => {
           </div>
         </div>
       )}
-    </div>
+
+      {/* Modal de Stickers após a compra */}
+      {showStickerModal && (
+                    <div className="modal">
+                        <div className="modal-content">
+                            <h2>Stickers Comprados!</h2>
+                            <div className="stickers-list">
+                                {userStickers.map((sticker, index) => (
+                                    <img key={index} src={sticker} alt={`Sticker ${index + 1}`} className="sticker-item" />
+                                ))}
+                            </div>
+                            <button onClick={() => setShowStickerModal(false)} className="confirm-button">Fechar</button>
+                        </div>
+                    </div>
+                )}
+        </div>
         </div>
         </>
     )

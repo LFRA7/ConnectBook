@@ -160,6 +160,27 @@ h2 {
   border-radius: 5px;
 }
 
+.stickers-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.stickers-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.sticker-item {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
 
 
   

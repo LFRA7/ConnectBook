@@ -16,7 +16,27 @@
       "confirmPassword": "aww",
       "department": "Financial",
       "team": "Auditing",
-      "credits": 150
+      "credits": 20,
+      "stickers": [
+        "/stickers/Sticker7.png",
+        "/stickers/Sticker11.png",
+        "/stickers/Sticker9.png",
+        "/stickers/Sticker1.png",
+        "/stickers/Sticker6.png",
+        "/stickers/Sticker5.png",
+        "/stickers/Sticker3.png",
+        "/stickers/Sticker8.png",
+        "/stickers/Sticker13.png",
+        "/stickers/Sticker7.png",
+        "/stickers/Sticker12.png",
+        "/stickers/Sticker2.png",
+        "/stickers/Sticker5.png",
+        "/stickers/Sticker2.png",
+        "/stickers/Sticker13.png",
+        "/stickers/Sticker1.png",
+        "/stickers/Sticker4.png",
+        "/stickers/Sticker7.png"
+      ]
     },
     {
       "name": "joaquim7777",
@@ -26,6 +46,23 @@
       "department": "Human Resources",
       "team": "Employee Relations",
       "credits": 100
+    },
+    {
+      "name": "lucas",
+      "email": "lucasfralves89@gmail.com",
+      "password": "aw",
+      "confirmPassword": "aw",
+      "department": "IT Services",
+      "team": "Cybersecurity",
+      "credits": 55,
+      "stickers": [
+        "/stickers/Sticker12.png",
+        "/stickers/Sticker11.png",
+        "/stickers/Sticker8.png",
+        "/stickers/Sticker1.png",
+        "/stickers/Sticker6.png",
+        "/stickers/Sticker9.png"
+      ]
     }
   ]
 }
