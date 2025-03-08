@@ -6,6 +6,9 @@ import './shop.css';
 export const Shop = () => {
     const navigate = useNavigate();
     const [userData, setUserData] = useState({ name: '', credits: 0 });
+    const [selectedPack, setSelectedPack] = useState(null);
+
+
 
     useEffect(() => {
         const fetchShop = async () => {
@@ -44,6 +47,52 @@ export const Shop = () => {
         navigate('/login');
       };
 
+    const packs = [
+        { name: "Basic Pack", price: 15, stickers: 2, image: "/src/assets/Basic Pack.png" },
+        { name: "Elite Pack", price: 35, stickers: 5, image: "/src/assets/Elite Pack.png" },
+        { name: "Premium Pack", price: 75, stickers: 14, image: "/src/assets/Premium Pack.png" },
+    ];
+      
+    // Função chamada ao clicar na imagem ou preço do pack
+    const handlePurchase = (pack) => {
+        setSelectedPack(pack);
+    };
+      
+    // Função chamada quando o usuário confirma a compra
+    const confirmPurchase = async () => {
+        if (!selectedPack) return;
+
+        const token = localStorage.getItem("token");
+        if (!token) {
+            alert("Você precisa estar logado para comprar um pack.");
+            navigate("/login");
+            return;
+        }
+
+        try {
+            const response = await fetch("http://localhost:3000/buy-pack", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`,
+                },
+                body: JSON.stringify({ packPrice: selectedPack.price }),
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                alert(`Você comprou o ${selectedPack.name} e recebeu ${selectedPack.stickers} stickers!`);
+                setUserData((prev) => ({ ...prev, credits: data.credits })); // Atualiza os créditos na tela
+            } else {
+                alert(data.error); // Exibe erro (por exemplo, créditos insuficientes)
+            }
+        } catch (error) {
+            console.error("Erro ao processar a compra:", error);
+        }
+
+        setSelectedPack(null); // Fecha o modal
+    };
+
     return(
         <>
         <div className="app-container">
@@ -65,7 +114,28 @@ export const Shop = () => {
             <div className="full-width-bar"></div>
             <h2>Shop</h2>
             <div className="full-width-bar"></div>
-
+            <div className="packs">
+                {packs.map((pack, index) => (
+                <div 
+                    key={index} 
+                    className="pack-container" 
+                    onClick={() => handlePurchase(pack)} 
+                    style={{ cursor: "pointer" }}
+                    >
+                    <img src={pack.image} alt={pack.name} className="packs-item" />
+                    <span className="price-tag">{pack.price}</span>
+                </div>
+                ))}
+      {selectedPack && (
+        <div className="modal">
+          <div className="modal-content">
+            <p>Tem a certeza que quer comprar o {selectedPack.name} e receber {selectedPack.stickers} stickers?</p>
+            <button onClick={confirmPurchase} className="confirm-button">Sim</button>
+            <button onClick={() => setSelectedPack(null)} className="cancel-button">Não</button>
+          </div>
+        </div>
+      )}
+    </div>
         </div>
         </>
     )

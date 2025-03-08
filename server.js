@@ -102,6 +102,27 @@ app.get('/shop', authenticateToken, (req, res) => {
     });
 });
 
+// POST endpoint para processar a compra de um pack
+app.post('/buy-pack', authenticateToken, async (req, res) => {
+    const { packPrice } = req.body; // Recebe o preço do pack da requisição
+
+    const user = db.data.users.find(u => u.email === req.user.email);
+    if (!user) {
+        return res.status(404).json({ error: 'Usuário não encontrado' });
+    }
+
+    if (user.credits < packPrice) {
+        return res.status(400).json({ error: 'Créditos insuficientes para esta compra.' });
+    }
+
+    // Deduz os créditos do usuário
+    user.credits -= packPrice;
+    await db.write();
+
+    res.json({ message: `Compra realizada! Créditos restantes: ${user.credits}`, credits: user.credits });
+});
+
+
 // Rota protegida: /departments
 app.get('/departments', authenticateToken, (req, res) => {
     res.json({ departments: departments });
