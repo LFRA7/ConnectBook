@@ -11,14 +11,6 @@ export const Departments = () => {
         navigate('/login');
     };
 
-    const departments = [
-        { name: 'Human Resources', icon: '/src/assets/human_resources.png' },
-        { name: 'Financial', icon: '/src/assets/financial.png' },
-        { name: 'IT Services', icon: '/src/assets/it_services.png' },
-        { name: 'Marketing', icon: '/src/assets/marketing.png' },
-        { name: 'Administration', icon: '/src/assets/administration.png' },
-    ];
-
     return (
         <>
             <div className="app-container">

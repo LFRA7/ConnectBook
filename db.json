@@ -111,6 +111,15 @@
         "/stickers/Sticker15.png",
         "/stickers/Sticker1.png"
       ]
+    },
+    {
+      "name": "aaa",
+      "email": "lucasfrferalves88@gmail.com",
+      "password": "we",
+      "confirmPassword": "we",
+      "department": "Marketing",
+      "team": "Social Media",
+      "credits": 100
     }
   ]
 }
