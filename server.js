@@ -175,7 +175,11 @@ app.get('/profile', authenticateToken, (req, res) => {
         return res.status(404).json({ error: 'Usuário não encontrado' });
     }
 
-    res.json({ stickers: user.stickers });
+    res.json({ 
+        name: user.name,
+        credits: user.credits,
+        stickers: user.stickers || [] // Evita erro caso o usuário não tenha stickers
+    });
 });
 
 // Start the server

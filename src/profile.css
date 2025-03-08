@@ -98,22 +98,21 @@ h2 {
 }
 
 .stickers-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.stickers-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: center;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
-.sticker-item {
-  width: 80px;
-  height: 80px;
+.sticker {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
   object-fit: cover;
-  border-radius: 8px;
-  border: 2px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.sticker:hover {
+  transform: scale(1.1);
 }
