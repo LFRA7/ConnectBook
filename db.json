@@ -60,14 +60,16 @@
       "confirmPassword": "aw",
       "department": "IT Services",
       "team": "Cybersecurity",
-      "credits": 55,
+      "credits": 40,
       "stickers": [
         "/stickers/Sticker12.png",
         "/stickers/Sticker11.png",
         "/stickers/Sticker8.png",
         "/stickers/Sticker1.png",
         "/stickers/Sticker6.png",
-        "/stickers/Sticker9.png"
+        "/stickers/Sticker9.png",
+        "/stickers/Sticker14.png",
+        "/stickers/Sticker13.png"
       ]
     },
     {
@@ -93,6 +95,19 @@
         "/stickers/Sticker11.png",
         "/stickers/Sticker3.png",
         "/stickers/Sticker10.png",
+        "/stickers/Sticker15.png",
+        "/stickers/Sticker1.png"
+      ]
+    },
+    {
+      "name": "maneltremoço",
+      "email": "cc@gmail.com",
+      "password": "aw",
+      "confirmPassword": "aw",
+      "department": "IT Services",
+      "team": "Networking",
+      "credits": 85,
+      "stickers": [
         "/stickers/Sticker15.png",
         "/stickers/Sticker1.png"
       ]

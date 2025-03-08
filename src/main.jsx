@@ -24,9 +24,9 @@ createRoot(document.getElementById('root')).render(
       <Route path="/login" element={<Login />} />   
       <Route path="/shop" element={<PrivateRoute element={<Shop />} />} />
       <Route path="/profile" element={<PrivateRoute element={<Profile />} />} />
-      <Route path="/departments" element={<PrivateRoute element={<Departments />} />} />
       <Route path="/access-denied" element={<AccessDenied />} />
-      <Route path="/it-services" element={<PrivateRoute element={<ITServices />} />} />
+      <Route path="/departments" element={<PrivateRoute element={<Departments />} />} />
+      <Route path="/departments/it-services" element={<PrivateRoute element={<ITServices />} />} />
 
     </Routes>
   </BrowserRouter>,
