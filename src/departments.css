@@ -9,31 +9,22 @@ html, body {
   height: 100%;
   background-color: #4a90e2; /* Garante que o fundo azul cubra tudo */
 }
-  
-.btn-primary{
-  background-color: #2c3e50;
-  border-radius: 9999px;
-  padding: 0.5rem 2rem;
-  margin-top:-20px;
-}
 
-.btn-light{
-  background-color: white;
-  border-radius: 9999px;
-  padding: 0.5rem 2rem;
-  font-size: 1.5rem; /* Aumenta o tamanho da fonte */
-  font-weight: bold; /* Deixa a fonte mais destacada */
-  color:#2c3e50;
-  margin-top:-20px;
+h1 {
+  text-align: center; /* Centraliza o texto dentro do h1 */
+  font-size: 3rem; /* Ajusta o tamanho da fonte, se necessário */
+  color: white; /* Torna o texto visível sobre o fundo azul */
+  margin-top: 20px; /* Opcional: adiciona algum espaço no topo se necessário */
 }
 
 .app-container {
   min-height: 100vh;
-  display: flex; /* Garante que o layout funcione corretamente */
+  display: flex;
   flex-direction: column;
+  justify-content: flex-start; /* Garante que o conteúdo começa no topo */
+  align-items: center; /* Apenas alinha o conteúdo na horizontal */
 }
 
-/* Header styles */
 .header {
   display: flex;
   justify-content: space-between;
@@ -46,15 +37,16 @@ html, body {
 
 .nav {
   display: flex;
-  justify-content: space-between; /* Garante espaçamento entre os grupos */
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 1rem 2rem;
 }
 
 .nav-right {
   display: flex;
-  gap: 1rem; /* Aumenta o espaçamento entre os botões */
-  margin-left: 1500px;
+  gap: 1rem;
+  margin-left: 620px;
 }
 
 .nav-link {
@@ -75,19 +67,17 @@ html, body {
   justify-content: center;
   align-items: center;
   height: 50%;
-  background-color: #4a90e2; /* Cor de fundo azul */
+  background-color: #4a90e2;
 }
 
 .center-box {
-  background-color: #1a2a50; /* Cor do fundo do card */
+  background-color: #1a2a50;
   color: white;
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
-
-
 
 .btn:hover {
   background-color: #ddd;

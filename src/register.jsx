@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './Register.css';
 import { useNavigate } from 'react-router-dom';
 import { NavLink } from "react-router-dom"; 

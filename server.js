@@ -50,7 +50,7 @@ app.post('/users', async (req, res) => {
     }
 
     // Add the new user to the database
-    const user = { name, email, password, confirmPassword, department, team };
+    const user = { name, email, password, confirmPassword, department, team, credits: 100 };
     db.data.users.push(user);
     await db.write();
     res.status(201).json(user);
@@ -90,12 +90,25 @@ const authenticateToken = (req, res, next) => {
 
 // Rota protegida: /shop
 app.get('/shop', authenticateToken, (req, res) => {
-    res.json({ stickers: stickers });
+    const user = db.data.users.find(u => u.email === req.user.email);
+
+    if (!user) {
+        return res.status(404).json({ error: 'Usuário não encontrado' });
+    }
+
+    res.json({
+        message: `Hello, ${user.name}`,
+        credits: user.credits,
+    });
 });
 
 // Rota protegida: /departments
 app.get('/departments', authenticateToken, (req, res) => {
     res.json({ departments: departments });
+
+    res.json({
+        credits: user.credits,
+    })
 });
 
 
@@ -105,7 +118,7 @@ app.get('/profile', authenticateToken, (req, res) => {
         { id: 1, url: '/stickers/Sticker1.png' },
     ];
     
-    res.json({ message: `Hello, ${req.user.name}`, stickers });
+    res.json({ stickers });
 });
 
 // Start the server
