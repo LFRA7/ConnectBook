@@ -7,18 +7,18 @@ export const HumanResources = () => {
         fetch("http://localhost:3000/users")
             .then(response => response.json())
             .then(data => {
-                // Filtrar usuários apenas do departamento Marketing
+                // Filtrar Colaboradores apenas do departamento Marketing
                 const itUsers = data.filter(user => user.department === "Human Resources");
                 setUsers(itUsers);
             })
-            .catch(error => console.error("Erro ao buscar usuários:", error));
+            .catch(error => console.error("Erro ao procurar Colaboradores:", error));
     }, []);
 
     return (
         <div className="container">
-            <h2 className="mt-4">Usuários do Departamento de Recursos Humanos</h2>
+            <h2 className="mt-4">Colaboradores do Departamento de Recursos Humanos</h2>
             {users.length === 0 ? (
-                <p>Nenhum usuário encontrado no departamento de Recursos Humanos.</p>
+                <p>Nenhum Colaborador encontrado no departamento de Recursos Humanos.</p>
             ) : (
                 <ul className="list-group mt-3">
                     {users.map(user => (

@@ -23,7 +23,7 @@ export const Profile = () => {
                     setStickers(data.stickers);
                 }
             })
-            .catch(error => console.error('Erro ao buscar stickers:', error));
+            .catch(error => console.error('Erro ao procurar stickers:', error));
         }
     }, []);
 

@@ -28,7 +28,7 @@ export const Shop = () => {
                 });
 
                 if (!response.ok) {
-                    throw new Error('Erro ao buscar perfil');
+                    throw new Error('Erro ao procurar perfil');
                 }
 
                 const data = await response.json();
@@ -95,7 +95,7 @@ export const Shop = () => {
             console.error("Erro ao processar a compra:", error);
         }
     
-        setSelectedPack(null); // Fecha o modal
+        setSelectedPack(null); // Fecha o model
     };
 
     return(

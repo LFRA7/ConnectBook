@@ -55,7 +55,7 @@ export const Register = () => {
                 navigate("/login");
             }
         })
-        .catch(error => console.error("Erro ao cadastrar usuário:", error));
+        .catch(error => console.error("Erro ao registrar usuário:", error));
     };
 
     useEffect(() => {

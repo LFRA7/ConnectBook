@@ -11,21 +11,21 @@ export const Marketing = () => {
                 const itUsers = data.filter(user => user.department === "Marketing");
                 setUsers(itUsers);
             })
-            .catch(error => console.error("Erro ao buscar usuários:", error));
+            .catch(error => console.error("Erro ao procurar Colaboradores:", error));
     }, []);
 
     return (
         <div className="container">
-            <h2 className="mt-4">Usuários do Departamento de Marketing</h2>
+            <h2 className="mt-4">Colaboradores do Departamento de Marketing</h2>
             {users.length === 0 ? (
-                <p>Nenhum usuário encontrado no departamento de Marketing.</p>
+                <p>Nenhum Colaborador encontrado no departamento de Marketing.</p>
             ) : (
                 <ul className="list-group mt-3">
                     {users.map(user => (
                         <li key={user.email} className="list-group-item">
                             <strong>Nome:</strong> {user.name} <br />
                             <strong>Email:</strong> {user.email} <br />
-                            <strong>Equipe:</strong> {user.team}
+                            <strong>Equipa:</strong> {user.team}
                         </li>
                     ))}
                 </ul>

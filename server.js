@@ -95,7 +95,7 @@ app.get('/shop', authenticateToken, (req, res) => {
     const user = db.data.users.find(u => u.email === req.user.email);
 
     if (!user) {
-        return res.status(404).json({ error: 'Usuário não encontrado' });
+        return res.status(404).json({ error: 'Colaborador não encontrado' });
     }
 
     res.json({
@@ -121,7 +121,7 @@ app.post('/buy-pack', authenticateToken, async (req, res) => {
 
     const user = db.data.users.find(u => u.email === req.user.email);
     if (!user) {
-        return res.status(404).json({ error: 'Usuário não encontrado' });
+        return res.status(404).json({ error: 'Colaborador não encontrado' });
     }
 
     if (user.credits < packPrice) {
@@ -172,7 +172,7 @@ app.get('/profile', authenticateToken, (req, res) => {
     const user = db.data.users.find(u => u.email === req.user.email);
 
     if (!user) {
-        return res.status(404).json({ error: 'Usuário não encontrado' });
+        return res.status(404).json({ error: 'Colaborador não encontrado' });
     }
 
     res.json({ 

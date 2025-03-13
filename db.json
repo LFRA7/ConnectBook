@@ -47,10 +47,17 @@
       "confirmPassword": "aw",
       "department": "Human Resources",
       "team": "Employee Relations",
-      "credits": 85,
+      "credits": 35,
       "stickers": [
         "/stickers/Sticker6.png",
-        "/stickers/Sticker7.png"
+        "/stickers/Sticker7.png",
+        "/stickers/Sticker7.png",
+        "/stickers/Sticker4.png",
+        "/stickers/Sticker13.png",
+        "/stickers/Sticker12.png",
+        "/stickers/Sticker8.png",
+        "/stickers/Sticker7.png",
+        "/stickers/Sticker6.png"
       ]
     },
     {
