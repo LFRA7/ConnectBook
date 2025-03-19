@@ -5,127 +5,81 @@
       "email": "lucasfralves7@gmail.com",
       "password": "aw",
       "confirmPassword": "aw",
-      "department": "IT Services",
-      "team": "Support",
-      "credits": 10
+      "department": "Human Resources",
+      "team": "Training",
+      "sticker": "Sticker6.png",
+      "credits": 25,
+      "stickers": [
+        {
+          "name": "cx",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "manel",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "manel",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "manel",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "cx",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "cx",
+          "sticker": "Sticker4.png"
+        }
+      ]
     },
     {
       "name": "manel",
       "email": "lucasfralves88@gmail.com",
-      "password": "aww",
-      "confirmPassword": "aww",
+      "password": "aq",
+      "confirmPassword": "aq",
       "department": "Financial",
-      "team": "Auditing",
-      "credits": 5,
-      "stickers": [
-        "/stickers/Sticker7.png",
-        "/stickers/Sticker11.png",
-        "/stickers/Sticker9.png",
-        "/stickers/Sticker1.png",
-        "/stickers/Sticker6.png",
-        "/stickers/Sticker5.png",
-        "/stickers/Sticker3.png",
-        "/stickers/Sticker8.png",
-        "/stickers/Sticker13.png",
-        "/stickers/Sticker7.png",
-        "/stickers/Sticker12.png",
-        "/stickers/Sticker2.png",
-        "/stickers/Sticker5.png",
-        "/stickers/Sticker2.png",
-        "/stickers/Sticker13.png",
-        "/stickers/Sticker1.png",
-        "/stickers/Sticker4.png",
-        "/stickers/Sticker7.png",
-        "/stickers/Sticker12.png",
-        "/stickers/Sticker9.png"
-      ]
+      "team": "Accounting",
+      "sticker": "Sticker2.png",
+      "credits": 100
     },
     {
-      "name": "joaquim7777",
-      "email": "lucasfralves878@gmail.com",
-      "password": "aw",
-      "confirmPassword": "aw",
-      "department": "Human Resources",
-      "team": "Employee Relations",
-      "credits": 35,
-      "stickers": [
-        "/stickers/Sticker6.png",
-        "/stickers/Sticker7.png",
-        "/stickers/Sticker7.png",
-        "/stickers/Sticker4.png",
-        "/stickers/Sticker13.png",
-        "/stickers/Sticker12.png",
-        "/stickers/Sticker8.png",
-        "/stickers/Sticker7.png",
-        "/stickers/Sticker6.png"
-      ]
+      "name": "uuuu",
+      "email": "al78464@alunos.utad.pt",
+      "password": "aq",
+      "confirmPassword": "aq",
+      "department": "Financial",
+      "team": "Taxation",
+      "sticker": "Sticker3.png",
+      "credits": 100
     },
     {
-      "name": "lucas",
-      "email": "lucasfralves89@gmail.com",
-      "password": "aw",
-      "confirmPassword": "aw",
+      "name": "cx",
+      "email": "aaa@gmail.com",
+      "password": "xa",
+      "confirmPassword": "xa",
       "department": "IT Services",
-      "team": "Cybersecurity",
-      "credits": 40,
-      "stickers": [
-        "/stickers/Sticker12.png",
-        "/stickers/Sticker11.png",
-        "/stickers/Sticker8.png",
-        "/stickers/Sticker1.png",
-        "/stickers/Sticker6.png",
-        "/stickers/Sticker9.png",
-        "/stickers/Sticker14.png",
-        "/stickers/Sticker13.png"
-      ]
-    },
-    {
-      "name": "uuuuuhybgt",
-      "email": "lucasfralves8ytvc8@gmail.com",
-      "password": "bb",
-      "confirmPassword": "bb",
-      "department": "Human Resources",
-      "team": "Compliance",
-      "credits": 10,
-      "stickers": [
-        "/stickers/Sticker9.png",
-        "/stickers/Sticker4.png",
-        "/stickers/Sticker9.png",
-        "/stickers/Sticker13.png",
-        "/stickers/Sticker4.png",
-        "/stickers/Sticker6.png",
-        "/stickers/Sticker12.png",
-        "/stickers/Sticker2.png",
-        "/stickers/Sticker7.png",
-        "/stickers/Sticker14.png",
-        "/stickers/Sticker5.png",
-        "/stickers/Sticker11.png",
-        "/stickers/Sticker3.png",
-        "/stickers/Sticker10.png",
-        "/stickers/Sticker15.png",
-        "/stickers/Sticker1.png"
-      ]
-    },
-    {
-      "name": "maneltremoço",
-      "email": "cc@gmail.com",
-      "password": "aw",
-      "confirmPassword": "aw",
-      "department": "IT Services",
-      "team": "Networking",
-      "credits": 85,
-      "stickers": [
-        "/stickers/Sticker15.png",
-        "/stickers/Sticker1.png"
-      ]
-    },
-    {
-      "name": "aaa",
-      "email": "lucasfrferalves88@gmail.com",
-      "password": "we",
-      "confirmPassword": "we",
-      "department": "Marketing",
-      "team": "Social Media",
+      "team": "Support",
+      "sticker": "Sticker4.png",
       "credits": 100
     }
   ]

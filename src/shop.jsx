@@ -143,18 +143,26 @@ export const Shop = () => {
 
       {/* Modal de Stickers após a compra */}
       {showStickerModal && (
-                    <div className="modal">
-                        <div className="modal-content">
-                            <h2>Stickers Comprados!</h2>
-                            <div className="stickers-list">
-                                {userStickers.map((sticker, index) => (
-                                    <img key={index} src={sticker} alt={`Sticker ${index + 1}`} className="sticker-item" />
-                                ))}
-                            </div>
-                            <button onClick={() => setShowStickerModal(false)} className="confirm-button">Fechar</button>
-                        </div>
+    <div className="modal">
+        <div className="modal-content">
+            <h2>Stickers Comprados!</h2>
+            <div className="stickers-list" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+                {userStickers.map((sticker, index) => (
+                    <div key={index} style={{ textAlign: 'center' }}>
+                        <img 
+                            src={`/stickers/${sticker.sticker}`} 
+                            alt={`Sticker de ${sticker.name}`} 
+                            className="sticker-item" 
+                            style={{ width: '100px', height: '100px', objectFit: 'contain' }} 
+                        />
+                        <p>{sticker.name}</p> {/* Nome do dono do sticker */}
                     </div>
-                )}
+                ))}
+            </div>
+            <button onClick={() => setShowStickerModal(false)} className="confirm-button">Fechar</button>
+        </div>
+    </div>
+)}
         </div>
         </div>
         </>

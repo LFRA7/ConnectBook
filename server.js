@@ -28,9 +28,9 @@ app.get('/users', (req, res) => {
 
 // POST endpoint to add a new user
 app.post('/users', async (req, res) => {
-    const { name, email, password, confirmPassword, department, team} = req.body;
+    const { name, email, password, confirmPassword, department, team, sticker} = req.body;
 
-    if (!name || !email || !password || !confirmPassword || !department || !team) {
+    if (!name || !email || !password || !confirmPassword || !department || !team || !sticker) {
         return res.status(400).json({ error: 'Missing required fields' });
     }
 
@@ -52,7 +52,7 @@ app.post('/users', async (req, res) => {
     }
 
     // Add the new user to the database
-    const user = { name, email, password, confirmPassword, department, team, credits: 100 };
+    const user = { name, email, password, confirmPassword, department, team, sticker, credits: 100 };
     db.data.users.push(user);
     await db.write();
     res.status(201).json(user);
@@ -105,14 +105,15 @@ app.get('/shop', authenticateToken, (req, res) => {
 });
 
 // Função para obter uma lista de stickers disponíveis
-const getAvailableStickers = () => {
-    const stickersDir = path.join(process.cwd(), 'public/stickers');
-    try {
-        return fs.readdirSync(stickersDir).map(file => `/stickers/${file}`);
-    } catch (error) {
-        console.error("Erro ao ler a pasta de stickers:", error);
-        return [];
-    }
+const getAvailableStickers = (currentUserEmail) => {7
+
+    // Filtrar Usuários, exceto o próprio utilizador
+    return db.data.users
+        .filter(user => user.email !== currentUserEmail) // Exclui o próprio usuário
+        .map(user => ({
+            name: user.name,
+            sticker: user.sticker // Usa o sticker do usuário
+        }));
 };
 
 // POST endpoint para processar a compra de um pack e atribuir stickers
@@ -132,15 +133,16 @@ app.post('/buy-pack', authenticateToken, async (req, res) => {
     user.credits -= packPrice;
 
     // Obter stickers disponíveis e escolher aleatoriamente
-    const availableStickers = getAvailableStickers();
+    const availableStickers = getAvailableStickers(user.email);
     if (availableStickers.length === 0) {
         return res.status(500).json({ error: "Nenhum sticker disponível para compra." });
     }
 
+    // Sortear stickers aleatórios
     const userStickers = availableStickers
-        .sort(() => 0.5 - Math.random()) // Embaralha a lista
-        .slice(0, stickerCount); // Pega a quantidade necessária
-
+        .sort(() => Math.random() - 0.5) // Embaralha
+        .slice(0, stickerCount); // Seleciona a quantidade pedida
+        
     // Salvar os stickers no perfil do usuário
     if (!user.stickers) {
         user.stickers = [];

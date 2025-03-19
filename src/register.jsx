@@ -10,6 +10,8 @@ export const Register = () => {
     const [confirmpassword, setConfirmPassword] = useState('');
     const [department, setDepartment] = useState('');
     const [team, setTeam] = useState('');
+    const [stickers, setStickers] = useState([]);
+    const [selectedSticker, setSelectedSticker] = useState(null);
     const navigate = useNavigate();
 
     const departmentTeams = {
@@ -20,10 +22,25 @@ export const Register = () => {
         "Administration": ["Office Management", "Legal", "Logistics", "Procurement", "Customer Service"]
     };
 
+    useEffect(() => {
+        const loadStickers = async () => {
+            const stickerList = [
+                "Sticker1.png",
+                "Sticker2.png",
+                "Sticker3.png",
+                "Sticker4.png",
+                "Sticker5.png",
+                "Sticker6.png",
+            ];
+            setStickers(stickerList);
+        };
+        loadStickers();
+    }, []);
+
     const addUser = (event) => {
         event.preventDefault(); // Evita que a página seja recarregada(estava a dar erro quando redirecionava para o login)
 
-        if (!username.trim() || !email.trim() || !password.trim() || !confirmpassword.trim() || !department.trim() || !team.trim()) {
+        if (!username.trim() || !email.trim() || !password.trim() || !confirmpassword.trim() || !department.trim() || !team.trim() || !selectedSticker) {
             alert("Por favor, preencha todos os campos");
             return;
         }
@@ -32,6 +49,16 @@ export const Register = () => {
             alert("As senhas não coincidem");
             return;
         }
+
+        console.log("Enviando dados:", {
+            name: username,
+            email: email,
+            password: password,
+            confirmPassword: confirmpassword,
+            department: department,
+            team: team,
+            sticker: selectedSticker
+        });
 
         fetch('http://localhost:3000/users', {
             method: 'POST',
@@ -44,7 +71,8 @@ export const Register = () => {
                 password: password,
                 confirmPassword: confirmpassword,
                 department: department,
-                team: team
+                team: team,
+                sticker: selectedSticker
             })
         })
         .then(response => response.json())
@@ -141,6 +169,22 @@ export const Register = () => {
                                 ))}
                             </select>
                         )}
+
+                        {/* Selecionar Sticker */}
+                        <div className="sticker-container">
+                        <h3>Choose your Sticker</h3>
+                        <div className="sticker-selection">
+                            {stickers.map((sticker, index) => (
+                                <img 
+                                    key={index} 
+                                    src={`/stickers/${sticker}`} 
+                                    alt={`Sticker ${index + 1}`} 
+                                    className={selectedSticker === sticker ? "sticker selected" : "sticker"}
+                                    onClick={() => setSelectedSticker(sticker)}
+                                />
+                            ))}
+                        </div>
+                        </div>
                         <button type="submit" className="register-button" onClick={addUser}>
                             Sign Up
                         </button>

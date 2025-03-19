@@ -6,6 +6,7 @@ import './profile.css';
 export const Profile = () => {
     const navigate = useNavigate();
     const [stickers, setStickers] = useState([]);
+    const [userData, setUserData] = useState({ name: '' });
 
     useEffect(() => {
         const token = localStorage.getItem('token');
@@ -22,6 +23,10 @@ export const Profile = () => {
                 if (data.stickers) {
                     setStickers(data.stickers);
                 }
+                if (data.name) {
+                    setUserData({ name: data.name });
+                }
+
             })
             .catch(error => console.error('Erro ao procurar stickers:', error));
         }
@@ -48,17 +53,24 @@ export const Profile = () => {
                     </div>
                 </nav>
             </header>
-            <h1>Hello User</h1>
+            <h1>Hello {userData.name}</h1>
             <div className="full-width-bar"></div>
-            <h2>Seus Stickers</h2>
+            <h2>Stickers</h2>
             <div className="full-width-bar"></div>
-            <div className="stickers-container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '10px', padding: '20px' }}>
+            <div className="stickers-container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '20px', padding: '20px' }}>
                 {stickers.length > 0 ? stickers.map((sticker, index) => (
-                    <img key={index} src={sticker} alt={`Sticker ${index}`} className="sticker-image" style={{ maxWidth: '150px', maxHeight: '150px' }} />
+                    <div key={index} style={{ textAlign: 'center' }}>
+                        <img 
+                            src={`/stickers/${sticker.sticker}`} 
+                            alt={`Sticker de ${sticker.name}`} 
+                            className="sticker-image" 
+                            style={{ width: '100px', height: '100px', objectFit: 'contain' }} 
+                        />
+                        <p>{sticker.name}</p>
+                    </div>
                 )) : <p>Você ainda não possui stickers.</p>}
             </div>
         </div>
         </>
     );
 };
-
