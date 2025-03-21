@@ -8,7 +8,7 @@
       "department": "Human Resources",
       "team": "Training",
       "sticker": "Sticker6.png",
-      "credits": 25,
+      "credits": 1105,
       "stickers": [
         {
           "name": "cx",
@@ -49,6 +49,14 @@
         {
           "name": "cx",
           "sticker": "Sticker4.png"
+        },
+        {
+          "name": "manel",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker3.png"
         }
       ]
     },
@@ -60,7 +68,21 @@
       "department": "Financial",
       "team": "Accounting",
       "sticker": "Sticker2.png",
-      "credits": 100
+      "credits": 65,
+      "stickers": [
+        {
+          "name": "joaquim",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "cx",
+          "sticker": "Sticker4.png"
+        }
+      ]
     },
     {
       "name": "uuuu",
@@ -70,7 +92,29 @@
       "department": "Financial",
       "team": "Taxation",
       "sticker": "Sticker3.png",
-      "credits": 100
+      "credits": 50,
+      "stickers": [
+        {
+          "name": "manel",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "cx",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "joaquim",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "cx",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "manel",
+          "sticker": "Sticker2.png"
+        }
+      ]
     },
     {
       "name": "cx",
@@ -81,6 +125,98 @@
       "team": "Support",
       "sticker": "Sticker4.png",
       "credits": 100
+    },
+    {
+      "name": "cc",
+      "email": "cc@gmail.com",
+      "password": "cc",
+      "confirmPassword": "cc",
+      "department": "Administration",
+      "team": "Legal",
+      "sticker": "Sticker5.png",
+      "credits": 100,
+      "stickers": [
+        {
+          "name": "cx",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "manel",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "joaquim",
+          "sticker": "Sticker6.png"
+        }
+      ]
+    },
+    {
+      "name": "dd",
+      "email": "dd@gmail.com",
+      "password": "dd",
+      "confirmPassword": "dd",
+      "department": "Human Resources",
+      "team": "Employee Relations",
+      "sticker": "Sticker4.png",
+      "credits": 205,
+      "stickers": [
+        {
+          "name": "cc",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "cx",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "joaquim",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "manel",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker3.png"
+        }
+      ]
+    },
+    {
+      "name": "aa",
+      "email": "aa@gmail.com",
+      "password": "aa",
+      "confirmPassword": "aa",
+      "department": "Financial",
+      "team": "Investments",
+      "sticker": "Sticker4.png",
+      "credits": 325,
+      "stickers": [
+        {
+          "name": "cx",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "cc",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "joaquim",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "manel",
+          "sticker": "Sticker2.png"
+        }
+      ]
     }
   ]
 }

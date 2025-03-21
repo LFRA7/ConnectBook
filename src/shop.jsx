@@ -84,7 +84,12 @@ export const Shop = () => {
     
             const data = await response.json();
             if (response.ok) {
-                alert(`Você comprou o ${selectedPack.name} e recebeu ${selectedPack.stickers} stickers!`);
+                let message = (`Você comprou o ${selectedPack.name} e recebeu ${selectedPack.stickers} stickers!`);
+                if (data.extraCredits > 0) {
+                    message += `\nVocê recebeu ${data.extraCredits} créditos extras por stickers repetidos!`;
+                }
+
+                alert(message);
                 setUserData((prev) => ({ ...prev, credits: data.credits })); // Atualiza os créditos
                 setUserStickers(data.stickers); // Atualiza os stickers recebidos
                 setShowStickerModal(true); // Exibe o popup com os stickers
@@ -108,6 +113,7 @@ export const Shop = () => {
                     </div>
                     <div className="nav-right">
                         <NavLink to="/" className="btn btn-primary btn-lg">Home</NavLink>
+                        <NavLink to="/departments" className="btn btn-primary btn-lg">Departments</NavLink>
                         <NavLink to="/profile" className="btn btn-primary btn-lg">Profile</NavLink>
                         <NavLink to="/shop" className="btn btn-primary btn-lg">Shop </NavLink>
                         <button onClick={handleLogout} className="btn btn-primary btn-lg">Logout</button>

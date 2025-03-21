@@ -47,6 +47,7 @@ export const Profile = () => {
                     </div>
                     <div className="nav-right">
                         <NavLink to="/" className="btn btn-primary btn-lg">Home</NavLink>
+                        <NavLink to="/departments" className="btn btn-primary btn-lg">Departments</NavLink>
                         <NavLink to="/profile" className="btn btn-primary btn-lg">Profile</NavLink>
                         <NavLink to="/shop" className="btn btn-primary btn-lg">Shop</NavLink>
                         <button onClick={handleLogout} className="btn btn-primary btn-lg">Logout</button>

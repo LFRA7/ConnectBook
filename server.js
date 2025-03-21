@@ -138,23 +138,40 @@ app.post('/buy-pack', authenticateToken, async (req, res) => {
         return res.status(500).json({ error: "Nenhum sticker disponível para compra." });
     }
 
-    // Sortear stickers aleatórios
-    const userStickers = availableStickers
+    // Sorteia os stickers aleatórios
+    let newStickers = [];
+    let extraCredits = 0;
+
+    availableStickers
         .sort(() => Math.random() - 0.5) // Embaralha
-        .slice(0, stickerCount); // Seleciona a quantidade pedida
-        
-    // Salvar os stickers no perfil do usuário
+        .slice(0, stickerCount) // Seleciona a quantidade pedida
+        .forEach(sticker => {
+            // Verifica se o utilizador já tem o sticker
+            const alreadyHasSticker = user.stickers?.some(s => s.sticker === sticker.sticker);
+            
+            if (alreadyHasSticker) {
+                extraCredits += 25; // Se já tiver, ganha 25 créditos
+            } else {
+                newStickers.push(sticker); // Se não tiver, adiciona ao inventário
+            }
+        });
+
+    // Adiciona os novos stickers ao perfil do usuário
     if (!user.stickers) {
         user.stickers = [];
     }
-    user.stickers.push(...userStickers);
+    user.stickers.push(...newStickers);
+
+    // Adiciona os créditos pelos stickers duplicados
+    user.credits += extraCredits;
 
     await db.write();
 
     res.json({ 
         message: `Compra realizada! Créditos restantes: ${user.credits}`, 
         credits: user.credits, 
-        stickers: userStickers 
+        stickers: newStickers, 
+        extraCredits: extraCredits
     });
 });
 
