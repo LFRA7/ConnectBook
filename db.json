@@ -217,6 +217,38 @@
           "sticker": "Sticker2.png"
         }
       ]
+    },
+    {
+      "name": "joaqyhgtruim",
+      "email": "lucasfralvfredwses88@gmail.com",
+      "password": "aw",
+      "confirmPassword": "aw",
+      "department": "Human Resources",
+      "team": "Employee Relations",
+      "sticker": "Sticker2.png",
+      "credits": 115,
+      "stickers": [
+        {
+          "name": "uuuu",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "dd",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "manel",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "joaquim",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "cc",
+          "sticker": "Sticker5.png"
+        }
+      ]
     }
   ]
 }

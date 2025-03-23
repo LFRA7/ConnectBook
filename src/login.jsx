@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from "react-router"
 import { useNavigate } from 'react-router-dom';
+import './login.css';
 
 export const Login = () => {
   const [email, setEmail] = useState('');
@@ -59,10 +60,10 @@ export const Login = () => {
           </nav>
         </header>
 
-        <div className="register-container">
-          <div className="register-box">
-            <h2 className="register-title">Welcome Back</h2>
-            <form className="register-form" onSubmit={handleLogin}>
+        <div className="login-container">
+          <div className="login-box">
+            <h2 className="login-title">Welcome Back</h2>
+            <form className="login-form" onSubmit={handleLogin}>
               <div className="input-group mb-3">
                 <span className="input-group-text" id="basic-addon1">@</span>
                 <input 
