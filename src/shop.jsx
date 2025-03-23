@@ -121,9 +121,13 @@ export const Shop = () => {
                     </div>
                 </nav>
             </header>
+            <div className="title-shop">
             <h1>Hello {userData.name}, you have {userData.credits} credits</h1>
+            </div>
             <div className="full-width-bar"></div>
+            <div className="title-shop-h2">
             <h2>Shop</h2>
+            </div>
             <div className="full-width-bar"></div>
             <div className="packs">
                 {packs.map((pack, index) => (

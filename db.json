@@ -309,6 +309,26 @@
       "team": "Recruitment",
       "sticker": "Sticker13.png",
       "credits": 100
+    },
+    {
+      "name": "ujyhgtrf",
+      "email": "al784vrfed64@alunos.utad.pt",
+      "password": "aw",
+      "confirmPassword": "aw",
+      "department": "Administration",
+      "team": "Legal",
+      "sticker": "Sticker12.png",
+      "credits": 100
+    },
+    {
+      "name": "joaquimvfecdws",
+      "email": "lucasfralvesfcwdsa7@gmail.com",
+      "password": "aw",
+      "confirmPassword": "aw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker9.png",
+      "credits": 100
     }
   ]
 }

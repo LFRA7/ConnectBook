@@ -10,18 +10,19 @@ html, body {
   background-color: #4a90e2; /* Garante que o fundo azul cubra tudo */
 }
 
-h1 {
+.title-shop {
   font-size: 3rem; /* Ajusta o tamanho da fonte, se necessário */
   color: white; /* Torna o texto visível sobre o fundo azul */
-  margin-top: 50px !important; /* Adiciona algum espaço no topo */
+  margin-top: 50px ; /* Adiciona algum espaço no topo */
   margin-left: 20px; /* Garante que o h1 fique bem colado à esquerda */
 }
 
-h2 {
+.title-shop-h2 {
   text-align: center; /* Centraliza o texto dentro do h2 */
-  font-size: 3rem; /* Ajusta o tamanho da fonte, se necessário */
   color: #1a2a50; /* Torna o texto visível sobre o fundo azul */
   width: 100%; /* Faz com que o h2 ocupe toda a largura do contêiner */
+  font-size: 48px;
+  font-weight: bold;
 }
 
 .app-container {
@@ -67,14 +68,6 @@ h2 {
 
 .nav-link:hover {
   background-color: #34495e;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50%;
-  background-color: #4a90e2;
 }
 
 .center-box {

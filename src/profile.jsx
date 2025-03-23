@@ -54,9 +54,13 @@ export const Profile = () => {
                     </div>
                 </nav>
             </header>
+            <div className="title-profile">
             <h1>Hello {userData.name}</h1>
+            </div>
             <div className="full-width-bar"></div>
+            <div className="title-profile-h2">
             <h2>Stickers</h2>
+            </div>
             <div className="full-width-bar"></div>
             <div className="stickers-container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '20px', padding: '20px' }}>
                 {stickers.length > 0 ? stickers.map((sticker, index) => (

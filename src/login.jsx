@@ -88,7 +88,7 @@ export const Login = () => {
                   aria-describedby="inputGroup-sizing-default"
                 />
               </div>
-              <button type="submit" className="register-button">
+              <button type="submit" className="login-button">
                 Login
               </button>
             </form>

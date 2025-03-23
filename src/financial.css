@@ -1,4 +1,4 @@
-.title-administration{
+.title-financial{
     display: flex;
     flex-direction: column;
     justify-content: center; /* Centraliza verticalmente */
@@ -9,9 +9,10 @@
     font-weight: bold;
 }
 
-.card-administration {
+.card-financial {
     background-color: #ffff;
     color: white;
+    text-align: center;
     width: 350px;
     height: 250px;
     padding: 20px;
@@ -19,12 +20,13 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
     text-decoration: none;
+    font-weight: bold;
     margin-left: 20px;
     margin-right: 20px;  
     margin-top: 20px;
 }
 
-.card-admin-title {
+.card-financial-title {
     font-size: 36px;
     font-weight: bold;
     color: #2c3e50;

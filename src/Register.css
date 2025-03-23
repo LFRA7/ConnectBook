@@ -1,7 +1,3 @@
-h2{
-  font-size: 32px;
-}
-
 h3{
   color: #1a2a50;
   font-weight: bold; /* Deixa a fonte mais destacada */
@@ -30,7 +26,7 @@ h3{
   /* Título "Register" */
   .register-title {
     color: white;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
     margin-bottom: 25px;
   }

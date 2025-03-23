@@ -4,7 +4,9 @@
   justify-content: center; /* Centraliza verticalmente */
   align-items: center; /* Centraliza horizontalmente */
   width: 100%;
-  margin-top: 20px;
+  margin-top: 50px;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 /* Departamentos */

@@ -17,11 +17,11 @@ export const Register = () => {
     const navigate = useNavigate();
 
     const departmentTeams = {
-        "Human Resources": ["Recruitment", "Employee Relations", "Training", "Payroll", "Compliance"],
-        "Financial": ["Accounting", "Auditing", "Budgeting", "Investments", "Taxation"],
-        "IT Services": ["Development", "Cybersecurity", "Support", "Cloud Services", "Networking"],
-        "Marketing": ["Social Media", "SEO", "Branding", "Advertising", "Events"],
-        "Administration": ["Office Management", "Legal", "Logistics", "Procurement", "Customer Service"]
+        "Human Resources": ["Recruitment", "Employee Relations", "Training", "Payroll", "Compliance", "Employee Engagement"],
+        "Financial": ["Accounting", "Auditing", "Budgeting", "Investments", "Taxation", "Financial Planning"],
+        "IT Services": ["Development", "Cybersecurity", "Support", "Cloud Services", "Networking", "Data Analytics"],
+        "Marketing": ["Social Media", "SEO", "Branding", "Advertising", "Events", "Market Research"],
+        "Administration": ["Office Management", "Legal", "Logistics", "Procurement", "Customer Service", "Facilities Management"]
     };
 
     useEffect(() => {

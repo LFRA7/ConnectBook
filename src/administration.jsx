@@ -1,17 +1,40 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom"; 
+import { useNavigate } from 'react-router-dom';
+import './app.css';
 import './administration.css';
 
 export const Administration = () => {
-    const [users, setUsers] = useState([]);
+    const [teams, setTeams] = useState([]);
+
+    const [allTeams] = useState([
+        "Office Management",
+        "Legal",
+        "Logistics",
+        "Procurement",
+        "Customer Services",
+        "Facilities Management"
+    ]); // Lista de todas as equipas
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch("http://localhost:3000/users")
             .then(response => response.json())
             .then(data => {
-                // Filtrar Colaboradores apenas do departamento Administration
-                const itUsers = data.filter(user => user.department === "Administration");
-                setUsers(itUsers);
+                // Filtrar apenas usuários do departamento Administration
+                const adminUsers = data.filter(user => user.department === "Administration");
+                
+                // Agrupar os usuários por equipe
+                const groupedTeams = {};
+                adminUsers.forEach(user => {
+                    if (!groupedTeams[user.team]) {
+                        groupedTeams[user.team] = [];
+                    }
+                    groupedTeams[user.team].push(user);
+                });
+
+                setTeams(groupedTeams);
             })
             .catch(error => console.error("Erro ao procurar Colaboradores:", error));
     }, []);
@@ -23,7 +46,7 @@ export const Administration = () => {
 
     return (
         <>
-        <div className="container">
+        <div className="app-container">
             <header className="header">
             <nav className="nav">
                     <div className="nav-left">
@@ -39,21 +62,41 @@ export const Administration = () => {
                     
                 </nav>
             </header>
-            <h2 className="mt-4">Colaboradores do Departamento de Administração</h2>
-            {users.length === 0 ? (
-                <p>Nenhum Colaborador encontrado no departamento de Administração.</p>
-            ) : (
-                <ul className="list-group mt-3">
-                    {users.map(user => (
-                        <li key={user.email} className="list-group-item">
-                            <strong>Nome:</strong> {user.name} <br />
-                            <strong>Email:</strong> {user.email} <br />
-                            <strong>Equipa:</strong> {user.team}
-                        </li>
+            <div className="title-administration">
+                <h1>Administration Department</h1>
+            </div>
+
+            <div className="container text-center">
+                <div className="row">
+                    {allTeams.map((teamName) => (
+                        <div className="col" key={teamName}>
+                            <div className="card-administration">
+                                <div className="card-admin-title">
+                                    <h3>{teamName}</h3> {/* Título da equipa */}
+                                </div>
+                                <div className="sticker-container-administration">
+                                    {teams[teamName] && teams[teamName].length > 0 ? (
+                                        teams[teamName].map(user => (
+                                            <div key={user.email} className="sticker-card">
+                                            <img 
+                                                key={user.email} 
+                                                src={`/stickers/${user.sticker}`} 
+                                                alt={user.name} 
+                                                className="sticker-image"
+                                            />
+                                            <h5>{user.name}</h5> {/* Nome do usuário abaixo do sticker */}
+                                            </div>
+                                        ))
+                                    ) : (
+                                        <h5>Nenhum colaborador para esta equipa.</h5> // Exibe mensagem se não houver colaboradores
+                                    )}
+                                </div>
+                            </div>
+                        </div>
                     ))}
-                </ul>
-            )}
-        </div>
+                </div>
+            </div>
+    </div>
     </>
     );
 };
