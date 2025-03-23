@@ -29,30 +29,40 @@ export const Departments = () => {
                         </div>
                     </nav>
                 </header>
+                <div className="title-departments">
                 <h1>Departments</h1>
+                </div>
                 <div className="departments-container">
-  <NavLink to="/departments/human-resources" className="department-card">
-    <img src="/src/assets/human_resources.png" alt="Human Resources" className="department-icon" />
-    <p>Human Resources</p>
-  </NavLink>
-  <NavLink to="/departments/financial" className="department-card">
-    <img src="/src/assets/financial.png" alt="Financial" className="department-icon" />
-    <p>Financial</p>
-  </NavLink>
-  <NavLink to="/departments/it-services" className="department-card">
-    <img src="/src/assets/it_services.png" alt="IT Services" className="department-icon" />
-    <p>IT Services</p>
-  </NavLink>
-  <NavLink to="/departments/marketing" className="department-card">
-    <img src="/src/assets/marketing.png" alt="Marketing" className="department-icon" />
-    <p>Marketing</p>
-  </NavLink>
-  <NavLink to="/departments/administration" className="department-card">
-    <img src="/src/assets/administration.png" alt="Administration" className="department-icon" />
-    <p>Administration</p>
-  </NavLink>
-</div>
-            </div>
+                  
+                  <NavLink to="/departments/human-resources" className="department-card">
+                    <img src="/src/assets/human_resources.png" alt="Human Resources" className="department-icon" />
+                    <p>Human Resources</p>
+                  </NavLink>
+
+
+                  <NavLink to="/departments/financial" className="department-card">
+                    <img src="/src/assets/financial.png" alt="Financial" className="department-icon" />
+                    <p>Financial</p>
+                  </NavLink>
+
+
+                  <NavLink to="/departments/it-services" className="department-card">
+                    <img src="/src/assets/it_services.png" alt="IT Services" className="department-icon" />
+                    <p>IT Services</p>
+                  </NavLink>
+
+                  <NavLink to="/departments/marketing" className="department-card">
+                    <img src="/src/assets/marketing.png" alt="Marketing" className="department-icon" />
+                    <p>Marketing</p>
+                  </NavLink>
+
+                  <NavLink to="/departments/administration" className="department-card">
+                    <img src="/src/assets/administration.png" alt="Administration" className="department-icon" />
+                    <p>Administration</p>
+                  </NavLink>
+
+                  </div>
+              </div>
         </>
     );
 };

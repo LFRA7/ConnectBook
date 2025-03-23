@@ -12,6 +12,8 @@ export const Register = () => {
     const [team, setTeam] = useState('');
     const [stickers, setStickers] = useState([]);
     const [selectedSticker, setSelectedSticker] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
+    const stickersPerPage = 6;
     const navigate = useNavigate();
 
     const departmentTeams = {
@@ -31,6 +33,15 @@ export const Register = () => {
                 "Sticker4.png",
                 "Sticker5.png",
                 "Sticker6.png",
+                "Sticker7.png",
+                "Sticker8.png",
+                "Sticker9.png",
+                "Sticker10.png",
+                "Sticker11.png",
+                "Sticker12.png",
+                "Sticker13.png",
+                "Sticker14.png",
+                "Sticker15.png",
             ];
             setStickers(stickerList);
         };
@@ -98,6 +109,18 @@ export const Register = () => {
         }
     }, [department]);
 
+    // Pagination
+    const indexOfLastSticker = currentPage * stickersPerPage;
+    const indexOfFirstSticker = indexOfLastSticker - stickersPerPage;
+    const currentStickers = stickers.slice(indexOfFirstSticker, indexOfLastSticker);
+    const totalPages = Math.ceil(stickers.length / stickersPerPage);
+
+    const handlePageChange = (newPage) => {
+        if (newPage > 0 && newPage <= totalPages) {
+            setCurrentPage(newPage);
+        }
+    };
+
     return (
         <div className="app-container">
             <header className="header">
@@ -116,6 +139,8 @@ export const Register = () => {
                 <div className="register-box">
                     <h2 className="register-title">Register</h2>
                     <form className="register-form">
+                    <div class="row">
+                    <div class="col">
                         <div className="input-group mb-3">
                             <span className="input-group-text">Username</span>
                             <input 
@@ -160,21 +185,28 @@ export const Register = () => {
                             ))}
                         </select>
 
-                        {/* Selecionar Equipa (aparece quando um departamento é selecionado) */}
-                        {department && (
-                            <select className="form-select mt-2" value={team} onChange={(e) => setTeam(e.target.value)}>
-                                <option value="">Select your Team</option>
-                                {departmentTeams[department].map((teamName) => (
+                        {/* Selecionar Equipa (sempre visível, mas desativado sem departamento) */}
+                        <select 
+                            className="form-select mt-2" 
+                            value={team} 
+                            onChange={(e) => setTeam(e.target.value)} 
+                            disabled={!department} // Desativa o select quando nenhum departamento é escolhido
+                        >
+                            <option value="">Select your Team</option>
+                            {department && departmentTeams[department] ? (
+                                departmentTeams[department].map((teamName) => (
                                     <option key={teamName} value={teamName}>{teamName}</option>
-                                ))}
-                            </select>
-                        )}
+                                ))
+                            ) : null}
+                        </select>
 
+                        </div>
+                        <div class="col">
                         {/* Selecionar Sticker */}
                         <div className="sticker-container">
                         <h3>Choose your Sticker</h3>
                         <div className="sticker-selection">
-                            {stickers.map((sticker, index) => (
+                            {currentStickers.map((sticker, index) => (
                                 <img 
                                     key={index} 
                                     src={`/stickers/${sticker}`} 
@@ -184,10 +216,54 @@ export const Register = () => {
                                 />
                             ))}
                         </div>
+                        {/* Paginação */}
+                        <nav aria-label="Sticker pagination" className="mt-3">
+                            <ul className="pagination justify-content-center">
+                                <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
+                                    <button
+                                        className="page-link"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            handlePageChange(currentPage - 1);
+                                        }}
+                                        disabled={currentPage === 1}
+                                    >
+                                        Previous
+                                    </button>
+                                </li>
+                                {Array.from({ length: totalPages }, (_, i) => (
+                                    <li className={`page-item ${currentPage === i + 1 ? "active" : ""}`} key={i}>
+                                        <button
+                                            className="page-link"
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                handlePageChange(i + 1);
+                                            }}
+                                        >
+                                            {i + 1}
+                                        </button>
+                                    </li>
+                                ))}
+                                <li className={`page-item ${currentPage === totalPages ? "disabled" : ""}`}>
+                                    <button
+                                        className="page-link"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            handlePageChange(currentPage + 1);
+                                        }}
+                                        disabled={currentPage === totalPages}
+                                    >
+                                        Next
+                                    </button>
+                                </li>
+                            </ul>
+                        </nav>
+                        </div>
                         </div>
                         <button type="submit" className="register-button" onClick={addUser}>
                             Sign Up
                         </button>
+                        </div>
                     </form>
                 </div>
             </div>
