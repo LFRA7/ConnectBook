@@ -15,6 +15,7 @@ import { Marketing } from './marketing.jsx';
 import { HumanResources } from './human-resources.jsx';
 import { Financial } from './financial.jsx';
 import { Administration } from './administration.jsx';
+import { Accounting } from './Accounting.jsx';
 
 const PrivateRoute = ({ element }) => {
   return isAuthenticated() ? element : <Navigate to="/access-denied" replace/>;
@@ -33,8 +34,9 @@ createRoot(document.getElementById('root')).render(
       <Route path="/departments/it-services" element={<PrivateRoute element={<ITServices />} />} />
       <Route path="/departments/marketing" element={<PrivateRoute element={<Marketing />} />} />
       <Route path="/departments/human-resources" element={<PrivateRoute element={<HumanResources />} />} />
-      <Route path="/departments/financial" element={<PrivateRoute element={<Financial />} />} />
       <Route path="/departments/administration" element={<PrivateRoute element={<Administration />} />} />
+      <Route path="/departments/financial" element={<PrivateRoute element={<Financial />} />} />
+      <Route path="/departments/financial/Accounting" element={<PrivateRoute element={<Accounting />} />} />
 
     </Routes>
   </BrowserRouter>,

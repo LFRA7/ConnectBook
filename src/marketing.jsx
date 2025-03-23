@@ -16,6 +16,8 @@ export const Marketing = () => {
         "Market Research"
     ]); // Lista de todas as equipas
 
+    const navigate = useNavigate();
+
     useEffect(() => {
         fetch("http://localhost:3000/users")
             .then(response => response.json())

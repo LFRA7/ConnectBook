@@ -16,6 +16,8 @@ export const Financial = () => {
         "Financial Planning"
     ]); // Lista de todas as equipas
 
+    const navigate = useNavigate();
+
     useEffect(() => {
         fetch("http://localhost:3000/users")
             .then(response => response.json())
@@ -42,6 +44,10 @@ export const Financial = () => {
         navigate('/login');
       };
 
+    const handleCardClick = (teamName) => {
+        navigate(`/departments/financial/${teamName}`);
+    }
+
     return (
         <div className="app-container">
             <header className="header">
@@ -67,9 +73,9 @@ export const Financial = () => {
                 <div className="row">
                 {allTeams.map((teamName) => (
                         <div className="col" key={teamName}>
-                            <div className="card-financial">
+                            <div className="card-financial" onClick={() => handleCardClick(teamName)} style={{ cursor: "pointer" }}>
                                 <div className="card-financial-title">
-                                    <h3>{teamName}</h3> {/* Título da equipa */}
+                                    <h3>{teamName}</h3> {/* Nome da equipa */}
                                 </div>
                                 <div className="sticker-container-financial">
                                     {teams[teamName] && teams[teamName].length > 0 ? (
