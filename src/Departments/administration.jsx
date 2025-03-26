@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom"; 
 import { useNavigate } from 'react-router-dom';
-import '../app.css';
+import '../App.css';
 import './administration.css';
 
 export const Administration = () => {
