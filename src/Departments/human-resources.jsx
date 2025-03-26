@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom"; 
 import { useNavigate } from 'react-router-dom';
-import './App.css';
+import '../App.css';
 import './human-resources.css';
 
 export const HumanResources = () => {
@@ -44,6 +44,10 @@ export const HumanResources = () => {
         navigate('/login');
       };
 
+    const handleCardClick = (teamName) => {
+        navigate(`/departments/human-resources/${teamName}`);
+    }
+
     return (
         <div className="app-container">
             <header className="header">
@@ -69,7 +73,7 @@ export const HumanResources = () => {
                 <div class="row">
                 {allTeams.map((teamName) => (
                         <div className="col" key={teamName}>
-                            <div className="card-human-resources">
+                            <div className="card-human-resources" onClick={() => handleCardClick(teamName)} style={{ cursor: "pointer" }}>
                                 <div className="card-human-resources-title">
                                     <h3>{teamName}</h3> {/* Título da equipa */}
                                 </div>

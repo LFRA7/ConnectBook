@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom"; 
 import { useNavigate } from 'react-router-dom';
-import './app.css';
-import './ITServices.css';
+import '../app.css';
+import './financial.css';
 
-export const ITServices = () => {
+export const Financial = () => {
     const [teams, setTeams] = useState([]);
 
     const [allTeams] = useState([
-        "Development",
-        "Cybersecurity",
-        "Support",
-        "Cloud Services",
-        "Networking",
-        "Data Analytics"
+        "Accounting",
+        "Auditing",
+        "Budgeting",
+        "Investments",
+        "Taxation",
+        "Financial Planning"
     ]); // Lista de todas as equipas
 
     const navigate = useNavigate();
@@ -23,7 +23,7 @@ export const ITServices = () => {
             .then(response => response.json())
             .then(data => {
                 // Filtrar apenas usuários do departamento Administration
-                const adminUsers = data.filter(user => user.department === "IT Services");
+                const adminUsers = data.filter(user => user.department === "Financial");
                 
                 // Agrupar os usuários por equipe
                 const groupedTeams = {};
@@ -44,6 +44,10 @@ export const ITServices = () => {
         navigate('/login');
       };
 
+    const handleCardClick = (teamName) => {
+        navigate(`/departments/financial/${teamName}`);
+    }
+
     return (
         <div className="app-container">
             <header className="header">
@@ -61,19 +65,19 @@ export const ITServices = () => {
                     
                 </nav>
             </header>
-            <div className="title-itservices">
-                <h1>IT Services Department</h1>
+            <div className="title-financial">
+                <h1>Financial Department</h1>
             </div>
-                            
-            <div class="container text-center">
-                <div class="row">
+
+            <div className="container text-center">
+                <div className="row">
                 {allTeams.map((teamName) => (
                         <div className="col" key={teamName}>
-                            <div className="card-itservices">
-                                <div className="card-itservices-title">
-                                    <h3>{teamName}</h3> {/* Título da equipa */}
+                            <div className="card-financial" onClick={() => handleCardClick(teamName)} style={{ cursor: "pointer" }}>
+                                <div className="card-financial-title">
+                                    <h3>{teamName}</h3> {/* Nome da equipa */}
                                 </div>
-                                <div className="sticker-container-itservices">
+                                <div className="sticker-container-financial">
                                     {teams[teamName] && teams[teamName].length > 0 ? (
                                         teams[teamName].map(user => (
                                             <div key={user.email} className="sticker-card">
@@ -94,7 +98,8 @@ export const ITServices = () => {
                         </div>
                     ))}
                 </div>
-            </div>
-    </div>
+            </div>  
+            
+        </div>
     );
 };

@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom"; 
 import { useNavigate } from 'react-router-dom';
-import './app.css';
-import './marketing.css';
+import '../app.css';
+import './administration.css';
 
-export const Marketing = () => {
+export const Administration = () => {
     const [teams, setTeams] = useState([]);
 
     const [allTeams] = useState([
-        "Social Media",
-        "SEO",
-        "Branding",
-        "Advertising",
-        "Events",
-        "Market Research"
+        "Office Management",
+        "Legal",
+        "Logistics",
+        "Procurement",
+        "Customer Services",
+        "Facilities Management"
     ]); // Lista de todas as equipas
 
     const navigate = useNavigate();
@@ -23,7 +23,7 @@ export const Marketing = () => {
             .then(response => response.json())
             .then(data => {
                 // Filtrar apenas usuários do departamento Administration
-                const adminUsers = data.filter(user => user.department === "Marketing");
+                const adminUsers = data.filter(user => user.department === "Administration");
                 
                 // Agrupar os usuários por equipe
                 const groupedTeams = {};
@@ -44,7 +44,12 @@ export const Marketing = () => {
         navigate('/login');
       };
 
+    const handleCardClick = (teamName) => {
+        navigate(`/departments/administration/${teamName}`);
+    }
+
     return (
+        <>
         <div className="app-container">
             <header className="header">
             <nav className="nav">
@@ -61,19 +66,19 @@ export const Marketing = () => {
                     
                 </nav>
             </header>
-            <div className="title-marketing">
-                <h1>Marketing Department</h1>
+            <div className="title-administration">
+                <h1>Administration Department</h1>
             </div>
-                            
-            <div class="container text-center">
-                <div class="row">
-                {allTeams.map((teamName) => (
+
+            <div className="container text-center">
+                <div className="row">
+                    {allTeams.map((teamName) => (
                         <div className="col" key={teamName}>
-                            <div className="card-marketing">
-                                <div className="card-marketing-title">
+                            <div className="card-administration" onClick={() => handleCardClick(teamName)} style={{ cursor: "pointer" }}>
+                                <div className="card-admin-title">
                                     <h3>{teamName}</h3> {/* Título da equipa */}
                                 </div>
-                                <div className="sticker-container-marketing">
+                                <div className="sticker-container-administration">
                                     {teams[teamName] && teams[teamName].length > 0 ? (
                                         teams[teamName].map(user => (
                                             <div key={user.email} className="sticker-card">
@@ -96,5 +101,6 @@ export const Marketing = () => {
                 </div>
             </div>
     </div>
+    </>
     );
 };

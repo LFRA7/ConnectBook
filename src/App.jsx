@@ -2,9 +2,6 @@
 import { NavLink } from "react-router"
 import { useNavigate } from 'react-router-dom';
 import './App.css'
-import Sticker1 from './assets/Sticker1.png'
-import Sticker2 from './assets/Sticker2.png'
-import Sticker3 from './assets/Sticker3.png'
 
 function App() {
   const navigate = useNavigate(); 
