@@ -32,3 +32,17 @@
     color: #2c3e50;
     text-align: center;
 }
+
+.sticker-container-marketing{
+    display: flex;
+    flex-wrap: wrap; /* Permite que os stickers quebrem para a linha de baixo se necessário */
+    gap: 10px; /* Espaçamento entre os stickers */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.sticker-image-marketing{
+    width: 90px; /* Ajuste o tamanho conforme necessário */
+    height: 90px;
+    object-fit: contain;
+}

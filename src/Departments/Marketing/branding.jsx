@@ -1,18 +1,40 @@
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom"; 
+import { NavLink } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
+import '../teams.css';
 
 export const Branding = () => {
+    const navigate = useNavigate();
+    const [description, setDescription] = useState("");
+    const [teamMembers, setTeamMembers] = useState([]);
+
+    useEffect(() => {
+        // Simulação de carregamento da descrição
+        const teamDescription = "The branding team is responsible for managing the brand identity, ensuring a consistent and attractive image. We develop strategies for positioning, visual design, communication, and customer experience, strengthening the company's recognition and reputation in the market.";
+        setDescription(teamDescription);
+    }, []);
+
+    useEffect(() => {
+        fetch("http://localhost:3000/users")
+            .then(response => response.json())
+            .then(data => {
+                const advertisingTeam = data.filter(user => user.department === "Marketing" && user.team === "Branding");
+                setTeamMembers(advertisingTeam);
+            })
+            .catch(error => console.error("Erro ao procurar Colaboradores:", error));
+    }, []);
+    
 
     const handleLogout = () => {
         localStorage.removeItem('token');
         navigate('/login');
-      };
+    };
+    
 
     return (
         <div className="app-container">
             <header className="header">
-            <nav className="nav">
+                <nav className="nav">
                     <div className="nav-left">
                         <button type="button" className="btn btn-light">ConnectBook</button>
                     </div>
@@ -23,9 +45,45 @@ export const Branding = () => {
                         <NavLink to="/shop" className="btn btn-primary btn-lg">Shop </NavLink>
                         <button onClick={handleLogout} className="btn btn-primary btn-lg">Logout</button>
                     </div>
-                    
                 </nav>
             </header>
+
+            <div className="title-teams">
+                <h1>Branding</h1>
+            </div>
+
+            <div className="container text-center">
+                <div className="row">
+                    <div className="col">
+                        <div className="description-team">
+                            <h3>Description</h3>
+                            <div className="description-text-wrapper">
+                                <h6>{description}</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col">
+                    <div className="colaborators-team">
+                    <h3>Team Members</h3>
+                    {teamMembers.length > 0 ? (
+                        <div className="team-members-list">
+                            {teamMembers.map(member => (
+                                <div key={member.email} className="team-member">
+                                    <img src={`/stickers/${member.sticker}`} alt={member.name} className="sticker-img" />
+                                    <p>{member.name}</p>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <p>No members found.</p>
+                    )}
+                    </div>
+                        <div className="go-back" onClick={() => navigate('/departments/marketing')}>
+                            <h4>Go Back</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

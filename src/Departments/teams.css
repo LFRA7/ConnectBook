@@ -1,0 +1,105 @@
+.title-teams{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    width: 100%;
+    margin-top: 50px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  .description-team {
+    background-color: #ffff;
+    color: white;
+    text-align: center;
+    width: 350px;
+    height: 450px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.description-text-wrapper {
+    margin-top: auto; /* Garante espaço entre o título e o texto */
+    margin-bottom: auto; /* Garante espaço na parte de baixo */
+    width: 100%; /* Garante que o texto ocupe toda a largura disponível */
+    height: calc(100% - 50px); /* Calcula a altura restante, considerando o título */
+    overflow-y: auto; /* Adiciona rolagem apenas na vertical */
+    padding: 10px; /* Espaçamento interno para o texto */
+    box-sizing: border-box; /* Inclui o padding na largura e altura */
+}
+
+.description-text-wrapper h6 {
+    margin: 0; /* Remove margens do texto para evitar espaços desnecessários */
+}
+
+
+.colaborators-team{
+    background-color: #ffff;
+    color: black;
+    text-align: center;
+    width: 600px;
+    height: 360px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;  
+    margin-top: 40px;
+}
+
+.team-members-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sticker-img {
+  width: 100px; /* Ajuste o tamanho conforme necessário */
+  height: 100px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+
+.go-back{
+    background-color: #1a2a50;
+    color: white;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 250px;
+    margin-right: 20px;  
+    margin-top: 40px;
+    cursor: pointer;
+    text-align: center;
+}

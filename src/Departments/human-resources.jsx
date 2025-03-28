@@ -85,7 +85,7 @@ export const HumanResources = () => {
                                                 key={user.email} 
                                                 src={`/stickers/${user.sticker}`} 
                                                 alt={user.name} 
-                                                className="sticker-image"
+                                                className="sticker-image-human-resources"
                                             />
                                             <h5>{user.name}</h5> {/* Nome do usuário abaixo do sticker */}
                                             </div>

@@ -22,7 +22,7 @@ export const Marketing = () => {
         fetch("http://localhost:3000/users")
             .then(response => response.json())
             .then(data => {
-                // Filtrar apenas usuários do departamento Administration
+                // Filtrar apenas usuários do departamento Marketing
                 const adminUsers = data.filter(user => user.department === "Marketing");
                 
                 // Agrupar os usuários por equipe
@@ -85,7 +85,7 @@ export const Marketing = () => {
                                                 key={user.email} 
                                                 src={`/stickers/${user.sticker}`} 
                                                 alt={user.name} 
-                                                className="sticker-image"
+                                                className="sticker-image-marketing"
                                             />
                                             <h5>{user.name}</h5> {/* Nome do usuário abaixo do sticker */}
                                             </div>
