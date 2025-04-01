@@ -8,7 +8,7 @@
       "department": "Human Resources",
       "team": "Training",
       "sticker": "Sticker6.png",
-      "credits": 2115,
+      "credits": 4995,
       "stickers": [
         {
           "name": "cx",
@@ -85,6 +85,14 @@
         {
           "name": "quim",
           "sticker": "Sticker6.png"
+        },
+        {
+          "name": "jyuhgtrfed",
+          "sticker": "Sticker1.png"
+        },
+        {
+          "name": "kiyujhgtrf",
+          "sticker": "Sticker11.png"
         }
       ]
     },
@@ -96,7 +104,7 @@
       "department": "Financial",
       "team": "Accounting",
       "sticker": "Sticker2.png",
-      "credits": 65,
+      "credits": 4165,
       "stickers": [
         {
           "name": "joaquim",
@@ -109,6 +117,38 @@
         {
           "name": "cx",
           "sticker": "Sticker4.png"
+        },
+        {
+          "name": "lucas",
+          "sticker": "Sticker15.png"
+        },
+        {
+          "name": "cc",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "joaquimhtgrfd",
+          "sticker": "Sticker13.png"
+        },
+        {
+          "name": "ujyhgtrf",
+          "sticker": "Sticker12.png"
+        },
+        {
+          "name": "joaquimvfecdws",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "joaqyhgtruim",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "kiyujhgtrf",
+          "sticker": "Sticker11.png"
+        },
+        {
+          "name": "jyuhgtrfed",
+          "sticker": "Sticker1.png"
         }
       ]
     },
@@ -442,6 +482,226 @@
       "department": "Marketing",
       "team": "Advertising",
       "sticker": "Sticker13.png",
+      "credits": 100
+    },
+    {
+      "name": "jyuhgtrfed",
+      "email": "lucatgrfdssfralves7@gmail.com",
+      "password": "aw",
+      "confirmPassword": "aw",
+      "department": "Human Resources",
+      "team": "Recruitment",
+      "sticker": "Sticker1.png",
+      "credits": 100
+    },
+    {
+      "name": "okiuhy",
+      "email": "lucasfraljuhygtves7@gmail.com",
+      "password": "aw",
+      "confirmPassword": "aw",
+      "department": "Human Resources",
+      "team": "Employee Relations",
+      "sticker": "Sticker2.png",
+      "credits": 100
+    },
+    {
+      "name": "joaquolikjnhgvim",
+      "email": "lucasfralvehtgrfedcs7@gmail.com",
+      "password": "aw",
+      "confirmPassword": "aw",
+      "department": "Human Resources",
+      "team": "Compliance",
+      "sticker": "Sticker2.png",
+      "credits": 100
+    },
+    {
+      "name": "mjhngfvdsx",
+      "email": "lucasfralynhtgbvrfdcves88@gmail.com",
+      "password": "aw",
+      "confirmPassword": "aw",
+      "department": "IT Services",
+      "team": "Cybersecurity",
+      "sticker": "Sticker2.png",
+      "credits": 375,
+      "stickers": [
+        {
+          "name": "kiyujhgtrf",
+          "sticker": "Sticker11.png"
+        },
+        {
+          "name": "joaquolikjnhgvim",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "joaquim",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "ujyhgtrf",
+          "sticker": "Sticker12.png"
+        },
+        {
+          "name": "manel",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "cc",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "aa",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "joaquimvfecdws",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "joaquimhtgrfd",
+          "sticker": "Sticker13.png"
+        },
+        {
+          "name": "lucasfralves8888",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "dd",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "rfdsxaz",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "aaa",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "lucas",
+          "sticker": "Sticker15.png"
+        },
+        {
+          "name": "jyuhgtrfed",
+          "sticker": "Sticker1.png"
+        }
+      ]
+    },
+    {
+      "name": "asfdfg",
+      "email": "aaab@gmail.com",
+      "password": "aw",
+      "confirmPassword": "aw",
+      "department": "Financial",
+      "team": "Auditing",
+      "sticker": "Sticker2.png",
+      "credits": 875,
+      "stickers": [
+        {
+          "name": "lucasfralves8888",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "dd",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "joaquim",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "joaquolikjnhgvim",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "quina",
+          "sticker": "Sticker13.png"
+        },
+        {
+          "name": "aa",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "hytgrfe",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "ujyhgtrf",
+          "sticker": "Sticker12.png"
+        },
+        {
+          "name": "mjhngfvdsx",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "joaquimvfecdws",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "rfdsxaz",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "joaquimhtgrfd",
+          "sticker": "Sticker13.png"
+        },
+        {
+          "name": "manel",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "cc",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "jyuhgtrfed",
+          "sticker": "Sticker1.png"
+        },
+        {
+          "name": "kiyujhgtrf",
+          "sticker": "Sticker11.png"
+        },
+        {
+          "name": "lucas",
+          "sticker": "Sticker15.png"
+        }
+      ]
+    },
+    {
+      "name": "joaquimhbgvfcd",
+      "email": "lucasjyhtgrffralves7@gmail.com",
+      "password": "aw",
+      "confirmPassword": "aw",
+      "department": "Human Resources",
+      "team": "Payroll",
+      "sticker": "Sticker1.png",
+      "credits": 100
+    },
+    {
+      "name": "joaquimujyhgtrf",
+      "email": "lucasfralvejyutgrfes7@gmail.com",
+      "password": "aw",
+      "confirmPassword": "aw",
+      "department": "Human Resources",
+      "team": "Compliance",
+      "sticker": "Sticker1.png",
+      "credits": 100
+    },
+    {
+      "name": "wed",
+      "email": "lucasfralvnmaes88@gmail.com",
+      "password": "aw",
+      "confirmPassword": "aw",
+      "department": "Marketing",
+      "team": "Advertising",
+      "sticker": "Sticker5.png",
       "credits": 100
     }
   ]

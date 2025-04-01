@@ -42,6 +42,9 @@ export const Register = () => {
                 "Sticker13.png",
                 "Sticker14.png",
                 "Sticker15.png",
+                "Sticker16.png",
+                "Sticker17.png",
+                "Sticker18.png",
             ];
             setStickers(stickerList);
         };
