@@ -62,14 +62,13 @@ export const Profile = () => {
             <h2>Stickers</h2>
             </div>
             <div className="full-width-bar"></div>
-            <div className="stickers-container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '20px', padding: '20px' }}>
+            <div className="stickers-container">
                 {stickers.length > 0 ? stickers.map((sticker, index) => (
-                    <div key={index} style={{ textAlign: 'center' }}>
+                    <div key={index}>
                         <img 
                             src={`/stickers/${sticker.sticker}`} 
                             alt={`Sticker de ${sticker.name}`} 
                             className="sticker-image" 
-                            style={{ width: '100px', height: '100px', objectFit: 'contain' }} 
                         />
                         <p>{sticker.name}</p>
                     </div>

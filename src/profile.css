@@ -92,8 +92,13 @@ html, body {
 .stickers-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .sticker {
@@ -107,4 +112,10 @@ html, body {
 
 .sticker:hover {
   transform: scale(1.1);
+}
+
+.sticker-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }

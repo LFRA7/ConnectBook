@@ -36,7 +36,7 @@
     margin-bottom: auto; /* Garante espaço na parte de baixo */
     width: 100%; /* Garante que o texto ocupe toda a largura disponível */
     height: calc(100% - 50px); /* Calcula a altura restante, considerando o título */
-    overflow-y: auto; /* Adiciona rolagem apenas na vertical */
+    overflow-y: auto; /* Adiciona roll apenas na vertical */
     padding: 10px; /* Espaçamento interno para o texto */
     box-sizing: border-box; /* Inclui o padding na largura e altura */
 }

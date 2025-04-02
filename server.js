@@ -2,8 +2,6 @@ import express from 'express';
 import cors from 'cors';
 import { JSONFilePreset } from 'lowdb/node';
 import jwt from 'jsonwebtoken';
-import fs from 'fs';
-import path from 'path';
 
 const app = express();
 const defaultData = { users: [] }

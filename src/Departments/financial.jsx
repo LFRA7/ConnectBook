@@ -25,7 +25,7 @@ export const Financial = () => {
                 // Filtrar apenas usuários do departamento Administration
                 const adminUsers = data.filter(user => user.department === "Financial");
                 
-                // Agrupar os usuários por equipe
+                // Agrupar os usuários por equipa
                 const groupedTeams = {};
                 adminUsers.forEach(user => {
                     if (!groupedTeams[user.team]) {
