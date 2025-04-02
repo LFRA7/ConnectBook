@@ -72,29 +72,37 @@ export const Administration = () => {
 
             <div className="container text-center">
                 <div className="row">
-                    {allTeams.map((teamName) => (
+                {allTeams.map((teamName) => (
                         <div className="col" key={teamName}>
                             <div className="card-administration" onClick={() => handleCardClick(teamName)} style={{ cursor: "pointer" }}>
-                                <div className="card-admin-title">
-                                    <h3>{teamName}</h3> {/* Título da equipa */}
+                                <div className="card-administration-title">
+                                    <h3>{teamName}</h3>
                                 </div>
                                 <div className="sticker-container-administration">
-                                    {teams[teamName] && teams[teamName].length > 0 ? (
-                                        teams[teamName].map(user => (
+                                {teams[teamName] && teams[teamName].length > 0 ? (
+                                    <>
+                                        {teams[teamName].slice(0, teams[teamName].length > 6 ? 5 : 6).map(user => ( 
                                             <div key={user.email} className="sticker-card">
-                                            <img 
-                                                key={user.email} 
-                                                src={`/stickers/${user.sticker}`} 
-                                                alt={user.name} 
-                                                className="sticker-image-administration"
-                                            />
-                                            <h5>{user.name}</h5> {/* Nome do usuário abaixo do sticker */}
+                                                <img 
+                                                    src={`/stickers/${user.sticker}`} 
+                                                    alt={user.name} 
+                                                    className="sticker-image-administration"
+                                                />
+                                                <h5>{user.name}</h5>
                                             </div>
-                                        ))
-                                    ) : (
-                                        <h5>Nenhum colaborador para esta equipa.</h5> // Exibe mensagem se não houver colaboradores
-                                    )}
-                                </div>
+                                        ))}
+                                        {teams[teamName].length > 6 && ( // Só exibe a bola +x se houver mais de 6 membros
+                                            <div className="sticker-extra-bola">
+                                                <div className="sticker-card extra-stickers">
+                                                    <h3>+{teams[teamName].length - 5}</h3> 
+                                                </div>
+                                            </div>
+                                        )}
+                                    </>
+                                ) : (
+                                    <h5>Nenhum colaborador para esta equipa.</h5>
+                                )}
+                            </div>
                             </div>
                         </div>
                     ))}

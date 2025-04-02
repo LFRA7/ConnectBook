@@ -75,25 +75,33 @@ export const Financial = () => {
                         <div className="col" key={teamName}>
                             <div className="card-financial" onClick={() => handleCardClick(teamName)} style={{ cursor: "pointer" }}>
                                 <div className="card-financial-title">
-                                    <h3>{teamName}</h3> {/* Nome da equipa */}
+                                    <h3>{teamName}</h3>
                                 </div>
                                 <div className="sticker-container-financial">
-                                    {teams[teamName] && teams[teamName].length > 0 ? (
-                                        teams[teamName].map(user => (
+                                {teams[teamName] && teams[teamName].length > 0 ? (
+                                    <>
+                                        {teams[teamName].slice(0, teams[teamName].length > 6 ? 5 : 6).map(user => ( 
                                             <div key={user.email} className="sticker-card">
-                                            <img 
-                                                key={user.email} 
-                                                src={`/stickers/${user.sticker}`} 
-                                                alt={user.name} 
-                                                className="sticker-image-financial"
-                                            />
-                                            <h5>{user.name}</h5> {/* Nome do usuário abaixo do sticker */}
+                                                <img 
+                                                    src={`/stickers/${user.sticker}`} 
+                                                    alt={user.name} 
+                                                    className="sticker-image-financial"
+                                                />
+                                                <h5>{user.name}</h5>
                                             </div>
-                                        ))
-                                    ) : (
-                                        <h5>Nenhum colaborador para esta equipa.</h5> // Exibe mensagem se não houver colaboradores
-                                    )}
-                                </div>
+                                        ))}
+                                        {teams[teamName].length > 6 && ( // Só exibe a bola +x se houver mais de 6 membros
+                                            <div className="sticker-extra-bola">
+                                                <div className="sticker-card extra-stickers">
+                                                    <h3>+{teams[teamName].length - 5}</h3> 
+                                                </div>
+                                            </div>
+                                        )}
+                                    </>
+                                ) : (
+                                    <h5>Nenhum colaborador para esta equipa.</h5>
+                                )}
+                            </div>
                             </div>
                         </div>
                     ))}

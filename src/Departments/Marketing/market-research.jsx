@@ -64,7 +64,9 @@ export const MarketResearch = () => {
                     </div>
                     <div className="col">
                     <div className="colaborators-team">
+                    <div className="colaborators-team-header">
                     <h3>Team Members</h3>
+                    </div>
                     {teamMembers.length > 0 ? (
                         <div className="team-members-list">
                             {teamMembers.map(member => (

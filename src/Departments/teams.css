@@ -41,10 +41,9 @@
     box-sizing: border-box; /* Inclui o padding na largura e altura */
 }
 
-.description-text-wrapper h6 {
-    margin: 0; /* Remove margens do texto para evitar espaços desnecessários */
+.colaborators-team-header{
+  margin-top: -10px;
 }
-
 
 .colaborators-team{
     background-color: #ffff;
@@ -61,6 +60,7 @@
     margin-left: 20px;
     margin-right: 20px;  
     margin-top: 40px;
+    overflow-y: auto; /* Adiciona roll apenas na vertical */
 }
 
 .team-members-list {
