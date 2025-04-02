@@ -13,7 +13,7 @@ html, body {
 .title-shop {
   font-size: 3rem; /* Ajusta o tamanho da fonte, se necessário */
   color: white; /* Torna o texto visível sobre o fundo azul */
-  margin-top: 50px ; /* Adiciona algum espaço no topo */
+  margin-top: 40px ; /* Adiciona algum espaço no topo */
   margin-left: 20px; /* Garante que o h1 fique bem colado à esquerda */
 }
 

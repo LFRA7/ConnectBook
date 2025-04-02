@@ -6,7 +6,7 @@ import './profile.css';
 export const Profile = () => {
     const navigate = useNavigate();
     const [stickers, setStickers] = useState([]);
-    const [userData, setUserData] = useState({ name: '' });
+    const [userData, setUserData] = useState({ name: '', stickersCount: 0 });
 
     useEffect(() => {
         const token = localStorage.getItem('token');
@@ -24,7 +24,7 @@ export const Profile = () => {
                     setStickers(data.stickers);
                 }
                 if (data.name) {
-                    setUserData({ name: data.name });
+                    setUserData({ name: data.name, stickersCount: data.stickers ? data.stickers.length : 0  });
                 }
 
             })
@@ -55,7 +55,7 @@ export const Profile = () => {
                 </nav>
             </header>
             <div className="title-profile">
-            <h1>Hello {userData.name}</h1>
+            <h1>Hello {userData.name}, you have {userData.stickersCount} Stickers</h1>
             </div>
             <div className="full-width-bar"></div>
             <div className="title-profile-h2">

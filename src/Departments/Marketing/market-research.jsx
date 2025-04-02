@@ -7,9 +7,10 @@ export const MarketResearch = () => {
     const navigate = useNavigate();
     const [description, setDescription] = useState("");
     const [teamMembers, setTeamMembers] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const membersPerPage = 8;
 
     useEffect(() => {
-        // Simulação de carregamento da descrição
         const teamDescription = "The market research team is responsible for gathering and analyzing data about consumers, competitors, and industry trends. We conduct surveys, interviews, and data analysis to provide insights that help the company make informed decisions, improve products, and develop effective marketing strategies.";
         setDescription(teamDescription);
     }, []);
@@ -24,12 +25,16 @@ export const MarketResearch = () => {
             .catch(error => console.error("Erro ao procurar Colaboradores:", error));
     }, []);
     
-
     const handleLogout = () => {
         localStorage.removeItem('token');
         navigate('/login');
     };
-    
+
+    const indexOfLastMember = currentPage * membersPerPage;
+    const indexOfFirstMember = indexOfLastMember - membersPerPage;
+    const currentMembers = teamMembers.slice(indexOfFirstMember, indexOfLastMember);
+
+    const totalPages = Math.ceil(teamMembers.length / membersPerPage);
 
     return (
         <div className="app-container">
@@ -63,23 +68,38 @@ export const MarketResearch = () => {
                         </div>
                     </div>
                     <div className="col">
-                    <div className="colaborators-team">
-                    <div className="colaborators-team-header">
-                    <h3>Team Members</h3>
-                    </div>
-                    {teamMembers.length > 0 ? (
-                        <div className="team-members-list">
-                            {teamMembers.map(member => (
-                                <div key={member.email} className="team-member">
-                                    <img src={`/stickers/${member.sticker}`} alt={member.name} className="sticker-img" />
-                                    <p>{member.name}</p>
+                        <div className="colaborators-team">
+                            <div className="colaborators-team-header">
+                                <h3>Team Members</h3>
+                            </div>
+                            {currentMembers.length > 0 ? (
+                                <div className="team-members-list">
+                                    {currentMembers.map(member => (
+                                        <div key={member.email} className="team-member">
+                                            <img src={`/stickers/${member.sticker}`} alt={member.name} className="sticker-img" />
+                                            <p>{member.name}</p>
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
+                            ) : (
+                                <p>No members found.</p>
+                            )}
+                            <nav aria-label="Page navigation" className="pagination-container">
+                                <ul className="pagination">
+                                    <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
+                                        <button className="page-link" onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}>Previous</button>
+                                    </li>
+                                    {Array.from({ length: totalPages }, (_, i) => (
+                                        <li key={i} className={`page-item ${currentPage === i + 1 ? "active" : ""}`}>
+                                            <button className="page-link" onClick={() => setCurrentPage(i + 1)}>{i + 1}</button>
+                                        </li>
+                                    ))}
+                                    <li className={`page-item ${currentPage === totalPages ? "disabled" : ""}`}>
+                                        <button className="page-link" onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}>Next</button>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
-                    ) : (
-                        <p>No members found.</p>
-                    )}
-                    </div>
                         <div className="go-back" onClick={() => navigate('/departments/marketing')}>
                             <h4>Go Back</h4>
                         </div>
