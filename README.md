@@ -1,12 +1,25 @@
-# React + Vite
+# 📚 Blip Project - ConnectBook
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**ConnectBook** é uma aplicação desenvolvida em **React+Node.js** com o objetivo de implementar uma plataforma de Stickers da empresa para promover o relacionamento entre os colaboradores num ambiente de trabalho remoto.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- [Node.js](https://nodejs.org/pt) — Ambiente de execução JavaScript no backend;
+- [React](https://react.dev/) — Biblioteca JavaScript para construção de interfaces de usuário;
+- JWT — Autenticação baseada em tokens;
+- Bootstrap — Framework CSS para criação de interfaces responsivas e estilizadas;
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✅ Funcionalidades
+
+- 🎁 Colecionar Stickers: utilizadores recebem créditos diários para abrir pacotes de stickers;
+- 👨‍💼 Stickers de Colaboradores: os stickers representam membros reais da empresa;
+- 🔁 Gestão de Duplicados: stickers repetidos podem ser convertidos em créditos adicionais;
+- 📦 Sistema de Pacotes: aquisição de stickers via pacotes aleatórios;
+- 🧑‍🤝‍🧑 Foco na Equipa: promove a interação e familiaridade entre colaboradores remotos;
+- 🔐 Autenticação Segura: login com JWT garantindo proteção dos dados do usuário;
+- 📊 Perfil de Utilizador: visualização de stickers e créditos disponíveis;
+- 🌐 Interface Intuitiva: aplicação web responsiva com experiência fluida no navegador.
