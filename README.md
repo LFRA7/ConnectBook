@@ -8,6 +8,7 @@
 
 - [Node.js](https://nodejs.org/pt) — Ambiente de execução JavaScript no backend;
 - [React](https://react.dev/) — Biblioteca JavaScript para construção de interfaces de usuário;
+- LowDB - Banco de dados utilizado;
 - JWT — Autenticação baseada em tokens;
 - Bootstrap — Framework CSS para criação de interfaces responsivas e estilizadas;
 
