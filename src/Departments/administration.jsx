@@ -54,10 +54,9 @@ export const Administration = () => {
             <header className="header">
             <nav className="nav">
                     <div className="nav-left">
-                        <button type="button" className="btn btn-light">ConnectBook</button>
+                        <button type="button" className="btn btn-light" onClick={() => navigate('/')}>ConnectBook</button>
                     </div>
                     <div className="nav-right">
-                        <NavLink to="/" className="btn btn-primary btn-lg">Home</NavLink>
                         <NavLink to="/departments" className="btn btn-primary btn-lg">Departments</NavLink>
                         <NavLink to="/profile" className="btn btn-primary btn-lg">Profile</NavLink>
                         <NavLink to="/shop" className="btn btn-primary btn-lg">Shop </NavLink>

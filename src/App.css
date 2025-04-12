@@ -107,7 +107,7 @@ h6{
   display: flex;
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   background-color: #4a90e2;
 }
@@ -150,5 +150,28 @@ h6{
   .go-button:hover {
     background-color: #357abd;
   }
+
+.second-page{
+  background-color: white;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.title-container-team-assignment {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Centraliza só na horizontal, topo na vertical */
+  width: 100%; /* Corrigido: usa a largura da viewport */
+  height: 100vh; /* Se quiser controlar a altura também */
+}
+  
+.team-assignment {
+  font-size: 64px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  color:#1a2a50;
+  }
+  
 
   

@@ -5,6 +5,12 @@ import './App.css'
 
 function App() {
   const navigate = useNavigate(); 
+  const isLoggedIn = localStorage.getItem('token'); // ou outro critério
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/login');
+  };
 
   return (
     <>
@@ -14,13 +20,18 @@ function App() {
       <header className="header">
         <nav className="nav">
          <div className="nav-left">
-         <button type="button" className="btn btn-light">ConnectBook</button>
+         <button type="button" className="btn btn-light" onClick={() => navigate('/')}>ConnectBook</button>
         </div>
         <div className="nav-right">
-          <NavLink to="/" className="btn btn-primary btn-lg">Home</NavLink>
+      {isLoggedIn ? (
+        <button onClick={handleLogout} className="btn btn-primary btn-lg">Logout</button>
+      ) : (
+        <>
           <NavLink to="/register" className="btn btn-primary btn-lg">Register</NavLink>
           <NavLink to="/login" className="btn btn-primary btn-lg">Login</NavLink>
-        </div>
+        </>
+      )}
+    </div>
         </nav>
       </header>
 
@@ -37,8 +48,12 @@ function App() {
         </div>
       </div>
 
+      <div className="second-page">
+        <div className="title-container-team-assignment">
+          <h2 className="team-assignment">Team Assignment</h2>
+        </div>
+      </div>
 
-      <h1>Team Assignment</h1>
       </div>
 
     </>
