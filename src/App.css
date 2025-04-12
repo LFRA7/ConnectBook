@@ -105,16 +105,17 @@ h6{
 /* Fundo azul cobre toda a tela */
 .home-container {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100%;
   background-color: #4a90e2;
+  overflow: hidden;
 }
 
 .home-box {
   position: relative;
-  z-index: 2; /* está acima dos stickers */
+  z-index: 1;
   background-color: #1a2a50;
   color: white;
   border-radius: 40px;
@@ -122,12 +123,10 @@ h6{
   width: 400px;
   height: 400px;
   text-align: center;
-  overflow: visible; /* <- permite que os stickers "saiam" da caixa */
 }
   
 .home-title {
   position: relative;
-  z-index: 3; /* garante que fique acima */
   color: white;
   font-size: 68px;
   font-weight: bold;
@@ -248,29 +247,30 @@ h6{
   object-fit: contain;
 }
 
-.sticker-home {
+.sticker-home-land {
   position: absolute;
-  width: 120px;
+  width: 100px;
   height: auto;
-  z-index: 1; /* <- isso joga eles para trás do conteúdo */
+  z-index: 0; /* behind .home-box */
   pointer-events: none;
+  transition: transform 0.3s;
 }
 
 .sticker-left {
-  top: -115px;  /* sobe mais */
-  left: -120px;
-  rotate: 320deg;
+  top: 140px;
+  left: 490px;
+  transform: rotate(-45deg);
 }
 
 .sticker-center {
-  top: -135px;  /* sobe mais para centralizar bem */
-  left: 115px;
+  top: 115px;
+  left: 720px;
 }
 
 .sticker-right {
-  top: -100px;
-  right: -75px;
-  rotate: 40deg;
+  top: 153px;
+  right: 495px;
+  transform: rotate(45deg);
 }
 
 

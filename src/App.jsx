@@ -62,15 +62,17 @@ function App() {
       </header>
 
       <div className="home-container">
+
+      {stickerPacks.map((sticker, index) => (
+    <img
+      key={sticker.name}
+      src={sticker.image}
+      alt={sticker.name}
+      className={`sticker-home-land ${index === 0 ? "sticker-left" : index === 1 ? "sticker-center" : "sticker-right"}`}
+    />
+  ))}
+
         <div className="home-box">
-        {stickerPacks.map((sticker, index) => (
-        <img
-          key={sticker.name}
-          src={sticker.image}
-          alt={sticker.name}
-          className={`sticker-home ${index === 0 ? "sticker-left" : index === 1 ? "sticker-center" : "sticker-right"}`}
-        />
-        ))}
           <h2 className="home-title">Get Started</h2>
         <button type="button" className="go-button" onClick={() => navigate('/register')}>
           Register
