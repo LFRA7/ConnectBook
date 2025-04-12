@@ -9,6 +9,7 @@ import { Departments } from './departments.jsx';
 import { isAuthenticated } from './auth.js';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import { AccessDenied } from './access-denied.jsx';
+import { AccessDeniedAuthenticated } from './access-denied-authenticated.jsx';
 import { Profile } from './profile.jsx';
 import { ITServices } from './Departments/ITServices.jsx';
 import { Marketing } from './Departments/marketing.jsx';
@@ -50,15 +51,20 @@ const PrivateRoute = ({ element }) => {
   return isAuthenticated() ? element : <Navigate to="/access-denied" replace/>;
 };
 
+const PublicRoute = ({ element }) => {
+  return isAuthenticated() ? <Navigate to="/access-denied-authenticated" replace /> : element;
+};
+
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/register" element={<Register />} />    
-      <Route path="/login" element={<Login />} />   
+      <Route path="/register" element={<PublicRoute element={<Register />} />} />    
+      <Route path="/login" element={<PublicRoute element={<Login />} />} />   
       <Route path="/shop" element={<PrivateRoute element={<Shop />} />} />
       <Route path="/profile" element={<PrivateRoute element={<Profile />} />} />
       <Route path="/access-denied" element={<AccessDenied />} />
+      <Route path="/access-denied-authenticated" element={<AccessDeniedAuthenticated />} />
       <Route path="/departments" element={<PrivateRoute element={<Departments />} />} />
       <Route path="/departments/it-services" element={<PrivateRoute element={<ITServices />} />} />
       <Route path="/departments/marketing" element={<PrivateRoute element={<Marketing />} />} />

@@ -22,6 +22,12 @@ function App() {
     loadStickers();
   }, []);
 
+  const stickerPacks = [
+    { name: "Sticker1", image: "/src/assets/Sticker1.png" },
+    { name: "Sticker2", image: "/src/assets/Sticker2.png" },
+    { name: "Sticker3", image: "/src/assets/Sticker3.png" },
+  ];
+
   const handleLogout = () => {
     localStorage.removeItem('token');
     navigate('/login');
@@ -38,20 +44,33 @@ function App() {
          <button type="button" className="btn btn-light" onClick={() => navigate('/')}>ConnectBook</button>
         </div>
         <div className="nav-right">
-      {isLoggedIn ? (
-        <button onClick={handleLogout} className="btn btn-primary btn-lg">Logout</button>
-      ) : (
-        <>
-          <NavLink to="/register" className="btn btn-primary btn-lg">Register</NavLink>
-          <NavLink to="/login" className="btn btn-primary btn-lg">Login</NavLink>
-        </>
-      )}
+          {isLoggedIn ? (
+          <>
+            <NavLink to="/departments" className="btn btn-primary btn-lg">Departments</NavLink>
+            <NavLink to="/profile" className="btn btn-primary btn-lg">Profile</NavLink>
+            <NavLink to="/shop" className="btn btn-primary btn-lg">Shop</NavLink>
+            <button onClick={handleLogout} className="btn btn-primary btn-lg">Logout</button>
+          </>
+          ) : (
+          <>
+            <NavLink to="/register" className="btn btn-primary btn-lg">Register</NavLink>
+            <NavLink to="/login" className="btn btn-primary btn-lg">Login</NavLink>
+          </>
+          )}
     </div>
         </nav>
       </header>
 
       <div className="home-container">
         <div className="home-box">
+        {stickerPacks.map((sticker, index) => (
+        <img
+          key={sticker.name}
+          src={sticker.image}
+          alt={sticker.name}
+          className={`sticker-home ${index === 0 ? "sticker-left" : index === 1 ? "sticker-center" : "sticker-right"}`}
+        />
+        ))}
           <h2 className="home-title">Get Started</h2>
         <button type="button" className="go-button" onClick={() => navigate('/register')}>
           Register
@@ -107,8 +126,6 @@ function App() {
           <img src="/src/assets/administration.png" alt="Administration" className="department-icon" />
           <p>Administration</p>
           </div>
-
-
 
         </div>
       </div>

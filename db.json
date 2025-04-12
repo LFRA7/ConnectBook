@@ -8,7 +8,7 @@
       "department": "Human Resources",
       "team": "Training",
       "sticker": "Sticker6.png",
-      "credits": 5495,
+      "credits": 5560,
       "stickers": [
         {
           "name": "cx",
@@ -101,6 +101,10 @@
         {
           "name": "gtrfed",
           "sticker": "Sticker16.png"
+        },
+        {
+          "name": "hygtrfed",
+          "sticker": "Sticker14.png"
         }
       ]
     },

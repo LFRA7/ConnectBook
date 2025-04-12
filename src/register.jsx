@@ -59,8 +59,18 @@ export const Register = () => {
             return;
         }
 
+        if (username.length > 10) {
+            alert("O nome de utilizador deve ter no máximo 10 caracteres.");
+            return;
+        }
+
         if (password !== confirmpassword) {
             alert("As senhas não coincidem");
+            return;
+        }
+
+        if (password.length < 6) {
+            alert("A password deve ter no mínimo 6 caracteres.");
             return;
         }
 

@@ -32,9 +32,17 @@ app.post('/users', async (req, res) => {
         return res.status(400).json({ error: 'Missing required fields' });
     }
 
+    if (name.length > 10) {
+        return res.status(400).json({ error: 'O nome de utilizador deve ter no máximo 10 caracteres.' });
+    }
+
     // Check if passwords match
     if (password !== confirmPassword) {
         return res.status(400).json({ error: 'As senhas não coincidem.' });
+    }
+
+    if (password.length < 6) {
+        return res.status(400).json({ error: 'A password deve ter no mínimo 6 caracteres.' });
     }
 
     // Check if email already exists

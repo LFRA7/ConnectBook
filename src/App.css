@@ -113,6 +113,8 @@ h6{
 }
 
 .home-box {
+  position: relative;
+  z-index: 2; /* está acima dos stickers */
   background-color: #1a2a50;
   color: white;
   border-radius: 40px;
@@ -120,16 +122,18 @@ h6{
   width: 400px;
   height: 400px;
   text-align: center;
+  overflow: visible; /* <- permite que os stickers "saiam" da caixa */
 }
   
-  /* Título "Get Started" e "OR" */
-  .home-title {
-    color: white;
-    font-size: 68px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
+.home-title {
+  position: relative;
+  z-index: 3; /* garante que fique acima */
+  color: white;
+  font-size: 68px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 
   /* Botão de cadastro */
   .go-button {
@@ -243,4 +247,31 @@ h6{
   margin-bottom: 10px;
   object-fit: contain;
 }
+
+.sticker-home {
+  position: absolute;
+  width: 120px;
+  height: auto;
+  z-index: 1; /* <- isso joga eles para trás do conteúdo */
+  pointer-events: none;
+}
+
+.sticker-left {
+  top: -115px;  /* sobe mais */
+  left: -120px;
+  rotate: 320deg;
+}
+
+.sticker-center {
+  top: -135px;  /* sobe mais para centralizar bem */
+  left: 115px;
+}
+
+.sticker-right {
+  top: -100px;
+  right: -75px;
+  rotate: 40deg;
+}
+
+
   
