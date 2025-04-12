@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import '../teams.css';
 
+
 export const MarketResearch = () => {
     const navigate = useNavigate();
     const [description, setDescription] = useState("");
@@ -68,38 +69,48 @@ export const MarketResearch = () => {
                         </div>
                     </div>
                     <div className="col">
-                        <div className="colaborators-team">
-                            <div className="colaborators-team-header">
-                                <h3>Team Members</h3>
-                            </div>
-                            {currentMembers.length > 0 ? (
-                                <div className="team-members-list">
-                                    {currentMembers.map(member => (
-                                        <div key={member.email} className="team-member">
-                                            <img src={`/stickers/${member.sticker}`} alt={member.name} className="sticker-img" />
-                                            <p>{member.name}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            ) : (
-                                <p>No members found.</p>
-                            )}
-                            <nav aria-label="Page navigation" className="pagination-container">
-                                <ul className="pagination">
-                                    <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
-                                        <button className="page-link" onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}>Previous</button>
-                                    </li>
-                                    {Array.from({ length: totalPages }, (_, i) => (
-                                        <li key={i} className={`page-item ${currentPage === i + 1 ? "active" : ""}`}>
-                                            <button className="page-link" onClick={() => setCurrentPage(i + 1)}>{i + 1}</button>
-                                        </li>
-                                    ))}
-                                    <li className={`page-item ${currentPage === totalPages ? "disabled" : ""}`}>
-                                        <button className="page-link" onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}>Next</button>
-                                    </li>
-                                </ul>
-                            </nav>
+                    <div className="colaborators-team">
+                        <div className="colaborators-team-header">
+                            <h3>Team Members</h3>
                         </div>
+                        {currentMembers.length > 0 ? (
+                            <div className="team-members-list">
+                                {currentMembers.map(member => (
+                                    <div key={member.email} className="team-member">
+                                        <img src={`/stickers/${member.sticker}`} alt={member.name} className="sticker-img" />
+                                        <p>{member.name}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <p>No members found.</p>
+                        )}
+                        <nav aria-label="Page navigation" className="pagination-container">
+                            <ul className="pagination">
+                                <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
+                                    <button 
+                                        className="page-link" 
+                                        onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                                    >
+                                        <span className="seta-esquerda" aria-hidden="true">◂</span>
+                                    </button>
+                                </li>
+                                {Array.from({ length: totalPages }, (_, i) => (
+                                    <li key={i} className={`page-item ${currentPage === i + 1 ? "active" : ""}`}>
+                                        <button className="page-link" onClick={() => setCurrentPage(i + 1)}>{i + 1}</button>
+                                    </li>
+                                ))}
+                                <li className={`page-item ${currentPage === totalPages ? "disabled" : ""}`}>
+                                    <button 
+                                        className="page-link" 
+                                        onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                                    >
+                                        <span className="seta-direita" aria-hidden="true">▸</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                         <div className="go-back" onClick={() => navigate('/departments/marketing')}>
                             <h4>Go Back</h4>
                         </div>

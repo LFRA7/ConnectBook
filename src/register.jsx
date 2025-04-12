@@ -220,18 +220,18 @@ export const Register = () => {
                             ))}
                         </div>
                         {/* Paginação */}
-                        <nav aria-label="Sticker pagination" className="mt-3">
+                        <nav aria-label="Sticker pagination" className="mt-2">
                             <ul className="pagination justify-content-center">
                                 <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
                                     <button
                                         className="page-link"
                                         onClick={(e) => {
                                             e.preventDefault();
-                                            handlePageChange(currentPage - 1);
+                                            handlePageChange(Math.max(currentPage - 1, 1));
                                         }}
                                         disabled={currentPage === 1}
                                     >
-                                        Previous
+                                        <span className="seta-esquerda-register" aria-hidden="true">◂</span>
                                     </button>
                                 </li>
                                 {Array.from({ length: totalPages }, (_, i) => (
@@ -252,15 +252,16 @@ export const Register = () => {
                                         className="page-link"
                                         onClick={(e) => {
                                             e.preventDefault();
-                                            handlePageChange(currentPage + 1);
+                                            handlePageChange(Math.min(currentPage + 1, totalPages));
                                         }}
                                         disabled={currentPage === totalPages}
                                     >
-                                        Next
+                                        <span className="seta-direita-register" aria-hidden="true">▸</span>
                                     </button>
                                 </li>
                             </ul>
                         </nav>
+
                         </div>
                         </div>
                         <button type="submit" className="register-button" onClick={addUser}>
