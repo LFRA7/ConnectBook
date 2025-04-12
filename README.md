@@ -1,6 +1,6 @@
 # 📚 Blip Project - ConnectBook
 
-**ConnectBook** é uma aplicação desenvolvida em **React+Node.js** com o objetivo de implementar uma plataforma de Stickers da empresa para promover o relacionamento entre os colaboradores num ambiente de trabalho remoto.
+**ConnectBook** é uma aplicação em desenvolvimento, supervisionada por Ricardo Soares (Blip), utilizando as tecnologias **React+NodeJS** com o objetivo de implementar uma plataforma de Stickers da empresa para promover o relacionamento entre os colaboradores num ambiente de trabalho remoto.
 
 ---
 
@@ -8,6 +8,7 @@
 
 - [Node.js](https://nodejs.org/pt) — Ambiente de execução JavaScript no backend;
 - [React](https://react.dev/) — Biblioteca JavaScript para construção de interfaces de usuário;
+- LowDB - Banco de dados utilizado;
 - JWT — Autenticação baseada em tokens;
 - Bootstrap — Framework CSS para criação de interfaces responsivas e estilizadas;
 
