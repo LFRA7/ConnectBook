@@ -22,12 +22,6 @@ function App() {
     loadStickers();
   }, []);
 
-  const stickerPacks = [
-    { name: "Sticker1", image: "/src/assets/Sticker1.png" },
-    { name: "Sticker2", image: "/src/assets/Sticker2.png" },
-    { name: "Sticker3", image: "/src/assets/Sticker3.png" },
-  ];
-
   const handleLogout = () => {
     localStorage.removeItem('token');
     navigate('/login');
@@ -62,16 +56,6 @@ function App() {
       </header>
 
       <div className="home-container">
-
-      {stickerPacks.map((sticker, index) => (
-    <img
-      key={sticker.name}
-      src={sticker.image}
-      alt={sticker.name}
-      className={`sticker-home-land ${index === 0 ? "sticker-left" : index === 1 ? "sticker-center" : "sticker-right"}`}
-    />
-  ))}
-
         <div className="home-box">
           <h2 className="home-title">Get Started</h2>
         <button type="button" className="go-button" onClick={() => navigate('/register')}>
