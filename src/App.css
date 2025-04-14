@@ -258,6 +258,7 @@ h6{
   font-size: 40px;
   color: white;
   z-index: 10; /* Garantir que o hambúrguer fique acima do slider */
+  display: none; /* Esconde o menu hamburger por padrão */
 }
 
 /* Slider Menu */
@@ -266,7 +267,7 @@ h6{
   top: 0;
   right: 0;
   height: auto;
-  width: 40%;
+  width: 50%;
   background-color: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
@@ -298,7 +299,7 @@ h6{
   background-color: #f0f0f0;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
   div .nav-right {
     display: none;
   }

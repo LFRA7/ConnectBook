@@ -1463,6 +1463,58 @@
       "team": "SEO",
       "sticker": "Sticker2.png",
       "credits": 100
+    },
+    {
+      "name": "jyhbtgvrfc",
+      "email": "lucass@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Financial",
+      "team": "Accounting",
+      "sticker": "Sticker1.png",
+      "credits": 210,
+      "stickers": [
+        {
+          "name": "joaquimhtgrfd",
+          "sticker": "Sticker13.png"
+        },
+        {
+          "name": "joaquim",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "manel",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "gbfvdcxs",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "joaquimhbtgrvfe",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "wed",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "joaquimujyhgtrf",
+          "sticker": "Sticker1.png"
+        },
+        {
+          "name": "joaquimgrfedw",
+          "sticker": "Sticker8.png"
+        },
+        {
+          "name": "htgrvfcedxs",
+          "sticker": "Sticker10.png"
+        }
+      ]
     }
   ]
 }

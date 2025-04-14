@@ -10,16 +10,15 @@ html, body {
   background-color: #4a90e2; /* Garante que o fundo azul cubra tudo */
 }
 
-.title-profile {
-  font-size: 3rem; /* Ajusta o tamanho da fonte, se necessário */
+.title-profile h1{
   color: white; /* Torna o texto visível sobre o fundo azul */
   margin-top: 40px; /* Adiciona algum espaço no topo */
   margin-left: 20px; /* Garante que o h1 fique bem colado à esquerda */
+  font-size: 30px; /* Tamanho da fonte do h1 */
 }
 
 .title-profile-h2 {
   text-align: center; /* Centraliza o texto dentro do h2 */
-  font-size: 3rem; /* Ajusta o tamanho da fonte, se necessário */
   color: #1a2a50; /* Torna o texto visível sobre o fundo azul */
   width: 100%; /* Faz com que o h2 ocupe toda a largura do contêiner */
 }
@@ -118,4 +117,12 @@ html, body {
   width: 100px;
   height: 100px;
   object-fit: contain;
+}
+
+@media only screen and (max-width: 1000px) {
+  
+.title-profile h1 {
+    font-size: 20px; /* Tamanho da fonte do h1 */
+  }
+  
 }

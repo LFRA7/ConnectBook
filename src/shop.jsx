@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom"; 
 import { useNavigate } from 'react-router-dom';
+import { Sling as Hamburger } from 'hamburger-react';
 import './shop.css';
 
 export const Shop = () => {
@@ -9,6 +10,7 @@ export const Shop = () => {
     const [selectedPack, setSelectedPack] = useState(null);
     const [userStickers, setUserStickers] = useState([]);
     const [showStickerModal, setShowStickerModal] = useState(false); //Controlo do pop up
+    const [isOpen, setOpen] = useState(false);
 
     useEffect(() => {
         const fetchShop = async () => {
@@ -116,8 +118,23 @@ export const Shop = () => {
                         <NavLink to="/profile" className="btn btn-primary btn-lg">Profile</NavLink>
                         <NavLink to="/shop" className="btn btn-primary btn-lg">Shop </NavLink>
                         <button onClick={handleLogout} className="btn btn-primary btn-lg">Logout</button>
-
                     </div>
+
+                    {/* Menu hambúrguer */}
+                   <div className="menu-hamburger" onClick={() => setOpen(!isOpen)}>
+                     <Hamburger toggled={isOpen} toggle={setOpen} color={isOpen ? "#1a2a50" : "white"}/>
+                   </div>
+        
+                   {/* Slider Menu */}
+                   {isOpen && (
+                        <div className={`slider-menu ${isOpen ? "open" : ""}`}>
+                           <NavLink to="/departments" className="dropdown-item" onClick={() => setOpen(false)}>Departments</NavLink>
+                           <NavLink to="/profile" className="dropdown-item" onClick={() => setOpen(false)}>Profile</NavLink>
+                           <NavLink to="/shop" className="dropdown-item" onClick={() => setOpen(false)}>Shop</NavLink>
+                           <button onClick={() => { handleLogout(); setOpen(false); }} className="dropdown-item">Logout</button>
+                        </div>
+                    )}
+
                 </nav>
             </header>
             <div className="title-shop">
