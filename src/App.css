@@ -69,6 +69,7 @@ h6{
   max-width: 1920px;
   margin: 0 auto;
   width: 100%;
+  position: relative;
 }
 
 .nav {
@@ -247,6 +248,74 @@ h6{
   object-fit: contain;
 }
 
+/* Estilos gerais do hamburger */
+.menu-hamburger {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+  z-index: 10; /* Garantir que o hambúrguer fique acima do slider */
+}
+
+/* Slider Menu */
+.slider-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: auto;
+  width: 40%;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 9; /* Garantir que o slider fique abaixo do hamburger */
+  transform: translateX(100%); /* Inicialmente fora da tela */
+  transition: transform 0.3s ease-in-out; /* Animação suave */
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Quando o slider estiver aberto */
+.slider-menu.open {
+  transform: translateX(0); /* Slider entra na tela */
+}
+
+/* Itens do menu */
+.dropdown-item {
+  margin-top: 20px;
+  margin-bottom: -20px;
+  display: block;
+  padding: 10px 20px;
+  color: #1a2a50;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+@media only screen and (max-width: 700px) {
+  div .nav-right {
+    display: none;
+  }
+
+  .menu-hamburger{
+    display: block; /* Mostra o menu hamburger em telas menores */
+  }
+
+  .dropdown-item {
+    display: block; /* Mostra os itens do menu dropdown */
+  }
+
+  .slider-menu {
+    display: block; /* Mostra o slider menu */
+  }
+  
+}
 
 
 
