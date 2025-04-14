@@ -247,6 +247,31 @@ h6{
   object-fit: contain;
 }
 
+.sticker-home-land {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  z-index: 0; /* behind .home-box */
+  pointer-events: none;
+  transition: transform 0.3s;
+}
+
+.sticker-left {
+  top: 140px;
+  left: 490px;
+  transform: rotate(-45deg);
+}
+
+.sticker-center {
+  top: 115px;
+  left: 720px;
+}
+
+.sticker-right {
+  top: 153px;
+  right: 495px;
+  transform: rotate(45deg);
+}
 
 
   
