@@ -56,7 +56,6 @@ function App() {
       </header>
 
       <div className="home-container">
-
         <div className="home-box">
           <h2 className="home-title">Get Started</h2>
         <button type="button" className="go-button" onClick={() => navigate('/register')}>
