@@ -1,11 +1,14 @@
 import React from 'react';
+import { useState } from 'react';
 import { NavLink } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
+import { Sling as Hamburger } from 'hamburger-react';
 import './App.css';
 import './departments.css';
 
 export const Departments = () => {
     const navigate = useNavigate();
+    const [isOpen, setOpen] = useState(false);
 
     const handleLogout = () => {
         localStorage.removeItem('token');
@@ -16,17 +19,32 @@ export const Departments = () => {
         <>
             <div className="app-container">
                 <header className="header">
-                    <nav className="nav">
-                        <div className="nav-left">
-                          <button type="button" className="btn btn-light" onClick={() => navigate('/')}>ConnectBook</button>
+                <nav className="nav">
+                    <div className="nav-left">
+                        <button type="button" className="btn btn-light" onClick={() => navigate('/')}>ConnectBook</button>
+                    </div>
+                    <div className="nav-right">
+                        <NavLink to="/departments" className="btn btn-primary btn-lg">Departments</NavLink>
+                        <NavLink to="/profile" className="btn btn-primary btn-lg">Profile</NavLink>
+                        <NavLink to="/shop" className="btn btn-primary btn-lg">Shop</NavLink>
+                        <button onClick={handleLogout} className="btn btn-primary btn-lg">Logout</button>
+                    </div>
+
+                    {/* Menu hambúrguer */}
+                   <div className="menu-hamburger" onClick={() => setOpen(!isOpen)}>
+                     <Hamburger toggled={isOpen} toggle={setOpen} color={isOpen ? "#1a2a50" : "white"}/>
+                   </div>
+        
+                   {/* Slider Menu */}
+                   {isOpen && (
+                        <div className={`slider-menu ${isOpen ? "open" : ""}`}>
+                           <NavLink to="/departments" className="dropdown-item" onClick={() => setOpen(false)}>Departments</NavLink>
+                           <NavLink to="/profile" className="dropdown-item" onClick={() => setOpen(false)}>Profile</NavLink>
+                           <NavLink to="/shop" className="dropdown-item" onClick={() => setOpen(false)}>Shop</NavLink>
+                           <button onClick={() => { handleLogout(); setOpen(false); }} className="dropdown-item">Logout</button>
                         </div>
-                        <div className="nav-right">
-                            <NavLink to="/departments" className="btn btn-primary btn-lg">Departments</NavLink>
-                            <NavLink to="/profile" className="btn btn-primary btn-lg">Profile</NavLink>
-                            <NavLink to="/shop" className="btn btn-primary btn-lg">Shop </NavLink>
-                            <button onClick={handleLogout} className="btn btn-primary btn-lg">Logout</button>
-                        </div>
-                    </nav>
+                    )}                 
+                </nav>
                 </header>
                 <div className="title-departments">
                 <h1>Departments</h1>
