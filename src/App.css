@@ -115,6 +115,7 @@ h6{
 }
 
 .home-box {
+  margin-bottom: 150px;
   position: relative;
   z-index: 1;
   background-color: #1a2a50;

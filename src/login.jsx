@@ -64,25 +64,25 @@ export const Login = () => {
             <h2 className="login-title">Welcome Back</h2>
             <form className="login-form" onSubmit={handleLogin}>
               <div className="input-group mb-3">
-                <span className="input-group-text" id="basic-addon1">@</span>
-                <input 
-                  type="email" 
-                  name="email" 
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)} 
-                  className="form-control" 
-                  aria-label="Email" 
-                  aria-describedby="basic-addon1"
-                />
+              <input 
+                placeholder="Email"
+                type="email" 
+                name="email" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)} 
+                className="go-email" 
+                aria-label="Email" 
+                aria-describedby="basic-addon1"
+              />
               </div>
               <div className="input-group mb-3">
-                <span className="input-group-text" id="inputGroup-sizing-default">Password</span>
                 <input 
+                  placeholder="Password"
                   type="password" 
                   name="password" 
                   value={password}
                   onChange={(e) => setPassword(e.target.value)} 
-                  className="form-control" 
+                  className="go-email" 
                   aria-label="Password" 
                   aria-describedby="inputGroup-sizing-default"
                 />

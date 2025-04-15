@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken';
 const app = express();
 const defaultData = { users: [] }
 const port = 3000;
-const SECRET_KEY = 'passelucas';
+const SECRET_KEY = 'tfvygbuhnijmokgvbhn';
 
 // Set up lowdb with a JSON file adapter
 const db = await JSONFilePreset('db.json', defaultData);
