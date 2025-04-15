@@ -24,12 +24,12 @@ export const Marketing = () => {
         fetch("http://localhost:3000/users")
             .then(response => response.json())
             .then(data => {
-                // Filtrar apenas usuários do departamento Marketing
-                const adminUsers = data.filter(user => user.department === "Marketing");
+                // Filtrar apenas users do departamento Marketing
+                const MarketingUsers = data.filter(user => user.department === "Marketing");
                 
-                // Agrupar os usuários por equipa
+                // Agrupar os users por equipa
                 const groupedTeams = {};
-                adminUsers.forEach(user => {
+                MarketingUsers.forEach(user => {
                     if (!groupedTeams[user.team]) {
                         groupedTeams[user.team] = [];
                     }

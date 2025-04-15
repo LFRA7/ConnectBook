@@ -30,6 +30,7 @@ function App() {
   };
 
   return (
+    <>
     <div className="app-container">
       {/* Header */}
       <header className="header">
@@ -92,14 +93,50 @@ function App() {
 
       {/* Stickers */}
       <div className="second-page">
+        <div className="title-container-team-assignment">
+          <h2 className="team-assignment">Team Assignment</h2>
+        </div>
         <div className="stickers-container">
           {stickers.map((sticker, index) => (
             <img key={index} src={`/stickers/${sticker}`} alt={`Sticker ${index + 1}`} className="sticker-home" />
           ))}
         </div>
+        <div className="title-container-home-department">
+          <h2 className="home-department">Department</h2>
+        </div>
+        
+        <div className="departments-container-home">
+          <div className="department-card-home">
+            <img src="/src/assets/human_resources.png" alt="Human Resources" className="department-icon-home" />
+            <p>Human Resources</p>
+          </div>
+          
+          <div className="department-card-home">
+            <img src="/src/assets/financial.png" alt="Financial" className="department-icon" />
+            <p>Financial</p>
+          </div>
+
+          <div className="department-card-home">
+            <img src="/src/assets/it_services.png" alt="IT Services" className="department-icon" />
+            <p>IT Services</p>
+          </div>
+
+          <div className="department-card-home">
+            <img src="/src/assets/marketing.png" alt="Marketing" className="department-icon" />
+            <p>Marketing</p>
+          </div>
+
+          <div className="department-card-home">
+          <img src="/src/assets/administration.png" alt="Administration" className="department-icon" />
+          <p>Administration</p>
+          </div>
+
+        </div>
       </div>
     </div>
+    </>
   );
 }
+
 
 export default App;
