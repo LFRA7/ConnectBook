@@ -56,6 +56,9 @@ export const Marketing = () => {
                     if (data.stickers) {
                         setUserStickers(data.stickers);
                     }
+                    if (data.name) {
+                        setUserData({ name: data.name});
+                    }
                 })
                 .catch(error => console.error('Erro ao procurar perfil:', error));
         }
@@ -76,7 +79,7 @@ export const Marketing = () => {
     const ownedUsers = isCompanyMode
         ? totalUsers
         : allUsersInDepartment.filter(user =>
-            userStickers.some(s => s.sticker === user.sticker)
+            userStickers.some(s => s.name === user.name)
         ).length;
 
     return (
@@ -119,8 +122,8 @@ export const Marketing = () => {
                         const visibleUsers = isCompanyMode
                             ? teamUsers
                             : teamUsers.filter(user =>
-                                userStickers.some(s => s.sticker === user.sticker)
-                            );
+                                userStickers.some(s => s.name === user.name)
+                                );
 
                         return (
                             <div className="col" key={teamName}>
