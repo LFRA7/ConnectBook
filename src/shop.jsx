@@ -147,15 +147,22 @@ export const Shop = () => {
             <div className="full-width-bar"></div>
             <div className="packs">
                 {packs.map((pack, index) => (
-                <div 
-                    key={index} 
-                    className="pack-container" 
-                    onClick={() => handlePurchase(pack)} 
-                    style={{ cursor: "pointer" }}
-                    >
-                    <img src={pack.image} alt={pack.name} className="packs-item" />
-                    <span className="price-tag">{pack.price}</span>
-                </div>
+                <div key={index} className="pack-container">
+                <img 
+                  src={pack.image} 
+                  alt={pack.name} 
+                  className="packs-item" 
+                  onClick={() => handlePurchase(pack)} 
+                  style={{ cursor: "pointer" }}
+                />
+                <span 
+                  className="price-tag" 
+                  onClick={() => handlePurchase(pack)} 
+                  style={{ cursor: "pointer" }}
+                >
+                  {pack.price}
+                </span>
+              </div>
                 ))}
       {selectedPack && (
         <div className="modal">

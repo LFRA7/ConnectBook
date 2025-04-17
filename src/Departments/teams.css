@@ -141,3 +141,22 @@
   background-color: #4a90e2;
   color: white;
 }
+
+@media only screen and (max-width: 1000px) {
+  .description-team{
+    width: 90%;
+    height: 400px;
+  }
+
+  .colaborators-team{
+    width: 90%;
+    height: 400px;
+  }
+
+  .go-back{
+    width: 90%;
+    height: 50px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+}
