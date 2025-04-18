@@ -703,6 +703,26 @@
       "team": "Market Research",
       "sticker": "Sticker18.png",
       "credits": 100
+    },
+    {
+      "name": "iujyhgt",
+      "email": "lucasfralrfedwves7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Administration",
+      "team": "Logistics",
+      "sticker": "Sticker4.png",
+      "credits": 100
+    },
+    {
+      "name": "joaquimujn",
+      "email": "lucasfrbtgvalves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Administration",
+      "team": "Facilities Management",
+      "sticker": "Sticker9.png",
+      "credits": 100
     }
   ]
 }
