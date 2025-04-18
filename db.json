@@ -8,7 +8,7 @@
       "department": "Marketing",
       "team": "SEO",
       "sticker": "Sticker4.png",
-      "credits": 23055,
+      "credits": 23405,
       "stickers": [
         {
           "name": "joaquim22",
@@ -153,6 +153,38 @@
         {
           "name": "jyhtg",
           "sticker": "Sticker5.png"
+        },
+        {
+          "name": "tgrvc",
+          "sticker": "Sticker13.png"
+        },
+        {
+          "name": "hytg",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "gtrfs",
+          "sticker": "Sticker11.png"
+        },
+        {
+          "name": "awfr",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "ytgr",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "rvfecdx",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "btvrfce",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "htgrfd",
+          "sticker": "Sticker15.png"
         }
       ]
     },
@@ -534,6 +566,126 @@
       "department": "Marketing",
       "team": "Market Research",
       "sticker": "Sticker5.png",
+      "credits": 100
+    },
+    {
+      "name": "hytg",
+      "email": "lucrfasfralves7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker4.png",
+      "credits": 100
+    },
+    {
+      "name": "gtrfs",
+      "email": "lucasfdedralves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker11.png",
+      "credits": 100
+    },
+    {
+      "name": "awfr",
+      "email": "ale78464@alunos.utad.pt",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker6.png",
+      "credits": 100
+    },
+    {
+      "name": "tgrvc",
+      "email": "lucasdeedfralves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker13.png",
+      "credits": 100
+    },
+    {
+      "name": "btvrfce",
+      "email": "ccfee@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker9.png",
+      "credits": 100
+    },
+    {
+      "name": "ytgr",
+      "email": "lucaedwssfralves7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker2.png",
+      "credits": 100
+    },
+    {
+      "name": "gtrfede",
+      "email": "lucasfrarfelves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker5.png",
+      "credits": 100
+    },
+    {
+      "name": "mujynhtbg",
+      "email": "lucasfralvecees88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker10.png",
+      "credits": 100
+    },
+    {
+      "name": "htgrf",
+      "email": "lucasdewedfralves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker11.png",
+      "credits": 100
+    },
+    {
+      "name": "ujyhtgf",
+      "email": "lucasfraceelves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker9.png",
+      "credits": 100
+    },
+    {
+      "name": "htgrfd",
+      "email": "lucadefsfralves7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker15.png",
+      "credits": 100
+    },
+    {
+      "name": "rvfecdx",
+      "email": "ldwdwucasfralves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker18.png",
       "credits": 100
     }
   ]

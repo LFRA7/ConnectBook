@@ -12,7 +12,7 @@ export const MarketResearch = () => {
     const [isCompanyMode, setIsCompanyMode] = useState(true); // Modo empresa/pessoal
     const [userStickers, setUserStickers] = useState([]); // Stickers do user
 
-    const membersPerPage = 8;
+    const membersPerPage = 8; // Número de membros por página
 
     useEffect(() => {
         const teamDescription = "The market research team is responsible for gathering and analyzing data about consumers, competitors, and industry trends. We conduct surveys, interviews, and data analysis to provide insights that help the company make informed decisions, improve products, and develop effective marketing strategies.";
@@ -138,6 +138,7 @@ export const MarketResearch = () => {
 
                             <nav aria-label="Page navigation" className="pagination-container fixed-pagination">
                                 <ul className="pagination">
+                                    {/* Seta da esquerda */}
                                     <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
                                         <button
                                             className="page-link"
@@ -146,11 +147,66 @@ export const MarketResearch = () => {
                                             <span className="seta-esquerda" aria-hidden="true">◂</span>
                                         </button>
                                     </li>
-                                    {Array.from({ length: totalPages }, (_, i) => (
-                                        <li key={i} className={`page-item ${currentPage === i + 1 ? "active" : ""}`}>
-                                            <button className="page-link" onClick={() => setCurrentPage(i + 1)}>{i + 1}</button>
+
+                                    {/* Número 1 */}
+                                    <li className={`page-item ${currentPage === 1 ? "active" : ""}`}>
+                                        <button
+                                            className="page-link"
+                                            onClick={() => setCurrentPage(1)}
+                                        >
+                                            1
+                                        </button>
+                                    </li>
+
+                                    {/* Reticências antes dos números do meio */}
+                                    {currentPage > 3 && totalPages > 5 && (
+                                        <li className="page-item disabled">
+                                            <span className="page-link">...</span>
                                         </li>
-                                    ))}
+                                    )}
+
+                                    {/* Números do meio */}
+                                    {Array.from({ length: totalPages }, (_, i) => i + 1)
+                                        .filter(page =>
+                                            page !== 1 && // Já exibimos o número 1
+                                            page !== totalPages && // O último número será exibido separadamente
+                                            (totalPages <= 5 || // Se totalPages <= 5, exibe todos os números
+                                                (page >= currentPage - 1 && page <= currentPage + 1)) // Caso contrário, exibe 3 números ao redor da página atual
+                                        )
+                                        .map(page => (
+                                            <li
+                                                key={page}
+                                                className={`page-item ${currentPage === page ? "active" : ""}`}
+                                            >
+                                                <button
+                                                    className="page-link"
+                                                    onClick={() => setCurrentPage(page)}
+                                                >
+                                                    {page}
+                                                </button>
+                                            </li>
+                                        ))}
+
+                                    {/* Reticências depois dos números do meio */}
+                                    {currentPage < totalPages - 2 && totalPages > 5 && (
+                                        <li className="page-item disabled">
+                                            <span className="page-link">...</span>
+                                        </li>
+                                    )}
+
+                                    {/* Último número */}
+                                    {totalPages > 1 && (
+                                        <li className={`page-item ${currentPage === totalPages ? "active" : ""}`}>
+                                            <button
+                                                className="page-link"
+                                                onClick={() => setCurrentPage(totalPages)}
+                                            >
+                                                {totalPages}
+                                            </button>
+                                        </li>
+                                    )}
+
+                                    {/* Seta da direita */}
                                     <li className={`page-item ${currentPage === totalPages ? "disabled" : ""}`}>
                                         <button
                                             className="page-link"
