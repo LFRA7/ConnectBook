@@ -23,8 +23,8 @@ export const MarketResearch = () => {
         fetch("http://localhost:3000/users")
             .then(response => response.json())
             .then(data => {
-                const advertisingTeam = data.filter(user => user.department === "Marketing" && user.team === "Market Research");
-                setTeamMembers(advertisingTeam);
+                const MarketResearchTeam = data.filter(user => user.department === "Marketing" && user.team === "Market Research");
+                setTeamMembers(MarketResearchTeam);
             })
             .catch(error => console.error("Erro ao procurar Colaboradores:", error));
     }, []);

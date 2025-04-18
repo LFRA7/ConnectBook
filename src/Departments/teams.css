@@ -77,6 +77,7 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  min-height: 300px; /* Define uma altura mínima para o contêiner */
 }
 
 .team-member {
@@ -182,6 +183,10 @@
     font-size: 18px;
     margin: auto;
     font-weight: bold;
+  }
+
+  .team-members-list {
+    min-height: 620px; /* Define uma altura mínima para o contêiner */
   }
 }
 
