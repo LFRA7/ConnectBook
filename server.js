@@ -111,20 +111,17 @@ app.get('/shop', authenticateToken, (req, res) => {
 });
 
 // Função para obter uma lista de stickers disponíveis
-const getAvailableStickers = (currentUserEmail) => {
-
-    // Filtrar Usuários, exceto o próprio utilizador
-    return db.data.users
-        .filter(user => user.email !== currentUserEmail) // Exclui o próprio usuário
-        .map(user => ({
-            name: user.name,
-            sticker: user.sticker // Usa o sticker do usuário
-        }));
+const getAvailableStickers = () => {
+    // Retorna todos os stickers disponíveis, incluindo o do próprio utilizador
+    return db.data.users.map(user => ({
+        name: user.name,
+        sticker: user.sticker // Usa o sticker do usuário
+    }));
 };
 
 // POST endpoint para processar a compra de um pack e atribuir stickers
 app.post('/buy-pack', authenticateToken, async (req, res) => {
-    const { packPrice, stickerCount } = req.body; // Preço e quantidade de stickers no pack
+    const { packPrice, stickerCount } = req.body;
 
     const user = db.data.users.find(u => u.email === req.user.email);
     if (!user) {
@@ -139,7 +136,7 @@ app.post('/buy-pack', authenticateToken, async (req, res) => {
     user.credits -= packPrice;
 
     // Obter stickers disponíveis e escolher aleatoriamente
-    const availableStickers = getAvailableStickers(user.email);
+    const availableStickers = getAvailableStickers(); // Agora inclui o próprio utilizador
     if (availableStickers.length === 0) {
         return res.status(500).json({ error: "Nenhum sticker disponível para compra." });
     }
@@ -152,7 +149,6 @@ app.post('/buy-pack', authenticateToken, async (req, res) => {
         .sort(() => Math.random() - 0.5) // Embaralha
         .slice(0, stickerCount) // Seleciona a quantidade pedida
         .forEach(sticker => {
-            // Verifica se o utilizador já tem o sticker pelo nome
             const alreadyHasSticker = user.stickers?.some(s => s.name === sticker.name);
             
             if (alreadyHasSticker) {
@@ -162,13 +158,11 @@ app.post('/buy-pack', authenticateToken, async (req, res) => {
             }
         });
 
-    // Adiciona os novos stickers ao perfil do usuário
     if (!user.stickers) {
         user.stickers = [];
     }
     user.stickers.push(...newStickers);
 
-    // Adiciona os créditos pelos stickers duplicados
     user.credits += extraCredits;
 
     await db.write();
