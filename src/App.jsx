@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"; // Corrigir para 'react-router-dom'
+import { NavLink } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';

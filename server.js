@@ -111,7 +111,7 @@ app.get('/shop', authenticateToken, (req, res) => {
 });
 
 // Função para obter uma lista de stickers disponíveis
-const getAvailableStickers = (currentUserEmail) => {7
+const getAvailableStickers = (currentUserEmail) => {
 
     // Filtrar Usuários, exceto o próprio utilizador
     return db.data.users

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom"; 
 import { useNavigate } from 'react-router-dom';
+import { Sling as Hamburger } from 'hamburger-react';
 import '../app.css';
 import './marketing.css';
 
@@ -8,6 +9,7 @@ export const Marketing = () => {
     const [teams, setTeams] = useState([]);
     const [isCompanyMode, setIsCompanyMode] = useState(true); // true = empresa, false = pessoal
     const [userStickers, setUserStickers] = useState([]);
+    const [isOpen, setOpen] = useState(false);
 
     const [allTeams] = useState([
         "Social Media",
@@ -95,6 +97,21 @@ export const Marketing = () => {
                         <NavLink to="/shop" className="btn btn-primary btn-lg">Shop</NavLink>
                         <button onClick={handleLogout} className="btn btn-primary btn-lg">Logout</button>
                     </div>
+
+                    {/* Menu hambúrguer */}
+                    <div className="menu-hamburger" onClick={() => setOpen(!isOpen)}>
+                        <Hamburger toggled={isOpen} toggle={setOpen} color={isOpen ? "#1a2a50" : "white"}/>
+                    </div>
+                            
+                    {/* Slider Menu */}
+                    {isOpen && (
+                        <div className={`slider-menu ${isOpen ? "open" : ""}`}>
+                            <NavLink to="/departments" className="dropdown-item" onClick={() => setOpen(false)}>Departments</NavLink>
+                            <NavLink to="/profile" className="dropdown-item" onClick={() => setOpen(false)}>Profile</NavLink>
+                            <NavLink to="/shop" className="dropdown-item" onClick={() => setOpen(false)}>Shop</NavLink>
+                            <button onClick={() => { handleLogout(); setOpen(false); }} className="dropdown-item">Logout</button>
+                        </div>
+                    )}
                 </nav>
             </header>
 
@@ -138,7 +155,7 @@ export const Marketing = () => {
                                     <div className="sticker-container-marketing">
                                     {visibleUsers.length > 0 ? (
                                     <>
-                                        {visibleUsers.slice(0, 5).map(user => (
+                                        {visibleUsers.slice(0, visibleUsers.length > 6 ? 5 : 6).map(user => (
                                             <div key={user.email} className="sticker-card">
                                                 <img
                                                     src={`/stickers/${user.sticker}`}
@@ -149,7 +166,7 @@ export const Marketing = () => {
                                             </div>
                                         ))}
 
-                                        {visibleUsers.length > 5 && (
+                                        {visibleUsers.length > 6 && (
                                             <div className="sticker-extra-bola">
                                                 <div className="sticker-card extra-stickers">
                                                     <h3>+{visibleUsers.length - 5}</h3>
