@@ -152,8 +152,8 @@ app.post('/buy-pack', authenticateToken, async (req, res) => {
         .sort(() => Math.random() - 0.5) // Embaralha
         .slice(0, stickerCount) // Seleciona a quantidade pedida
         .forEach(sticker => {
-            // Verifica se o utilizador já tem o sticker
-            const alreadyHasSticker = user.stickers?.some(s => s.sticker === sticker.sticker);
+            // Verifica se o utilizador já tem o sticker pelo nome
+            const alreadyHasSticker = user.stickers?.some(s => s.name === sticker.name);
             
             if (alreadyHasSticker) {
                 extraCredits += 25; // Se já tiver, ganha 25 créditos
