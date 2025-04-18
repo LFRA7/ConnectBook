@@ -26,10 +26,9 @@
     margin-top: 20px;
 }
 
-.card-financial-title {
-    font-size: 36px;
+.card-financial-title h3{
+    font-size: 26px;
     font-weight: bold;
-    color: #2c3e50;
     text-align: center;
     margin-top: -10px;
 }

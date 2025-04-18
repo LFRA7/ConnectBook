@@ -8,7 +8,7 @@
       "department": "Marketing",
       "team": "SEO",
       "sticker": "Sticker4.png",
-      "credits": 21965,
+      "credits": 23055,
       "stickers": [
         {
           "name": "joaquim22",
@@ -137,6 +137,22 @@
         {
           "name": "gtrfc",
           "sticker": "Sticker1.png"
+        },
+        {
+          "name": "sao",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "grtfedw",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "gtrf",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "jyhtg",
+          "sticker": "Sticker5.png"
         }
       ]
     },
@@ -473,6 +489,46 @@
     {
       "name": "vfrcd",
       "email": "lucasfrawwlves7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker5.png",
+      "credits": 100
+    },
+    {
+      "name": "sao",
+      "email": "lucasfrrfecdalves7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker6.png",
+      "credits": 100
+    },
+    {
+      "name": "gtrf",
+      "email": "lucasfraefclves7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker4.png",
+      "credits": 100
+    },
+    {
+      "name": "grtfedw",
+      "email": "lucrvfedasfralves7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker6.png",
+      "credits": 100
+    },
+    {
+      "name": "jyhtg",
+      "email": "lucasfrgralves7@gmail.com",
       "password": "awawaw",
       "confirmPassword": "awawaw",
       "department": "Marketing",

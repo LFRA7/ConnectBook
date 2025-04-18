@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './Register.css';
 import { useNavigate } from 'react-router-dom';
 import { NavLink } from "react-router-dom"; 
+import { Sling as Hamburger } from 'hamburger-react';
 
 export const Register = () => {
     const [username, setUsername] = useState('');
@@ -14,6 +15,7 @@ export const Register = () => {
     const [selectedSticker, setSelectedSticker] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);
     const stickersPerPage = 6;
+    const [isOpen, setOpen] = useState(false);
     const navigate = useNavigate();
 
     const departmentTeams = {
@@ -145,6 +147,18 @@ export const Register = () => {
                         <NavLink to="/register" className="btn btn-primary btn-lg">Register</NavLink>
                         <NavLink to="/login" className="btn btn-primary btn-lg">Login</NavLink>
                     </div>
+                    {/* Menu hambúrguer */}
+                    <div className="menu-hamburger" onClick={() => setOpen(!isOpen)}>
+                        <Hamburger toggled={isOpen} toggle={setOpen} color={isOpen ? "#1a2a50" : "white"}/>
+                    </div>
+                            
+                    {/* Slider Menu */}
+                    {isOpen && (
+                        <div className={`slider-menu ${isOpen ? "open" : ""}`}>
+                            <NavLink to="/register" className="dropdown-item" onClick={() => setOpen(false)}>Register</NavLink>
+                            <NavLink to="/login" className="dropdown-item" onClick={() => setOpen(false)}>Login</NavLink>
+                        </div>
+                    )}
                 </nav>
             </header>
             <div className="register-container">

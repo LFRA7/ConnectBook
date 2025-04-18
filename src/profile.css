@@ -119,10 +119,10 @@ html, body {
   object-fit: contain;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 600px) {
   
 .title-profile h1 {
-    font-size: 20px; /* Tamanho da fonte do h1 */
+    font-size: 25px; /* Tamanho da fonte do h1 */
   }
   
 }

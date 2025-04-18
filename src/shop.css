@@ -10,8 +10,8 @@ html, body {
   background-color: #4a90e2; /* Garante que o fundo azul cubra tudo */
 }
 
-.title-shop {
-  font-size: 3rem; /* Ajusta o tamanho da fonte, se necessário */
+.title-shop h1{
+  font-size: 35px; /* Ajusta o tamanho da fonte, se necessário */
   color: white; /* Torna o texto visível sobre o fundo azul */
   margin-top: 40px ; /* Adiciona algum espaço no topo */
   margin-left: 20px; /* Garante que o h1 fique bem colado à esquerda */
@@ -191,6 +191,12 @@ html, body {
     font-weight: bold;
     font-size: 25px;
     border-radius: 40px 0px 40px 0px; /* Arredonda apenas o canto inferior direito */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .title-shop h1{
+    font-size: 25px; /* Ajusta o tamanho da fonte, se necessário */
   }
 }
 

@@ -1,13 +1,22 @@
 .title-teams{
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    width: 100%;
-    margin-top: 40px;
-    color: #ffffff;
-    font-weight: bold;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  width: 100%;
+  margin-top: 40px;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 10px;
   }
+
+  /* Flex container para alinhar h1 e botão lado a lado */
+.title-row-teams {
+  display: flex;
+  align-items: center;
+  gap: 42vw; /* Espaçamento entre o título e o botão 35vw- 35% da tela*/
+}
 
   .description-team {
     background-color: #ffff;
@@ -46,7 +55,7 @@
     color: black;
     text-align: center;
     width: 600px;
-    height: 410px;
+    height: 430px;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -56,6 +65,11 @@
     margin-left: 20px;
     margin-right: 20px;  
     margin-top: 30px;
+}
+
+.colaborators-team-header h3{
+  margin-top: -5px;
+  margin-bottom: 20px;
 }
 
 .team-members-list {
@@ -94,7 +108,7 @@
     font-weight: bold;
     margin-left: 250px;
     margin-right: 20px;  
-    margin-top: 40px;
+    margin-top: 20px;
     cursor: pointer;
     text-align: center;
 }
@@ -150,7 +164,7 @@
 
   .colaborators-team{
     width: 90%;
-    height: 400px;
+    height: 750px;
   }
 
   .go-back{
@@ -158,5 +172,15 @@
     height: 50px;
     margin-left: 20px;
     margin-bottom: 20px;
+  }
+
+  .title-row-teams {
+    gap: 5vw; /* Espaçamento entre o título e o botão 35vw- 35% da tela*/
+  }
+
+  .title-teams h1{
+    font-size: 18px;
+    margin: auto;
+    font-weight: bold;
   }
 }
