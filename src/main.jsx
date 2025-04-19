@@ -80,7 +80,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/departments/administration/Customer Services" element={<PrivateRoute element={<CustomerServices />} />} />
       <Route path="/departments/administration/Legal" element={<PrivateRoute element={<Legal />} />} />
       <Route path="/departments/administration/Facilities Management" element={<PrivateRoute element={<FacilitiesManagement />} />} />
-      <Route path="/departments/administration/Logistics" element={<PrivateRoute element={<Logistics />} />} />~
+      <Route path="/departments/administration/Logistics" element={<PrivateRoute element={<Logistics />} />} />
       <Route path="/departments/administration/Office Management" element={<PrivateRoute element={<OfficeManagement />} />} />
       <Route path="/departments/administration/Procurement" element={<PrivateRoute element={<Procurement />} />} />
       <Route path="/departments/human-resources/Compliance" element={<PrivateRoute element={<Compliance />} />} />

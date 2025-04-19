@@ -8,7 +8,7 @@
       "department": "Marketing",
       "team": "SEO",
       "sticker": "Sticker4.png",
-      "credits": 25230,
+      "credits": 28690,
       "stickers": [
         {
           "name": "joaquim22",
@@ -201,6 +201,38 @@
         {
           "name": "htgrf",
           "sticker": "Sticker11.png"
+        },
+        {
+          "name": "joaquimujn",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "iujyhgt",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "jhtg",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "uuuubgb",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "mjhngb",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "joaquimnhg",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "hbgfvd",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "htgfre",
+          "sticker": "Sticker4.png"
         }
       ]
     },
@@ -722,6 +754,86 @@
       "department": "Administration",
       "team": "Facilities Management",
       "sticker": "Sticker9.png",
+      "credits": 100
+    },
+    {
+      "name": "uuuubgb",
+      "email": "lucasfraveclves7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "IT Services",
+      "team": "Support",
+      "sticker": "Sticker6.png",
+      "credits": 100
+    },
+    {
+      "name": "jhtg",
+      "email": "lucewasfralves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "IT Services",
+      "team": "Data Analytics",
+      "sticker": "Sticker4.png",
+      "credits": 100
+    },
+    {
+      "name": "joaquimnhg",
+      "email": "lucasxsafralves7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Human Resources",
+      "team": "Recruitment",
+      "sticker": "Sticker5.png",
+      "credits": 100
+    },
+    {
+      "name": "mjhngb",
+      "email": "lucasfrawelves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Human Resources",
+      "team": "Compliance",
+      "sticker": "Sticker18.png",
+      "credits": 100
+    },
+    {
+      "name": "jyhgbf",
+      "email": "lucasfrwqalves7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "IT Services",
+      "team": "Cloud Services",
+      "sticker": "Sticker11.png",
+      "credits": 100
+    },
+    {
+      "name": "hbgfvd",
+      "email": "lucasfralvewds88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "IT Services",
+      "team": "Development",
+      "sticker": "Sticker4.png",
+      "credits": 100
+    },
+    {
+      "name": "ngbfvd",
+      "email": "lucasfralsaves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Financial",
+      "team": "Auditing",
+      "sticker": "Sticker5.png",
+      "credits": 100
+    },
+    {
+      "name": "htgfre",
+      "email": "lucaqsfralves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Financial",
+      "team": "Accounting",
+      "sticker": "Sticker4.png",
       "credits": 100
     }
   ]
