@@ -57,8 +57,19 @@ app.post('/users', async (req, res) => {
         return res.status(400).json({ error: 'Nome de usuário já está em uso.' });
     }
 
+    // Random rarity based on weighted probability
+    function getRandomRarity() {
+        const rand = Math.random();
+        if (rand < 0.50) return 'common';       // 50%
+        else if (rand < 0.75) return 'rare';    // 25%
+        else if (rand < 0.93) return 'epic';    // 18%
+        else return 'legendary';                // 7%
+    }
+
+    const rarity = getRandomRarity();
+
     // Add the new user to the database
-    const user = { name, email, password, confirmPassword, department, team, sticker, credits: 100 };
+    const user = { name, email, password, confirmPassword, department, team, sticker, rarity, credits: 100 };
     db.data.users.push(user);
     await db.write();
     res.status(201).json(user);

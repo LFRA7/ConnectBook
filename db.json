@@ -8,7 +8,7 @@
       "department": "Marketing",
       "team": "SEO",
       "sticker": "Sticker4.png",
-      "credits": 28690,
+      "credits": 29190,
       "stickers": [
         {
           "name": "joaquim22",
@@ -233,6 +233,14 @@
         {
           "name": "htgfre",
           "sticker": "Sticker4.png"
+        },
+        {
+          "name": "jyhgbf",
+          "sticker": "Sticker11.png"
+        },
+        {
+          "name": "ngbfvd",
+          "sticker": "Sticker5.png"
         }
       ]
     },
@@ -260,7 +268,7 @@
       "department": "Marketing",
       "team": "Branding",
       "sticker": "Sticker11.png",
-      "credits": 120,
+      "credits": 70,
       "stickers": [
         {
           "name": "joaquim",
@@ -269,6 +277,58 @@
         {
           "name": "lucas",
           "sticker": "Sticker4.png"
+        },
+        {
+          "name": "rvfecdx",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "jhtg",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "grtfed",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "nntgb",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "aaafed",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "likuyjhgtr",
+          "sticker": "Sticker12.png"
+        },
+        {
+          "name": "hbgfvd",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "iujyhgt",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "mjhngb",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "yhbtgvf",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "mujynhtbg",
+          "sticker": "Sticker10.png"
+        },
+        {
+          "name": "ujmjoaquim",
+          "sticker": "Sticker12.png"
+        },
+        {
+          "name": "hbgtfvr",
+          "sticker": "Sticker9.png"
         }
       ]
     },
@@ -834,6 +894,141 @@
       "department": "Financial",
       "team": "Accounting",
       "sticker": "Sticker4.png",
+      "credits": 100
+    },
+    {
+      "name": "mjhgbngb",
+      "email": "lucasfraedlves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker6.png",
+      "credits": 100
+    },
+    {
+      "name": "jhnbgfvd",
+      "email": "lucasfragfvlves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker15.png",
+      "credits": 0,
+      "stickers": [
+        {
+          "name": "mjnhg",
+          "sticker": "Sticker15.png"
+        },
+        {
+          "name": "yhbgtvf",
+          "sticker": "Sticker12.png"
+        },
+        {
+          "name": "tgrvc",
+          "sticker": "Sticker13.png"
+        },
+        {
+          "name": "likuyjhgtr",
+          "sticker": "Sticker12.png"
+        },
+        {
+          "name": "yhbtgvf",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "joaquim22",
+          "sticker": "Sticker11.png"
+        },
+        {
+          "name": "nntgb",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "joaquimuhn",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "lyjnhbgvf",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "sao",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "rfed",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "joaquimujn",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "rvfecdx",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "hbgtfvr",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "gtrfs",
+          "sticker": "Sticker11.png"
+        },
+        {
+          "name": "lucas",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "joaquim",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "ujyhtgf",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "ytgr",
+          "sticker": "Sticker2.png"
+        },
+        {
+          "name": "mjnhgfv",
+          "sticker": "Sticker16.png"
+        }
+      ]
+    },
+    {
+      "name": "lucasrari",
+      "email": "lucasfragvfdslves7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Social Media",
+      "sticker": "Sticker7.png",
+      "rarity": "common",
+      "credits": 100
+    },
+    {
+      "name": "nhgbf",
+      "email": "luwxscasfralves7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "IT Services",
+      "team": "Development",
+      "sticker": "Sticker5.png",
+      "rarity": "common",
+      "credits": 100
+    },
+    {
+      "name": "hbgfv",
+      "email": "lucasdeedfralves7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Financial",
+      "team": "Accounting",
+      "sticker": "Sticker4.png",
+      "rarity": "rare",
       "credits": 100
     }
   ]
