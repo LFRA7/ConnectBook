@@ -158,6 +158,27 @@ export const Shop = () => {
                             <h2>Resultado da Compra</h2>
                             <div className="sticker-columns">
                                 <div className="sticker-section">
+                                    <h3>Novos Stickers</h3>
+                                    {newStickers.length === 0 ? (
+                                        <p>Não recebeu novos stickers.</p>
+                                    ) : (
+                                        <div className="sticker-grid">
+                                            {newStickers.map((sticker, index) => (
+                                                <div key={index} className={`sticker-box border-${sticker.rarity || 'common'}`}>
+                                                    <img
+                                                        src={`/stickers/${sticker.sticker}`}
+                                                        alt={`Sticker de ${sticker.name}`}
+                                                        className="sticker-item"
+                                                    />
+                                                    <p>{sticker.name}</p>
+                                                    <p className="rarity-label">{sticker.rarity?.toUpperCase() || 'COMMON'}</p>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+
+                                <div className="sticker-section">
                                     <h3>Stickers Repetidos</h3>
                                     {repeatedStickers.length === 0 ? (
                                         <p>Nenhum sticker repetido.</p>
@@ -178,27 +199,6 @@ export const Shop = () => {
                                     )}
                                     {repeatedStickers.length > 0 && (
                                         <p className="extra-credits">Créditos recebidos: +{repeatedStickers.length * 25}</p>
-                                    )}
-                                </div>
-
-                                <div className="sticker-section">
-                                    <h3>Novos Stickers</h3>
-                                    {newStickers.length === 0 ? (
-                                        <p>Não recebeu novos stickers.</p>
-                                    ) : (
-                                        <div className="sticker-grid">
-                                            {newStickers.map((sticker, index) => (
-                                                <div key={index} className={`sticker-box border-${sticker.rarity || 'common'}`}>
-                                                    <img
-                                                        src={`/stickers/${sticker.sticker}`}
-                                                        alt={`Sticker de ${sticker.name}`}
-                                                        className="sticker-item"
-                                                    />
-                                                    <p>{sticker.name}</p>
-                                                    <p className="rarity-label">{sticker.rarity?.toUpperCase() || 'COMMON'}</p>
-                                                </div>
-                                            ))}
-                                        </div>
                                     )}
                                 </div>
                             </div>
