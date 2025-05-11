@@ -99,6 +99,7 @@ html, body {
   width: 300px;
   margin-left: 160px;
   border-radius: 40px 40px 40px 40px;
+  cursor: pointer;
 }
 
 .price-tag {
@@ -172,6 +173,101 @@ html, body {
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+.sticker-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.sticker-section {
+    flex: 1;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sticker-section h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #1a2a50;
+}
+
+.sticker-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    justify-items: center;
+    overflow-y: auto;
+    padding-right: 10px;
+    flex-grow: 1;
+}
+
+.sticker-box {
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 120px;
+    border: 3px solid;
+    transition: all 0.3s ease;
+}
+
+.sticker-box.border-common {
+    border-color: #bbb;
+}
+
+.sticker-box.border-rare {
+    border-color: #4e9af1;
+}
+
+.sticker-box.border-epic {
+    border-color: #a84ff1;
+}
+
+.sticker-box.border-legendary {
+    border-color: #f1b14e;
+}
+
+.sticker-box img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.sticker-box p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.extra-credits {
+    text-align: center;
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.rarity-label {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.border-common .rarity-label { color: #bbb; }
+.border-rare .rarity-label { color: #4e9af1; }
+.border-epic .rarity-label { color: #a84ff1; }
+.border-legendary .rarity-label { color: #f1b14e; }
 
 @media only screen and (max-width: 1000px) {
   .packs-item{

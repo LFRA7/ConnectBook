@@ -1,1035 +1,607 @@
 {
   "users": [
     {
-      "name": "lucas",
+      "name": "aaa",
       "email": "lucasfralves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "SEO",
-      "sticker": "Sticker4.png",
-      "credits": 29190,
-      "stickers": [
-        {
-          "name": "joaquim22",
-          "sticker": "Sticker11.png"
-        },
-        {
-          "name": "joaquim",
-          "sticker": "Sticker5.png"
-        },
-        {
-          "name": "joaquimma",
-          "sticker": "Sticker18.png"
-        },
-        {
-          "name": "yhbgtvf",
-          "sticker": "Sticker12.png"
-        },
-        {
-          "name": "lbhggfv",
-          "sticker": "Sticker12.png"
-        },
-        {
-          "name": "aaaecw",
-          "sticker": "Sticker15.png"
-        },
-        {
-          "name": "hbgtfvr",
-          "sticker": "Sticker9.png"
-        },
-        {
-          "name": "mjnhytbgr",
-          "sticker": "Sticker10.png"
-        },
-        {
-          "name": "htbgrfv",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "jorvaquim",
-          "sticker": "Sticker7.png"
-        },
-        {
-          "name": "joaujnquim",
-          "sticker": "Sticker3.png"
-        },
-        {
-          "name": "mjnhgfv",
-          "sticker": "Sticker16.png"
-        },
-        {
-          "name": "hbgfvdc",
-          "sticker": "Sticker1.png"
-        },
-        {
-          "name": "nntgb",
-          "sticker": "Sticker5.png"
-        },
-        {
-          "name": "ujmjoaquim",
-          "sticker": "Sticker12.png"
-        },
-        {
-          "name": "jyhtgr",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "mjnhg",
-          "sticker": "Sticker15.png"
-        },
-        {
-          "name": "grtfed",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "joaquimuhn",
-          "sticker": "Sticker5.png"
-        },
-        {
-          "name": "likuyjhgtr",
-          "sticker": "Sticker12.png"
-        },
-        {
-          "name": "yhbtgvf",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "lyjnhbgvf",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "aaafed",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "lucas",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "fred",
-          "sticker": "Sticker3.png"
-        },
-        {
-          "name": "joaquimfed",
-          "sticker": "Sticker6.png"
-        },
-        {
-          "name": "rfcedx",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "rfed",
-          "sticker": "Sticker5.png"
-        },
-        {
-          "name": "gt5fr",
-          "sticker": "Sticker1.png"
-        },
-        {
-          "name": "tgvrfc",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "vfrcd",
-          "sticker": "Sticker5.png"
-        },
-        {
-          "name": "gtrfc",
-          "sticker": "Sticker1.png"
-        },
-        {
-          "name": "sao",
-          "sticker": "Sticker6.png"
-        },
-        {
-          "name": "grtfedw",
-          "sticker": "Sticker6.png"
-        },
-        {
-          "name": "gtrf",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "jyhtg",
-          "sticker": "Sticker5.png"
-        },
-        {
-          "name": "tgrvc",
-          "sticker": "Sticker13.png"
-        },
-        {
-          "name": "hytg",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "gtrfs",
-          "sticker": "Sticker11.png"
-        },
-        {
-          "name": "awfr",
-          "sticker": "Sticker6.png"
-        },
-        {
-          "name": "ytgr",
-          "sticker": "Sticker2.png"
-        },
-        {
-          "name": "rvfecdx",
-          "sticker": "Sticker18.png"
-        },
-        {
-          "name": "btvrfce",
-          "sticker": "Sticker9.png"
-        },
-        {
-          "name": "htgrfd",
-          "sticker": "Sticker15.png"
-        },
-        {
-          "name": "mujynhtbg",
-          "sticker": "Sticker10.png"
-        },
-        {
-          "name": "ujyhtgf",
-          "sticker": "Sticker9.png"
-        },
-        {
-          "name": "gtrfede",
-          "sticker": "Sticker5.png"
-        },
-        {
-          "name": "htgrf",
-          "sticker": "Sticker11.png"
-        },
-        {
-          "name": "joaquimujn",
-          "sticker": "Sticker9.png"
-        },
-        {
-          "name": "iujyhgt",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "jhtg",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "uuuubgb",
-          "sticker": "Sticker6.png"
-        },
-        {
-          "name": "mjhngb",
-          "sticker": "Sticker18.png"
-        },
-        {
-          "name": "joaquimnhg",
-          "sticker": "Sticker5.png"
-        },
-        {
-          "name": "hbgfvd",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "htgfre",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "jyhgbf",
-          "sticker": "Sticker11.png"
-        },
-        {
-          "name": "ngbfvd",
-          "sticker": "Sticker5.png"
-        }
-      ]
-    },
-    {
-      "name": "joaquim",
-      "email": "lucasfralves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Social Media",
-      "sticker": "Sticker5.png",
-      "credits": 95,
-      "stickers": [
-        {
-          "name": "lucas",
-          "sticker": "Sticker4.png"
-        }
-      ]
-    },
-    {
-      "name": "joaquim22",
-      "email": "cc@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Branding",
-      "sticker": "Sticker11.png",
-      "credits": 70,
-      "stickers": [
-        {
-          "name": "joaquim",
-          "sticker": "Sticker5.png"
-        },
-        {
-          "name": "lucas",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "rvfecdx",
-          "sticker": "Sticker18.png"
-        },
-        {
-          "name": "jhtg",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "grtfed",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "nntgb",
-          "sticker": "Sticker5.png"
-        },
-        {
-          "name": "aaafed",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "likuyjhgtr",
-          "sticker": "Sticker12.png"
-        },
-        {
-          "name": "hbgfvd",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "iujyhgt",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "mjhngb",
-          "sticker": "Sticker18.png"
-        },
-        {
-          "name": "yhbtgvf",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "mujynhtbg",
-          "sticker": "Sticker10.png"
-        },
-        {
-          "name": "ujmjoaquim",
-          "sticker": "Sticker12.png"
-        },
-        {
-          "name": "hbgtfvr",
-          "sticker": "Sticker9.png"
-        }
-      ]
-    },
-    {
-      "name": "joaquimma",
-      "email": "lucasfralves878@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker18.png",
-      "credits": 400,
-      "stickers": [
-        {
-          "name": "joaquim22",
-          "sticker": "Sticker11.png"
-        },
-        {
-          "name": "joaquim",
-          "sticker": "Sticker5.png"
-        },
-        {
-          "name": "lucas",
-          "sticker": "Sticker4.png"
-        }
-      ]
-    },
-    {
-      "name": "lbhggfv",
-      "email": "lucasfralvrffres88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Social Media",
-      "sticker": "Sticker12.png",
-      "credits": 100
-    },
-    {
-      "name": "joaquimuhn",
-      "email": "lucasfralveshyb88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Social Media",
-      "sticker": "Sticker5.png",
-      "credits": 100
-    },
-    {
-      "name": "yhbgtvf",
-      "email": "lucasgvrffralves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Social Media",
-      "sticker": "Sticker12.png",
-      "credits": 100
-    },
-    {
-      "name": "hbgtfvr",
-      "email": "lucasfralvcdses88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Social Media",
-      "sticker": "Sticker9.png",
-      "credits": 100
-    },
-    {
-      "name": "aaaecw",
-      "email": "lucasfralvswxes88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Social Media",
-      "sticker": "Sticker15.png",
-      "credits": 100
-    },
-    {
-      "name": "nntgb",
-      "email": "lucasfraewxlves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Social Media",
-      "sticker": "Sticker5.png",
-      "credits": 100
-    },
-    {
-      "name": "mjnhytbgr",
-      "email": "lucasfralves7fref@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Social Media",
-      "sticker": "Sticker10.png",
-      "credits": 100
-    },
-    {
-      "name": "htbgrfv",
-      "email": "lucasfrbgfvdalves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Social Media",
-      "sticker": "Sticker4.png",
-      "credits": 100
-    },
-    {
-      "name": "joaujnquim",
-      "email": "lucasfralfrfrcves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker3.png",
-      "credits": 100
-    },
-    {
-      "name": "grtfed",
-      "email": "lucasfralvrvfes88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker4.png",
-      "credits": 100
-    },
-    {
-      "name": "jorvaquim",
-      "email": "lucasecfralves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker7.png",
-      "credits": 100
-    },
-    {
-      "name": "mjnhg",
-      "email": "vvfcc@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker15.png",
-      "credits": 100
-    },
-    {
-      "name": "likuyjhgtr",
-      "email": "lucvfecdxasfralves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker12.png",
-      "credits": 100
-    },
-    {
-      "name": "mjnhgfv",
-      "email": "lucasfrtbgvralves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker16.png",
-      "credits": 100
-    },
-    {
-      "name": "lyjnhbgvf",
-      "email": "lucasfraldewdwves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "SEO",
-      "sticker": "Sticker4.png",
-      "credits": 100
-    },
-    {
-      "name": "yhbtgvf",
-      "email": "lucasferalves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Administration",
-      "team": "Office Management",
-      "sticker": "Sticker4.png",
-      "credits": 100
-    },
-    {
-      "name": "ujmjoaquim",
-      "email": "afedwl78464@alunos.utad.pt",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Administration",
-      "team": "Logistics",
-      "sticker": "Sticker12.png",
-      "credits": 100
-    },
-    {
-      "name": "hbgfvdc",
-      "email": "lucasfralvedes88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Administration",
-      "team": "Office Management",
-      "sticker": "Sticker1.png",
-      "credits": 100
-    },
-    {
-      "name": "jyhtgr",
-      "email": "lucasfralvdsxes7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "SEO",
-      "sticker": "Sticker4.png",
-      "credits": 100
-    },
-    {
-      "name": "aaafed",
-      "email": "lucasfralgtrfeves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Events",
-      "sticker": "Sticker4.png",
-      "credits": 100
-    },
-    {
-      "name": "gt5fr",
-      "email": "lucasfralvrdees88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Events",
-      "sticker": "Sticker1.png",
-      "credits": 100
-    },
-    {
-      "name": "tgvrfc",
-      "email": "aaarfe@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Events",
-      "sticker": "Sticker4.png",
-      "credits": 100
-    },
-    {
-      "name": "fred",
-      "email": "lucasfralveeds88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Events",
-      "sticker": "Sticker3.png",
-      "credits": 100
-    },
-    {
-      "name": "joaquimfed",
-      "email": "luedxcasfralves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Events",
-      "sticker": "Sticker6.png",
-      "credits": 100
-    },
-    {
-      "name": "rfcedx",
-      "email": "cdexlucasfralves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Events",
-      "sticker": "Sticker4.png",
-      "credits": 100
-    },
-    {
-      "name": "rfed",
-      "email": "adxwsaab@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Events",
-      "sticker": "Sticker5.png",
-      "credits": 100
-    },
-    {
-      "name": "gtrfc",
-      "email": "lucasfralvrfees88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker1.png",
-      "credits": 100
-    },
-    {
-      "name": "vfrcd",
-      "email": "lucasfrawwlves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker5.png",
-      "credits": 100
-    },
-    {
-      "name": "sao",
-      "email": "lucasfrrfecdalves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker6.png",
-      "credits": 100
-    },
-    {
-      "name": "gtrf",
-      "email": "lucasfraefclves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker4.png",
-      "credits": 100
-    },
-    {
-      "name": "grtfedw",
-      "email": "lucrvfedasfralves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker6.png",
-      "credits": 100
-    },
-    {
-      "name": "jyhtg",
-      "email": "lucasfrgralves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker5.png",
-      "credits": 100
-    },
-    {
-      "name": "hytg",
-      "email": "lucrfasfralves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker4.png",
-      "credits": 100
-    },
-    {
-      "name": "gtrfs",
-      "email": "lucasfdedralves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker11.png",
-      "credits": 100
-    },
-    {
-      "name": "awfr",
-      "email": "ale78464@alunos.utad.pt",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker6.png",
-      "credits": 100
-    },
-    {
-      "name": "tgrvc",
-      "email": "lucasdeedfralves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker13.png",
-      "credits": 100
-    },
-    {
-      "name": "btvrfce",
-      "email": "ccfee@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker9.png",
-      "credits": 100
-    },
-    {
-      "name": "ytgr",
-      "email": "lucaedwssfralves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker2.png",
-      "credits": 100
-    },
-    {
-      "name": "gtrfede",
-      "email": "lucasfrarfelves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker5.png",
-      "credits": 100
-    },
-    {
-      "name": "mujynhtbg",
-      "email": "lucasfralvecees88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker10.png",
-      "credits": 100
-    },
-    {
-      "name": "htgrf",
-      "email": "lucasdewedfralves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker11.png",
-      "credits": 100
-    },
-    {
-      "name": "ujyhtgf",
-      "email": "lucasfraceelves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker9.png",
-      "credits": 100
-    },
-    {
-      "name": "htgrfd",
-      "email": "lucadefsfralves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker15.png",
-      "credits": 100
-    },
-    {
-      "name": "rvfecdx",
-      "email": "ldwdwucasfralves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker18.png",
-      "credits": 100
-    },
-    {
-      "name": "iujyhgt",
-      "email": "lucasfralrfedwves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Administration",
-      "team": "Logistics",
-      "sticker": "Sticker4.png",
-      "credits": 100
-    },
-    {
-      "name": "joaquimujn",
-      "email": "lucasfrbtgvalves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Administration",
-      "team": "Facilities Management",
-      "sticker": "Sticker9.png",
-      "credits": 100
-    },
-    {
-      "name": "uuuubgb",
-      "email": "lucasfraveclves7@gmail.com",
       "password": "awawaw",
       "confirmPassword": "awawaw",
       "department": "IT Services",
       "team": "Support",
       "sticker": "Sticker6.png",
-      "credits": 100
-    },
-    {
-      "name": "jhtg",
-      "email": "lucewasfralves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "IT Services",
-      "team": "Data Analytics",
-      "sticker": "Sticker4.png",
-      "credits": 100
-    },
-    {
-      "name": "joaquimnhg",
-      "email": "lucasxsafralves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Human Resources",
-      "team": "Recruitment",
-      "sticker": "Sticker5.png",
-      "credits": 100
-    },
-    {
-      "name": "mjhngb",
-      "email": "lucasfrawelves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Human Resources",
-      "team": "Compliance",
-      "sticker": "Sticker18.png",
-      "credits": 100
-    },
-    {
-      "name": "jyhgbf",
-      "email": "lucasfrwqalves7@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "IT Services",
-      "team": "Cloud Services",
-      "sticker": "Sticker11.png",
-      "credits": 100
-    },
-    {
-      "name": "hbgfvd",
-      "email": "lucasfralvewds88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "IT Services",
-      "team": "Development",
-      "sticker": "Sticker4.png",
-      "credits": 100
-    },
-    {
-      "name": "ngbfvd",
-      "email": "lucasfralsaves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Financial",
-      "team": "Auditing",
-      "sticker": "Sticker5.png",
-      "credits": 100
-    },
-    {
-      "name": "htgfre",
-      "email": "lucaqsfralves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Financial",
-      "team": "Accounting",
-      "sticker": "Sticker4.png",
-      "credits": 100
-    },
-    {
-      "name": "mjhgbngb",
-      "email": "lucasfraedlves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker6.png",
-      "credits": 100
-    },
-    {
-      "name": "jhnbgfvd",
-      "email": "lucasfragfvlves88@gmail.com",
-      "password": "awawaw",
-      "confirmPassword": "awawaw",
-      "department": "Marketing",
-      "team": "Market Research",
-      "sticker": "Sticker15.png",
-      "credits": 0,
+      "rarity": "common",
+      "credits": 545,
       "stickers": [
         {
-          "name": "mjnhg",
-          "sticker": "Sticker15.png"
-        },
-        {
-          "name": "yhbgtvf",
-          "sticker": "Sticker12.png"
-        },
-        {
-          "name": "tgrvc",
-          "sticker": "Sticker13.png"
-        },
-        {
-          "name": "likuyjhgtr",
-          "sticker": "Sticker12.png"
-        },
-        {
-          "name": "yhbtgvf",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "joaquim22",
-          "sticker": "Sticker11.png"
-        },
-        {
-          "name": "nntgb",
-          "sticker": "Sticker5.png"
-        },
-        {
-          "name": "joaquimuhn",
-          "sticker": "Sticker5.png"
-        },
-        {
-          "name": "lyjnhbgvf",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "sao",
+          "name": "aaa",
           "sticker": "Sticker6.png"
         },
         {
-          "name": "rfed",
-          "sticker": "Sticker5.png"
-        },
-        {
-          "name": "joaquimujn",
-          "sticker": "Sticker9.png"
-        },
-        {
-          "name": "rvfecdx",
+          "name": "wefgtrh",
           "sticker": "Sticker18.png"
         },
         {
-          "name": "hbgtfvr",
-          "sticker": "Sticker9.png"
-        },
-        {
-          "name": "gtrfs",
-          "sticker": "Sticker11.png"
-        },
-        {
-          "name": "lucas",
-          "sticker": "Sticker4.png"
-        },
-        {
-          "name": "joaquim",
+          "name": "uuuu",
           "sticker": "Sticker5.png"
         },
         {
-          "name": "ujyhtgf",
-          "sticker": "Sticker9.png"
+          "name": "aa",
+          "sticker": "Sticker4.png"
         },
         {
-          "name": "ytgr",
-          "sticker": "Sticker2.png"
+          "name": "aaaew",
+          "sticker": "Sticker4.png"
         },
         {
-          "name": "mjnhgfv",
-          "sticker": "Sticker16.png"
+          "name": "wgsrdh",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "umjhntg",
+          "sticker": "Sticker7.png"
         }
       ]
     },
     {
-      "name": "lucasrari",
-      "email": "lucasfragvfdslves7@gmail.com",
+      "name": "aa",
+      "email": "lucasfralves88@gmail.com",
       "password": "awawaw",
       "confirmPassword": "awawaw",
       "department": "Marketing",
-      "team": "Social Media",
+      "team": "Market Research",
+      "sticker": "Sticker4.png",
+      "rarity": "common",
+      "credits": 115,
+      "stickers": [
+        {
+          "name": "aa",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "aaa",
+          "sticker": "Sticker6.png"
+        }
+      ]
+    },
+    {
+      "name": "aaaew",
+      "email": "luccsasfralves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Administration",
+      "team": "Legal",
+      "sticker": "Sticker4.png",
+      "rarity": "common",
+      "credits": 100
+    },
+    {
+      "name": "wefgtrh",
+      "email": "cc@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Administration",
+      "team": "Logistics",
+      "sticker": "Sticker18.png",
+      "rarity": "common",
+      "credits": 100
+    },
+    {
+      "name": "umjhntg",
+      "email": "al78464@alunos.utad.pt",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "IT Services",
+      "team": "Cybersecurity",
       "sticker": "Sticker7.png",
       "rarity": "common",
       "credits": 100
     },
     {
-      "name": "nhgbf",
-      "email": "luwxscasfralves7@gmail.com",
+      "name": "uuuu",
+      "email": "lucasfdwsralves88@gmail.com",
       "password": "awawaw",
       "confirmPassword": "awawaw",
       "department": "IT Services",
-      "team": "Development",
+      "team": "Cybersecurity",
       "sticker": "Sticker5.png",
       "rarity": "common",
-      "credits": 100
+      "credits": 25,
+      "stickers": [
+        {
+          "name": "aaa",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "aa",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "wefgtrh",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "umjhntg",
+          "sticker": "Sticker7.png"
+        },
+        {
+          "name": "aaaew",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker5.png"
+        }
+      ]
     },
     {
-      "name": "hbgfv",
-      "email": "lucasdeedfralves7@gmail.com",
+      "name": "wgsrdh",
+      "email": "cdac@gmail.com",
       "password": "awawaw",
       "confirmPassword": "awawaw",
-      "department": "Financial",
-      "team": "Accounting",
+      "department": "IT Services",
+      "team": "Cybersecurity",
+      "sticker": "Sticker6.png",
+      "rarity": "rare",
+      "credits": 385,
+      "stickers": [
+        {
+          "name": "wgsrdh",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "aaaew",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "aa",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "umjhntg",
+          "sticker": "Sticker7.png"
+        },
+        {
+          "name": "aaa",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "wefgtrh",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker5.png"
+        }
+      ]
+    },
+    {
+      "name": "jmhngb",
+      "email": "al78wdef464@alunos.utad.pt",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "IT Services",
+      "team": "Cybersecurity",
+      "sticker": "Sticker5.png",
+      "rarity": "rare",
+      "credits": 220,
+      "stickers": [
+        {
+          "name": "aaa",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "wgsrdh",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "jmhngb",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "aa",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "umjhntg",
+          "sticker": "Sticker7.png"
+        },
+        {
+          "name": "aaaew",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "wefgtrh",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker5.png"
+        }
+      ]
+    },
+    {
+      "name": "hgvf",
+      "email": "al7dw8464@alunos.utad.pt",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "IT Services",
+      "team": "Cybersecurity",
+      "sticker": "Sticker5.png",
+      "rarity": "epic",
+      "credits": 25,
+      "stickers": [
+        {
+          "name": "aa",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "aaaew",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "wgsrdh",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "wefgtrh",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "jmhngb",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "hgvf",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "umjhntg",
+          "sticker": "Sticker7.png"
+        },
+        {
+          "name": "aaa",
+          "sticker": "Sticker6.png"
+        }
+      ]
+    },
+    {
+      "name": "hgbfvdc",
+      "email": "al7846as4@alunos.utad.pt",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Advertising",
       "sticker": "Sticker4.png",
       "rarity": "rare",
       "credits": 100
+    },
+    {
+      "name": "dfghhn",
+      "email": "lucasfsfralves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker9.png",
+      "rarity": "rare",
+      "credits": 25,
+      "stickers": [
+        {
+          "name": "dfghhn",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "jmhngb",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "wgsrdh",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "wefgtrh",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "hgvf",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "aaaew",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "aa",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "aaa",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "hgbfvdc",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "umjhntg",
+          "sticker": "Sticker7.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker5.png"
+        }
+      ]
+    },
+    {
+      "name": "ergr",
+      "email": "aaa@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker5.png",
+      "rarity": "rare",
+      "credits": 25,
+      "stickers": [
+        {
+          "name": "uuuu",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "hgvf",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "dfghhn",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "umjhntg",
+          "sticker": "Sticker7.png"
+        },
+        {
+          "name": "aaa",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "aa",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "aaaew",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "wgsrdh",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "jmhngb",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "wefgtrh",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "hgbfvdc",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "ergr",
+          "sticker": "Sticker5.png"
+        }
+      ]
+    },
+    {
+      "name": "wergth",
+      "email": "al7eds8464@alunos.utad.pt",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "IT Services",
+      "team": "Data Analytics",
+      "sticker": "Sticker6.png",
+      "rarity": "common",
+      "credits": 25,
+      "stickers": [
+        {
+          "name": "aa",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "umjhntg",
+          "sticker": "Sticker7.png"
+        },
+        {
+          "name": "wgsrdh",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "ergr",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "hgbfvdc",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "aaa",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "wergth",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "dfghhn",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "wefgtrh",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "aaaew",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "jmhngb",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "hgvf",
+          "sticker": "Sticker5.png"
+        }
+      ]
+    },
+    {
+      "name": "lkjh",
+      "email": "csadc@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "IT Services",
+      "team": "Support",
+      "sticker": "Sticker14.png",
+      "rarity": "epic",
+      "credits": 1195,
+      "stickers": [
+        {
+          "name": "jmhngb",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "lkjh",
+          "sticker": "Sticker14.png"
+        },
+        {
+          "name": "aaa",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "dfghhn",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "umjhntg",
+          "sticker": "Sticker7.png"
+        },
+        {
+          "name": "aa",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "ergr",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "wgsrdh",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "wergth",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "hgbfvdc",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "hgvf",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "wefgtrh",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "aaaew",
+          "sticker": "Sticker4.png"
+        }
+      ]
+    },
+    {
+      "name": "hjngfvd",
+      "email": "cssc@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Market Research",
+      "sticker": "Sticker10.png",
+      "rarity": "legendary",
+      "credits": 2140,
+      "stickers": [
+        {
+          "name": "hjngfvd",
+          "sticker": "Sticker10.png"
+        },
+        {
+          "name": "wefgtrh",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "aa",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "lkjh",
+          "sticker": "Sticker14.png"
+        },
+        {
+          "name": "aaa",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "wergth",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "hgvf",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "dfghhn",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "umjhntg",
+          "sticker": "Sticker7.png"
+        },
+        {
+          "name": "jmhngb",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "hgbfvdc",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "aaaew",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "ergr",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "wgsrdh",
+          "sticker": "Sticker6.png"
+        }
+      ]
     }
   ]
 }

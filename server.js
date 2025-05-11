@@ -126,7 +126,8 @@ const getAvailableStickers = () => {
     // Retorna todos os stickers disponíveis, incluindo o do próprio utilizador
     return db.data.users.map(user => ({
         name: user.name,
-        sticker: user.sticker // Usa o sticker do usuário
+        sticker: user.sticker,
+        rarity: user.rarity // Adicionando a raridade do sticker
     }));
 };
 
@@ -143,48 +144,60 @@ app.post('/buy-pack', authenticateToken, async (req, res) => {
         return res.status(400).json({ error: 'Créditos insuficientes para esta compra.' });
     }
 
-    // Deduzir créditos
     user.credits -= packPrice;
 
-    // Obter stickers disponíveis e escolher aleatoriamente
-    const availableStickers = getAvailableStickers(); // Agora inclui o próprio utilizador
+    const availableStickers = getAvailableStickers();
     if (availableStickers.length === 0) {
         return res.status(500).json({ error: "Nenhum sticker disponível para compra." });
     }
 
-    // Sorteia os stickers aleatórios
     let newStickers = [];
+    let repeatedStickers = [];
     let extraCredits = 0;
 
     availableStickers
-        .sort(() => Math.random() - 0.5) // Embaralha
-        .slice(0, stickerCount) // Seleciona a quantidade pedida
+        .sort(() => Math.random() - 0.5)
+        .slice(0, stickerCount)
         .forEach(sticker => {
             const alreadyHasSticker = user.stickers?.some(s => s.name === sticker.name);
-            
+
             if (alreadyHasSticker) {
-                extraCredits += 25; // Se já tiver, ganha 25 créditos
+                repeatedStickers.push({
+                    name: sticker.name,
+                    sticker: sticker.sticker,
+                    rarity: sticker.rarity // Incluindo a raridade no sticker repetido
+                });
+                extraCredits += 25;
             } else {
-                newStickers.push(sticker); // Se não tiver, adiciona ao inventário
+                newStickers.push({
+                    name: sticker.name,
+                    sticker: sticker.sticker,
+                    rarity: sticker.rarity // Incluindo a raridade no novo sticker
+                });
             }
         });
 
     if (!user.stickers) {
         user.stickers = [];
     }
-    user.stickers.push(...newStickers);
+    user.stickers.push(...newStickers.map(s => ({
+        name: s.name,
+        sticker: s.sticker
+    })));
 
     user.credits += extraCredits;
 
     await db.write();
 
-    res.json({ 
-        message: `Compra realizada! Créditos restantes: ${user.credits}`, 
-        credits: user.credits, 
-        stickers: newStickers, 
-        extraCredits: extraCredits
+    res.json({
+        message: `Compra realizada! Créditos restantes: ${user.credits}`,
+        credits: user.credits,
+        newStickers,
+        repeatedStickers,
+        extraCredits
     });
 });
+
 
 
 // Rota protegida: /departments
