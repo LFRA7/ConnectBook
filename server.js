@@ -218,10 +218,20 @@ app.get('/profile', authenticateToken, (req, res) => {
         return res.status(404).json({ error: 'Colaborador não encontrado' });
     }
 
+    // Mapear os stickers para incluir a raridade correta
+    const stickersWithRarity = (user.stickers || []).map(sticker => {
+        // Encontrar o usuário original que possui este sticker
+        const originalUser = db.data.users.find(u => u.name === sticker.name);
+        return {
+            ...sticker,
+            rarity: originalUser ? originalUser.rarity : 'common' // Se não encontrar o usuário, usa common como fallback
+        };
+    });
+
     res.json({ 
         name: user.name,
         credits: user.credits,
-        stickers: user.stickers || [] // Evita erro caso o usuário não tenha stickers
+        stickers: stickersWithRarity
     });
 });
 

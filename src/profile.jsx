@@ -81,13 +81,14 @@ export const Profile = () => {
             <div className="full-width-bar"></div>
             <div className="stickers-container">
                 {stickers.length > 0 ? stickers.map((sticker, index) => (
-                    <div key={index}>
+                    <div key={index} className={`sticker-box border-${sticker.rarity || 'common'}`}>
                         <img 
                             src={`/stickers/${sticker.sticker}`} 
                             alt={`Sticker de ${sticker.name}`} 
-                            className="sticker-image" 
+                            className="sticker-item" 
                         />
                         <p>{sticker.name}</p>
+                        <p className="rarity-label">{sticker.rarity?.toUpperCase() || 'COMMON'}</p>
                     </div>
                 )) : <p>Você ainda não possui stickers.</p>}
             </div>
