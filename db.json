@@ -9,7 +9,7 @@
       "team": "Support",
       "sticker": "Sticker6.png",
       "rarity": "common",
-      "credits": 2995,
+      "credits": 3420,
       "stickers": [
         {
           "name": "aaa",
@@ -74,6 +74,10 @@
         {
           "name": "lucas",
           "sticker": "Sticker1.png"
+        },
+        {
+          "name": "hgbfvd",
+          "sticker": "Sticker12.png"
         }
       ]
     },
@@ -715,6 +719,28 @@
           "sticker": "Sticker9.png"
         }
       ]
+    },
+    {
+      "name": "hgbfvd",
+      "email": "lucasfdsralves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "SEO",
+      "sticker": "Sticker12.png",
+      "rarity": "rare",
+      "credits": 100
+    },
+    {
+      "name": "dfcghij",
+      "email": "lucasffgvbhralves7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Events",
+      "sticker": "Sticker5.png",
+      "rarity": "common",
+      "credits": 100
     }
   ]
 }

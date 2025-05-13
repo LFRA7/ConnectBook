@@ -224,7 +224,7 @@ app.get('/profile', authenticateToken, (req, res) => {
         const originalUser = db.data.users.find(u => u.name === sticker.name);
         return {
             ...sticker,
-            rarity: originalUser ? originalUser.rarity : 'common' // Se não encontrar o usuário, usa common como fallback
+            rarity: originalUser ? originalUser.rarity : 'common' // Se não encontrar o usuário, usa common 
         };
     });
 
