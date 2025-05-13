@@ -9,7 +9,7 @@
       "team": "Support",
       "sticker": "Sticker6.png",
       "rarity": "common",
-      "credits": 545,
+      "credits": 2995,
       "stickers": [
         {
           "name": "aaa",
@@ -38,6 +38,42 @@
         {
           "name": "umjhntg",
           "sticker": "Sticker7.png"
+        },
+        {
+          "name": "jmhngb",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "dfghhn",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "hgvf",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "hgbfvdc",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "ergr",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "hjngfvd",
+          "sticker": "Sticker10.png"
+        },
+        {
+          "name": "wergth",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "lkjh",
+          "sticker": "Sticker14.png"
+        },
+        {
+          "name": "lucas",
+          "sticker": "Sticker1.png"
         }
       ]
     },
@@ -600,6 +636,83 @@
         {
           "name": "wgsrdh",
           "sticker": "Sticker6.png"
+        }
+      ]
+    },
+    {
+      "name": "lucas",
+      "email": "ldsucasfralves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Financial",
+      "team": "Auditing",
+      "sticker": "Sticker1.png",
+      "rarity": "common",
+      "credits": 545,
+      "stickers": [
+        {
+          "name": "hjngfvd",
+          "sticker": "Sticker10.png"
+        },
+        {
+          "name": "jmhngb",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "ergr",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "aaa",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "hgvf",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "lucas",
+          "sticker": "Sticker1.png"
+        },
+        {
+          "name": "aaaew",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "wergth",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "aa",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "umjhntg",
+          "sticker": "Sticker7.png"
+        },
+        {
+          "name": "lkjh",
+          "sticker": "Sticker14.png"
+        },
+        {
+          "name": "wefgtrh",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "hgbfvdc",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "wgsrdh",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "dfghhn",
+          "sticker": "Sticker9.png"
         }
       ]
     }

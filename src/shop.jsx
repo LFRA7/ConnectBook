@@ -50,7 +50,7 @@ export const Shop = () => {
     const packs = [
         { name: "Basic Pack", price: 15, stickers: 2, image: "/src/assets/Basic Pack.png" },
         { name: "Elite Pack", price: 35, stickers: 5, image: "/src/assets/Elite Pack.png" },
-        { name: "Premium Pack", price: 75, stickers: 14, image: "/src/assets/Premium Pack.png" },
+        { name: "Premium Pack", price: 75, stickers: 12, image: "/src/assets/Premium Pack.png" },
     ];
 
     const handlePurchase = (pack) => {
