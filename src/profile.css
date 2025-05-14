@@ -96,7 +96,7 @@ html, body {
   align-items: center;
   gap: 20px;
   padding: 20px;
-  margin-left: 120px;
+  margin: auto;
 }
 
 .sticker {
@@ -175,10 +175,21 @@ html, body {
 }
 
 @media only screen and (max-width: 500px) {
-    .page-link {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
+  .page-link {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .stickers-container-profile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: auto;
     }
 }
 
