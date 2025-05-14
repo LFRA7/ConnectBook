@@ -9,9 +9,8 @@ export const Branding = () => {
     const [teamMembers, setTeamMembers] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [isOpen, setOpen] = useState(false);
-    const [isCompanyMode, setIsCompanyMode] = useState(true); // Modo empresa/pessoal
+    const [isCompanyMode, setIsCompanyMode] = useState(false); // Modo empresa/pessoal
     const [userStickers, setUserStickers] = useState([]); // Stickers do user
-
     const membersPerPage = 8; // Número de membros por página
 
     useEffect(() => {

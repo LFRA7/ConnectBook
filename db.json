@@ -9,7 +9,7 @@
       "team": "Support",
       "sticker": "Sticker6.png",
       "rarity": "common",
-      "credits": 4445,
+      "credits": 4920,
       "stickers": [
         {
           "name": "aaa",
@@ -93,6 +93,38 @@
         },
         {
           "name": "dfcghij",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "hjk",
+          "sticker": "Sticker14.png"
+        },
+        {
+          "name": "joaqbn",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "fghij",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "tyghuji",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "fghjk",
+          "sticker": "Sticker13.png"
+        },
+        {
+          "name": "gyuhjiop",
+          "sticker": "Sticker10.png"
+        },
+        {
+          "name": "fghuji",
+          "sticker": "Sticker10.png"
+        },
+        {
+          "name": "tgrvfc",
           "sticker": "Sticker5.png"
         }
       ]
@@ -1183,6 +1215,72 @@
           "sticker": "Sticker18.png"
         }
       ]
+    },
+    {
+      "name": "joaqbn",
+      "email": "lucagvyuiisfralves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Advertising",
+      "sticker": "Sticker3.png",
+      "rarity": "rare",
+      "credits": 100
+    },
+    {
+      "name": "hjk",
+      "email": "lucasfraljklves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Advertising",
+      "sticker": "Sticker14.png",
+      "rarity": "epic",
+      "credits": 100
+    },
+    {
+      "name": "tyghuji",
+      "email": "lucasfralves8n8@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Advertising",
+      "sticker": "Sticker3.png",
+      "rarity": "rare",
+      "credits": 100
+    },
+    {
+      "name": "fghij",
+      "email": "ccgvhbj@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Advertising",
+      "sticker": "Sticker9.png",
+      "rarity": "rare",
+      "credits": 100
+    },
+    {
+      "name": "tgrvfc",
+      "email": "lucasfrwxsalves7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "IT Services",
+      "team": "Cloud Services",
+      "sticker": "Sticker5.png",
+      "rarity": "common",
+      "credits": 100
+    },
+    {
+      "name": "yhtgrf",
+      "email": "cwsc@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "IT Services",
+      "team": "Development",
+      "sticker": "Sticker4.png",
+      "rarity": "common",
+      "credits": 100
     }
   ]
 }

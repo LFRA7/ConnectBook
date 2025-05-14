@@ -87,7 +87,7 @@ export const Profile = () => {
             <h2>Stickers</h2>
             </div>
             <div className="full-width-bar"></div>
-            <div className="stickers-container">
+            <div className="stickers-container-profile">
                 {currentStickers.length > 0 ? currentStickers.map((sticker, index) => (
                     <div key={index} className={`sticker-box border-${sticker.rarity || 'common'}`}>
                         <img 

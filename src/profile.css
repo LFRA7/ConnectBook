@@ -88,7 +88,7 @@ html, body {
   left: 0; /* Garante que a barra comece na borda esquerda */
 }
 
-.stickers-container {
+.stickers-container-profile {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   margin-top: 20px;

@@ -182,15 +182,14 @@ h6{
 .stickers-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 40px; /* espaço entre os stickers */
 }
   
 .sticker-home {
   width: 200px;
   height: auto;
-  margin-left: 40px;
+  transition: transform 0.3s;
 }
 
 .sticker-home:hover {

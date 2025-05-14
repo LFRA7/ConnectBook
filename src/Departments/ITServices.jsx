@@ -7,7 +7,7 @@ import './ITServices.css';
 
 export const ITServices = () => {
     const [teams, setTeams] = useState([]);
-    const [isCompanyMode, setIsCompanyMode] = useState(true); // true = empresa, false = pessoal
+    const [isCompanyMode, setIsCompanyMode] = useState(false); // true = empresa, false = pessoal
     const [userStickers, setUserStickers] = useState([]);
     const [isOpen, setOpen] = useState(false);
 
