@@ -10,35 +10,64 @@ export const Profile = () => {
     const [userData, setUserData] = useState({ name: '', stickersCount: 0 });
     const [isOpen, setOpen] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
+    const [selectedSticker, setSelectedSticker] = useState(null);
     const stickersPerPage = 20;
 
     useEffect(() => {
-        const token = localStorage.getItem('token');
-        if (token) {
-            fetch('http://localhost:3000/profile', {
-                method: 'GET',
+    const token = localStorage.getItem('token');
+    if (!token) return;
+
+    const fetchUserData = async () => {
+        try {
+            const res = await fetch('http://localhost:3000/profile', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json'
                 }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.stickers) {
-                    setStickers(data.stickers);
-                }
-                if (data.name) {
-                    setUserData({ name: data.name, stickersCount: data.stickers ? data.stickers.length : 0  });
-                }
+            });
+            const data = await res.json();
 
-            })
-            .catch(error => console.error('Erro ao procurar stickers:', error));
-        }
+            if (data.stickers?.length) {
+                const usersRes = await fetch('http://localhost:3000/users');
+                const users = await usersRes.json();
+
+                const completeStickers = data.stickers.map(sticker => {
+                    const user = users.find(u => u.name === sticker.name);
+                    return {
+                        ...sticker,
+                        department: user?.department || 'Unknown',
+                        team: user?.team || 'Unknown'
+                    };
+                });
+
+                setStickers(completeStickers);
+            }
+
+            if (data.name) {
+                setUserData({
+                    name: data.name,
+                    stickersCount: data.stickers?.length || 0
+                });
+            }
+            } catch (err) {
+                console.error('Erro ao procurar stickers:', err);
+            }
+        };
+
+        fetchUserData();
     }, []);
 
     const handleLogout = () => {
         localStorage.removeItem('token');
         navigate('/login');
+    };
+
+    const handleStickerClick = (sticker) => {
+        setSelectedSticker(sticker);
+    };
+
+    const handleCloseModal = () => {
+        setSelectedSticker(null);
     };
 
     // Calculate pagination
@@ -89,7 +118,11 @@ export const Profile = () => {
             <div className="full-width-bar"></div>
             <div className="stickers-container-profile">
                 {currentStickers.length > 0 ? currentStickers.map((sticker, index) => (
-                    <div key={index} className={`sticker-box border-${sticker.rarity || 'common'}`}>
+                    <div 
+                        key={index} 
+                        className={`sticker-box border-${sticker.rarity || 'common'}`}
+                        onClick={() => handleStickerClick(sticker)}
+                    >
                         <img 
                             src={`/stickers/${sticker.sticker}`} 
                             alt={`Sticker de ${sticker.name}`} 
@@ -100,6 +133,28 @@ export const Profile = () => {
                     </div>
                 )) : <p>Você ainda não possui stickers.</p>}
             </div>
+
+            {/* Sticker Modal */}
+            {selectedSticker && (
+                <div className={`sticker-modal show`} onClick={handleCloseModal}>
+                    <div className="modal-content" onClick={e => e.stopPropagation()}>
+                        <button className="modal-close" onClick={handleCloseModal}>×</button>
+                        <img 
+                            src={`/stickers/${selectedSticker.sticker}`} 
+                            alt={`Sticker de ${selectedSticker.name}`} 
+                            className="modal-sticker-image" 
+                        />
+                        <div className="modal-info">
+                            <p>Name: {selectedSticker.name}</p>
+                            <p>Department: {selectedSticker.department}</p>
+                            <p>Team: {selectedSticker.team}</p>
+                            <p className={`modal-rarity ${selectedSticker.rarity || 'common'}`}>
+                                {selectedSticker.rarity?.toUpperCase() || 'COMMON'}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* Pagination */}
             {stickers.length > 0 && (
