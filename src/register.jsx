@@ -3,6 +3,8 @@ import './Register.css';
 import { useNavigate } from 'react-router-dom';
 import { NavLink } from "react-router-dom"; 
 import { Sling as Hamburger } from 'hamburger-react';
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Register = () => {
     const [username, setUsername] = useState('');
@@ -54,29 +56,29 @@ export const Register = () => {
     }, []);
 
     const addUser = (event) => {
-        event.preventDefault(); // Evita que a página seja recarregada(estava a dar erro quando redirecionava para o login)
+        event.preventDefault();
 
         if (!username.trim() || !email.trim() || !password.trim() || !confirmpassword.trim() || !department.trim() || !team.trim() || !selectedSticker) {
-            alert("Por favor, preencha todos os campos");
+            toast.error("Por favor, preencha todos os campos");
             return;
         }
 
         if (username.length > 10) {
-            alert("O nome de utilizador deve ter no máximo 10 caracteres.");
+            toast.error("O nome de utilizador deve ter no máximo 10 caracteres.");
             return;
         }
 
         if (password !== confirmpassword) {
-            alert("As senhas não coincidem");
+            toast.error("As senhas não coincidem");
             return;
         }
 
         if (password.length < 6) {
-            alert("A password deve ter no mínimo 6 caracteres.");
+            toast.error("A password deve ter no mínimo 6 caracteres.");
             return;
         }
 
-        console.log("Enviando dados:", {
+        console.log("A enviar dados:", {
             name: username,
             email: email,
             password: password,
@@ -104,12 +106,16 @@ export const Register = () => {
         .then(response => response.json())
         .then(data => {
             if (data.error) {
-                alert(data.error);
+                toast.error(data.error);
             } else {
-                navigate("/login");
+                toast.success("User registered successfully!");
+                setTimeout(() => navigate("/login"), 1500);
             }
         })
-        .catch(error => console.error("Erro ao registrar usuário:", error));
+        .catch(error => {
+            console.error("Erro ao registrar usuário:", error);
+            toast.error("Erro ao registrar usuário.");
+        });
     };
 
     useEffect(() => {
@@ -290,6 +296,19 @@ export const Register = () => {
                         <button type="submit" className="register-button" onClick={addUser}>
                             Sign Up
                         </button>
+                        <ToastContainer
+                            position="bottom-left"
+                            autoClose={5000}
+                            hideProgressBar={false}
+                            newestOnTop={false}
+                            closeOnClick={false}
+                            rtl={false}
+                            pauseOnFocusLoss
+                            draggable
+                            pauseOnHover
+                            theme="dark"
+                            transition={Bounce}
+                        />
                         </div>
                     </form>
                 </div>

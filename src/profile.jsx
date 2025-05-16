@@ -136,19 +136,19 @@ export const Profile = () => {
 
             {/* Sticker Modal */}
             {selectedSticker && (
-                <div className={`sticker-modal show`} onClick={handleCloseModal}>
-                    <div className="modal-content" onClick={e => e.stopPropagation()}>
-                        <button className="modal-close" onClick={handleCloseModal}>×</button>
+                <div className={`sticker-modal-profile show`} onClick={handleCloseModal}>
+                    <div className="modal-content-profile" onClick={e => e.stopPropagation()}>
+                        <button className="modal-close-profile" onClick={handleCloseModal}>×</button>
                         <img 
                             src={`/stickers/${selectedSticker.sticker}`} 
                             alt={`Sticker de ${selectedSticker.name}`} 
-                            className="modal-sticker-image" 
+                            className="modal-sticker-image-profile" 
                         />
-                        <div className="modal-info">
+                        <div className="modal-info-profile">
                             <p>Name: {selectedSticker.name}</p>
                             <p>Department: {selectedSticker.department}</p>
                             <p>Team: {selectedSticker.team}</p>
-                            <p className={`modal-rarity ${selectedSticker.rarity || 'common'}`}>
+                            <p className={`modal-rarity-profile ${selectedSticker.rarity || 'common'}`}>
                                 {selectedSticker.rarity?.toUpperCase() || 'COMMON'}
                             </p>
                         </div>

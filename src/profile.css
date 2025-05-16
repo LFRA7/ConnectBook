@@ -118,7 +118,7 @@ html, body {
   object-fit: contain;
 }
 
-.sticker-modal {
+.sticker-modal-profile {
   display: none;
   position: fixed;
   top: 0;
@@ -131,11 +131,11 @@ html, body {
   align-items: center;
 }
 
-.sticker-modal.show {
+.sticker-modal-profile.show {
   display: flex;
 }
 
-.modal-content {
+.modal-content-profile {
   background-color: #1a2a50;
   padding: 2rem;
   border-radius: 12px;
@@ -147,7 +147,7 @@ html, body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.modal-close {
+.modal-close-profile {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -159,7 +159,7 @@ html, body {
   padding: 5px;
 }
 
-.modal-sticker-image {
+.modal-sticker-image-profile {
   width: 200px;
   height: 200px;
   object-fit: contain;
@@ -169,7 +169,7 @@ html, body {
   border-radius: 8px;
 }
 
-.modal-info {
+.modal-info-profile {
   margin-top: 1rem;
 }
 
@@ -179,7 +179,7 @@ html, body {
   font-weight: bold;
 }
 
-.modal-rarity {
+.modal-rarity-profile {
   font-weight: bold;
   text-transform: uppercase;
   padding: 0.3rem 0.8rem;
@@ -188,10 +188,10 @@ html, body {
   margin: 0.5rem 0;
 }
 
-.modal-rarity.common { background-color: #808080; }
-.modal-rarity.rare { background-color: #4169e1; }
-.modal-rarity.epic { background-color: #9932cc; }
-.modal-rarity.legendary { background-color: #ffd700; }
+.modal-rarity-profile.common { background-color: #808080; }
+.modal-rarity-profile.rare { background-color: #4169e1; }
+.modal-rarity-profile.epic { background-color: #9932cc; }
+.modal-rarity-profile.legendary { background-color: #f1b14e; }
 
 .sticker-box {
   cursor: pointer;
