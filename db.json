@@ -9,7 +9,7 @@
       "team": "Support",
       "sticker": "Sticker6.png",
       "rarity": "common",
-      "credits": 4920,
+      "credits": 6725,
       "stickers": [
         {
           "name": "aaa",
@@ -126,6 +126,18 @@
         {
           "name": "tgrvfc",
           "sticker": "Sticker5.png"
+        },
+        {
+          "name": "yhtgrf",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "gbhjnkml",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "gvhbjn",
+          "sticker": "Sticker15.png"
         }
       ]
     },
@@ -1281,6 +1293,75 @@
       "sticker": "Sticker4.png",
       "rarity": "common",
       "credits": 100
+    },
+    {
+      "name": "tgyhu",
+      "email": "lucasgybhufralves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "SEO",
+      "sticker": "Sticker11.png",
+      "rarity": "rare",
+      "credits": 10,
+      "stickers": [
+        {
+          "name": "lol",
+          "sticker": "Sticker15.png"
+        },
+        {
+          "name": "wefgtrh",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "wergth",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "yhtgrf",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "tyghuji",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "wgsrdh",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "hgvf",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "hjngfvd",
+          "sticker": "Sticker10.png"
+        },
+        {
+          "name": "tgyhu",
+          "sticker": "Sticker11.png"
+        },
+        {
+          "name": "lucas",
+          "sticker": "Sticker1.png"
+        },
+        {
+          "name": "jmhngb",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "aaaew",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "gbhjnkml",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "gyuhjiop",
+          "sticker": "Sticker10.png"
+        }
+      ]
     }
   ]
 }
