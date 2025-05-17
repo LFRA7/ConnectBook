@@ -16,7 +16,7 @@ export const Login = () => {
     event.preventDefault(); // Evitar recarregamento da página
 
     if (!email || !password) {
-      toast.error('Por favor, preencha todos os campos');
+      toast.error("Please fill in all fields");
       return;
     }
 
@@ -31,18 +31,18 @@ export const Login = () => {
     .then(response => {
       if (!response.ok) {
         return response.json().then(data => {
-          throw new Error(data.error || 'Erro desconhecido');
+          throw new Error(data.error || 'Unknown error');
         });
       }
       return response.json();
     })
     .then(data => {
-      toast.success('Login bem-sucedido!', data);
+      toast.success('Login successful!', data);
       localStorage.setItem('token', data.token); // Salva o token no localStorage
       setTimeout(() => navigate("/shop"), 1500);
     })
     .catch(error => {
-      console.error('Erro ao realizar login:', error.message);
+      console.error('Error logging in:', error.message);
       toast.error(error.message);
     });
   };

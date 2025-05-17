@@ -50,7 +50,7 @@ export const Profile = () => {
                 });
             }
             } catch (err) {
-                console.error('Erro ao procurar stickers:', err);
+                console.error('Error searching for stickers:', err);
             }
         };
 
@@ -131,7 +131,7 @@ export const Profile = () => {
                         <p>{sticker.name}</p>
                         <p className="rarity-label">{sticker.rarity?.toUpperCase() || 'COMMON'}</p>
                     </div>
-                )) : <p>Você ainda não possui stickers.</p>}
+                )) : <p>You don't have any stickers yet.</p>}
             </div>
 
             {/* Sticker Modal */}

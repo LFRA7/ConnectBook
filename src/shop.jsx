@@ -31,7 +31,7 @@ export const Shop = () => {
                     },
                 });
 
-                if (!response.ok) throw new Error('Erro ao procurar perfil');
+                if (!response.ok) throw new Error('Error searching for profile');
 
                 const data = await response.json();
                 setUserData({ name: data.message.split(', ')[1], credits: data.credits });
@@ -64,7 +64,7 @@ export const Shop = () => {
 
         const token = localStorage.getItem("token");
         if (!token) {
-            toast.error("Você precisa estar logado para comprar um pack.");
+            toast.error("You must be logged in to purchase a pack.");
             navigate("/login");
             return;
         }
@@ -88,12 +88,12 @@ export const Shop = () => {
                 setNewStickers(data.newStickers || []);
                 setRepeatedStickers(data.repeatedStickers || []);
                 setShowStickerModal(true);
-                toast.success(`Compra realizada com sucesso! Você abriu o ${selectedPack.name} e gastou ${selectedPack.price} créditos.`);
+                toast.success(`Purchase completed successfully! You opened ${selectedPack.name} and spent ${selectedPack.price} credits.`);
             } else {
                 toast.error(data.error);
             }
         } catch (error) {
-            toast.error("Erro ao processar a compra:", error);
+            toast.error("Error processing purchase:", error);
         }
 
         setSelectedPack(null);
@@ -161,9 +161,9 @@ export const Shop = () => {
                 {selectedPack && (
                     <div className="modal">
                         <div className="modal-content">
-                            <p>Tem a certeza que quer comprar o {selectedPack.name} e receber {selectedPack.stickers} stickers?</p>
-                            <button onClick={confirmPurchase} className="confirm-button">Sim</button>
-                            <button onClick={() => setSelectedPack(null)} className="cancel-button">Não</button>
+                            <p>Are you sure you want to buy {selectedPack.name} and receive {selectedPack.stickers} stickers?</p>
+                            <button onClick={confirmPurchase} className="confirm-button">Yes</button>
+                            <button onClick={() => setSelectedPack(null)} className="cancel-button">No</button>
                         </div>
                     </div>
                 )}
@@ -171,12 +171,12 @@ export const Shop = () => {
                 {showStickerModal && (
                     <div className="modal">
                         <div className="modal-content">
-                            <h2>Resultado da Compra</h2>
+                            <h2>Purchase Result</h2>
                             <div className="sticker-columns">
                                 <div className="sticker-section">
-                                    <h3>Novos Stickers</h3>
+                                    <h3>New Stickers</h3>
                                     {newStickers.length === 0 ? (
-                                        <p>Não recebeu novos stickers.</p>
+                                        <p>You haven't received any new stickers.</p>
                                     ) : (
                                         <div className="sticker-grid">
                                             {newStickers.map((sticker, index) => (
@@ -195,9 +195,9 @@ export const Shop = () => {
                                 </div>
 
                                 <div className="sticker-section">
-                                    <h3>Stickers Repetidos</h3>
+                                    <h3>Repeated Stickers</h3>
                                     {repeatedStickers.length === 0 ? (
-                                        <p>Nenhum sticker repetido.</p>
+                                        <p>No repeated stickers.</p>
                                     ) : (
                                         <div className="sticker-grid">
                                             {repeatedStickers.map((sticker, index) => (
@@ -214,11 +214,11 @@ export const Shop = () => {
                                         </div>
                                     )}
                                     {repeatedStickers.length > 0 && (
-                                        <p className="extra-credits">Créditos recebidos: +{repeatedStickers.length * 25}</p>
+                                        <p className="extra-credits">Credits received: +{repeatedStickers.length * 25}</p>
                                     )}
                                 </div>
                             </div>
-                            <button onClick={() => setShowStickerModal(false)} className="confirm-button">Fechar</button>
+                            <button onClick={() => setShowStickerModal(false)} className="confirm-button">Close</button>
                         </div>
                     </div>
                 )}

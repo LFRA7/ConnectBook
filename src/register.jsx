@@ -59,34 +59,24 @@ export const Register = () => {
         event.preventDefault();
 
         if (!username.trim() || !email.trim() || !password.trim() || !confirmpassword.trim() || !department.trim() || !team.trim() || !selectedSticker) {
-            toast.error("Por favor, preencha todos os campos");
+            toast.error("Please fill in all fields");
             return;
         }
 
         if (username.length > 10) {
-            toast.error("O nome de utilizador deve ter no máximo 10 caracteres.");
+            toast.error("Username must not exceed 10 characters.");
             return;
         }
 
         if (password !== confirmpassword) {
-            toast.error("As senhas não coincidem");
+            toast.error("Passwords don't match");
             return;
         }
 
         if (password.length < 6) {
-            toast.error("A password deve ter no mínimo 6 caracteres.");
+            toast.error("Password must have a minimum of 6 characters.");
             return;
         }
-
-        console.log("A enviar dados:", {
-            name: username,
-            email: email,
-            password: password,
-            confirmPassword: confirmpassword,
-            department: department,
-            team: team,
-            sticker: selectedSticker
-        });
 
         fetch('http://localhost:3000/users', {
             method: 'POST',
@@ -113,8 +103,7 @@ export const Register = () => {
             }
         })
         .catch(error => {
-            console.error("Erro ao registrar usuário:", error);
-            toast.error("Erro ao registrar usuário.");
+            toast.error("User registration error:", error);
         });
     };
 

@@ -40,7 +40,7 @@ export const Financial = () => {
 
                 setTeams(groupedTeams);
             })
-            .catch(error => console.error("Erro ao procurar Colaboradores:", error));
+            .catch(error => console.error("Error searching for Collaborators:", error));
     }, []);
 
     useEffect(() => {
@@ -62,7 +62,7 @@ export const Financial = () => {
                         setUserData({ name: data.name});
                     }
                 })
-                .catch(error => console.error('Erro ao procurar perfil:', error));
+                .catch(error => console.error('Error searching for profile:', error));
         }
     }, []);
 
@@ -176,7 +176,7 @@ export const Financial = () => {
                                         )}
                                     </>
                                 ) : (
-                                    <h5>Nenhum colaborador para esta equipa.</h5>
+                                    <h5>No collaborators for this team.</h5>
                                 )}
 
                                     </div>
