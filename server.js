@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import { JSONFilePreset } from 'lowdb/node';
 import jwt from 'jsonwebtoken';
+import cron from 'node-cron';
 
 const app = express();
 const defaultData = { users: [] }
@@ -247,6 +248,16 @@ app.get('/profile', authenticateToken, (req, res) => {
         credits: user.credits,
         stickers: stickersWithRarity
     });
+});
+
+// Distribuir créditos todos os dias de 24 em 24 horas
+cron.schedule('0 0 * * *', async () => {
+    console.log('Distributing credits to all users...');
+    db.data.users.forEach(user => {
+        user.credits += 100;
+    });
+    await db.write();
+    console.log('Credits distributed successfully!');
 });
 
 // Start the server
