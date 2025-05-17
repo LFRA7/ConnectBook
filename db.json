@@ -9,7 +9,7 @@
       "team": "Support",
       "sticker": "Sticker6.png",
       "rarity": "common",
-      "credits": 8390,
+      "credits": 8490,
       "stickers": [
         {
           "name": "aaa",
@@ -194,6 +194,10 @@
         {
           "name": "joadwquim",
           "sticker": "Sticker5.png"
+        },
+        {
+          "name": "jodfaquim",
+          "sticker": "Sticker14.png"
         }
       ]
     },
@@ -1688,6 +1692,17 @@
           "sticker": "Sticker4.png"
         }
       ]
+    },
+    {
+      "name": "efgrt",
+      "email": "luqawsedfgcasfralves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Branding",
+      "sticker": "Sticker4.png",
+      "rarity": "common",
+      "credits": 100
     }
   ]
 }

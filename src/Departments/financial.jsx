@@ -58,9 +58,6 @@ export const Financial = () => {
                     if (data.stickers) {
                         setUserStickers(data.stickers);
                     }
-                    if (data.name) {
-                        setUserData({ name: data.name});
-                    }
                 })
                 .catch(error => console.error('Error searching for profile:', error));
         }
