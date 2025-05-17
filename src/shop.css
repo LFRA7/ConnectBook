@@ -204,7 +204,6 @@ html, body {
     grid-template-columns: repeat(6, 1fr);
     gap: 10px;
     justify-items: center;
-    overflow-y: auto;
     padding-right: 10px;
     flex-grow: 1;
 }

@@ -9,7 +9,7 @@
       "team": "Support",
       "sticker": "Sticker6.png",
       "rarity": "common",
-      "credits": 6725,
+      "credits": 8100,
       "stickers": [
         {
           "name": "aaa",
@@ -138,6 +138,58 @@
         {
           "name": "gvhbjn",
           "sticker": "Sticker15.png"
+        },
+        {
+          "name": "sw",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "jhgfvd",
+          "sticker": "Sticker15.png"
+        },
+        {
+          "name": "joaqssuim",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "fsdgthy",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "joaasadf",
+          "sticker": "Sticker13.png"
+        },
+        {
+          "name": "swaaxs",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "quimaaaa",
+          "sticker": "Sticker14.png"
+        },
+        {
+          "name": "xasadsfgh",
+          "sticker": "Sticker14.png"
+        },
+        {
+          "name": "joaquimsa",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "swaa",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "hgf",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "adwquimas",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "tgyhu",
+          "sticker": "Sticker11.png"
         }
       ]
     },
@@ -1550,6 +1602,86 @@
         {
           "name": "joaqssuim",
           "sticker": "Sticker5.png"
+        }
+      ]
+    },
+    {
+      "name": "quimaaaa",
+      "email": "lucasfralvdwefes7@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "SEO",
+      "sticker": "Sticker14.png",
+      "rarity": "epic",
+      "credits": 100
+    },
+    {
+      "name": "jodfaquim",
+      "email": "lucasdfdgasfralves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "Branding",
+      "sticker": "Sticker14.png",
+      "rarity": "rare",
+      "credits": 10,
+      "stickers": [
+        {
+          "name": "xasadsfgh",
+          "sticker": "Sticker14.png"
+        },
+        {
+          "name": "jodfaquim",
+          "sticker": "Sticker14.png"
+        },
+        {
+          "name": "hgf",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "swaaxs",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "fghij",
+          "sticker": "Sticker9.png"
+        },
+        {
+          "name": "wergth",
+          "sticker": "Sticker6.png"
+        },
+        {
+          "name": "uuuu",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "joadwquim",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "tyghuji",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "joaquimsa",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "tfyguhij",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "joaasadf",
+          "sticker": "Sticker13.png"
+        },
+        {
+          "name": "ergr",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "aaaew",
+          "sticker": "Sticker4.png"
         }
       ]
     }

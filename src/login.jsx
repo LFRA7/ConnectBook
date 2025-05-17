@@ -3,6 +3,8 @@ import { NavLink } from "react-router"
 import { useNavigate } from 'react-router-dom';
 import './login.css';
 import { Sling as Hamburger } from 'hamburger-react';
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Login = () => {
   const [email, setEmail] = useState('');
@@ -14,7 +16,7 @@ export const Login = () => {
     event.preventDefault(); // Evitar recarregamento da página
 
     if (!email || !password) {
-      alert('Por favor, preencha todos os campos');
+      toast.error('Por favor, preencha todos os campos');
       return;
     }
 
@@ -35,13 +37,13 @@ export const Login = () => {
       return response.json();
     })
     .then(data => {
-      console.log('Login bem-sucedido!', data);
+      toast.success('Login bem-sucedido!', data);
       localStorage.setItem('token', data.token); // Salva o token no localStorage
-      navigate('/shop'); // Redireciona para a página /shop
+      setTimeout(() => navigate("/shop"), 1500);
     })
     .catch(error => {
       console.error('Erro ao realizar login:', error.message);
-      alert(error.message);
+      toast.error(error.message);
     });
   };
 
@@ -104,6 +106,19 @@ export const Login = () => {
               <button type="submit" className="login-button">
                 Login
               </button>
+              <ToastContainer
+                position="bottom-left"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick={false}
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+                transition={Bounce}
+              />
             </form>
           </div>
         </div>

@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
 import './shop.css';
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Shop = () => {
     const navigate = useNavigate();
@@ -34,7 +36,7 @@ export const Shop = () => {
                 const data = await response.json();
                 setUserData({ name: data.message.split(', ')[1], credits: data.credits });
             } catch (error) {
-                console.error(error);
+                toast.error(error);
                 navigate('/login');
             }
         };
@@ -62,7 +64,7 @@ export const Shop = () => {
 
         const token = localStorage.getItem("token");
         if (!token) {
-            alert("Você precisa estar logado para comprar um pack.");
+            toast.error("Você precisa estar logado para comprar um pack.");
             navigate("/login");
             return;
         }
@@ -86,11 +88,12 @@ export const Shop = () => {
                 setNewStickers(data.newStickers || []);
                 setRepeatedStickers(data.repeatedStickers || []);
                 setShowStickerModal(true);
+                toast.success(`Compra realizada com sucesso! Você abriu o ${selectedPack.name} e gastou ${selectedPack.price} créditos.`);
             } else {
-                alert(data.error);
+                toast.error(data.error);
             }
         } catch (error) {
-            console.error("Erro ao processar a compra:", error);
+            toast.error("Erro ao processar a compra:", error);
         }
 
         setSelectedPack(null);
@@ -98,6 +101,19 @@ export const Shop = () => {
 
     return (
         <>
+            <ToastContainer
+                position="bottom-left"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick={false}
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+                transition={Bounce}
+              />
             <div className="app-container">
                 <header className="header">
                     <nav className="nav">
