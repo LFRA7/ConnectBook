@@ -9,7 +9,7 @@
       "team": "Support",
       "sticker": "Sticker6.png",
       "rarity": "common",
-      "credits": 8490,
+      "credits": 8590,
       "stickers": [
         {
           "name": "aaa",
@@ -1703,6 +1703,71 @@
       "sticker": "Sticker4.png",
       "rarity": "common",
       "credits": 100
+    },
+    {
+      "name": "jmhngfv",
+      "email": "adslucasfralves88@gmail.com",
+      "password": "awawaw",
+      "confirmPassword": "awawaw",
+      "department": "Marketing",
+      "team": "SEO",
+      "sticker": "Sticker4.png",
+      "rarity": "common",
+      "credits": 5,
+      "stickers": [
+        {
+          "name": "tyghuji",
+          "sticker": "Sticker3.png"
+        },
+        {
+          "name": "ergr",
+          "sticker": "Sticker5.png"
+        },
+        {
+          "name": "hgbfvdc",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "hjngfvd",
+          "sticker": "Sticker10.png"
+        },
+        {
+          "name": "gbhjnkml",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "xasadsfgh",
+          "sticker": "Sticker14.png"
+        },
+        {
+          "name": "lkjh",
+          "sticker": "Sticker14.png"
+        },
+        {
+          "name": "fsdgthy",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "efgrt",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "wefgtrh",
+          "sticker": "Sticker18.png"
+        },
+        {
+          "name": "fghuji",
+          "sticker": "Sticker10.png"
+        },
+        {
+          "name": "swaaxs",
+          "sticker": "Sticker4.png"
+        },
+        {
+          "name": "gyuhjiop",
+          "sticker": "Sticker10.png"
+        }
+      ]
     }
   ]
 }

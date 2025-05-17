@@ -214,7 +214,15 @@ export const Shop = () => {
                                         </div>
                                     )}
                                     {repeatedStickers.length > 0 && (
-                                        <p className="extra-credits">Credits received: +{repeatedStickers.length * 25}</p>
+                                        <p className="extra-credits">Credits received: +{repeatedStickers.reduce((total, sticker) => {
+                                            switch (sticker.rarity) {
+                                                case 'common': return total + 5;
+                                                case 'rare': return total + 10;
+                                                case 'epic': return total + 15;
+                                                case 'legendary': return total + 20;
+                                                default: return total;
+                                            }
+                                        }, 0)}</p>
                                     )}
                                 </div>
                             </div>

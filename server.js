@@ -165,14 +165,28 @@ app.post('/buy-pack', authenticateToken, async (req, res) => {
                 repeatedStickers.push({
                     name: sticker.name,
                     sticker: sticker.sticker,
-                    rarity: sticker.rarity // Incluindo a raridade no sticker repetido
+                    rarity: sticker.rarity
                 });
-                extraCredits += 25;
+                // Calcular créditos extras com base na raridade
+                switch (sticker.rarity) {
+                    case 'common':
+                        extraCredits += 5;
+                        break;
+                    case 'rare':
+                        extraCredits += 10;
+                        break;
+                    case 'epic':
+                        extraCredits += 15;
+                        break;
+                    case 'legendary':
+                        extraCredits += 20;
+                        break;
+                }
             } else {
                 newStickers.push({
                     name: sticker.name,
                     sticker: sticker.sticker,
-                    rarity: sticker.rarity // Incluindo a raridade no novo sticker
+                    rarity: sticker.rarity
                 });
             }
         });
