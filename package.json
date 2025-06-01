@@ -16,7 +16,6 @@
     "express": "^4.21.2",
     "hamburger-react": "^2.5.2",
     "jsonwebtoken": "^9.0.2",
-    "lowdb": "^7.0.1",
     "mongoose": "^8.15.1",
     "node-cron": "^4.0.5",
     "react": "^19.0.0",
