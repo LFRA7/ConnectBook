@@ -2,12 +2,43 @@ import express from 'express';
 import cors from 'cors';
 import jwt from 'jsonwebtoken';
 import cron from 'node-cron';
+import multer from 'multer';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import User from './Models/User.js';
 import './db.js';
 
 const app = express();
 const port = 3000;
 const SECRET_KEY = 'tfvygbuhnijmokgvbhn';
+
+// Get the directory name
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Configure multer for file upload
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'public/stickers')
+    },
+    filename: function (req, file, cb) {
+        // Use the username as the filename
+        const username = req.body.name;
+        // Ensure the file is saved as PNG
+        cb(null, `${username}.png`);
+    }
+});
+
+const upload = multer({ 
+    storage: storage,
+    fileFilter: function (req, file, cb) {
+        // Accept only image files
+        if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {
+            return cb(new Error('Only image files are allowed!'), false);
+        }
+        cb(null, true);
+    }
+});
 
 // Enable CORS
 app.use(cors());
@@ -28,8 +59,9 @@ app.get('/users', async (req, res) => {
 });
 
 // POST endpoint to add a new user
-app.post('/users', async (req, res) => {
-    const { name, email, password, confirmPassword, department, team, sticker} = req.body;
+app.post('/users', upload.single('sticker'), async (req, res) => {
+    const { name, email, password, confirmPassword, department, team } = req.body;
+    const sticker = req.file ? `${name}.png` : req.body.sticker;
 
     if (!name || !email || !password || !confirmPassword || !department || !team || !sticker) {
         return res.status(400).json({ error: 'Missing required fields' });

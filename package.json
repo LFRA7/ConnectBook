@@ -17,6 +17,7 @@
     "hamburger-react": "^2.5.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.15.1",
+    "multer": "^2.0.0",
     "node-cron": "^4.0.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

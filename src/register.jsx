@@ -18,6 +18,7 @@ export const Register = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const stickersPerPage = 6;
     const [isOpen, setOpen] = useState(false);
+    const [customSticker, setCustomSticker] = useState(null);
     const navigate = useNavigate();
 
     const departmentTeams = {
@@ -47,18 +48,29 @@ export const Register = () => {
                 "Sticker14.png",
                 "Sticker15.png",
                 "Sticker16.png",
-                "Sticker17.png",
-                "Sticker18.png",
+                "Sticker17.png"
             ];
             setStickers(stickerList);
         };
         loadStickers();
     }, []);
 
+    const handleCustomStickerUpload = (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                setCustomSticker(e.target.result);
+                setSelectedSticker('custom');
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+
     const addUser = (event) => {
         event.preventDefault();
 
-        if (!username.trim() || !email.trim() || !password.trim() || !confirmpassword.trim() || !department.trim() || !team.trim() || !selectedSticker) {
+        if (!username.trim() || !email.trim() || !password.trim() || !confirmpassword.trim() || !department.trim() || !team.trim() || (!selectedSticker && !customSticker)) {
             toast.error("Please fill in all fields");
             return;
         }
@@ -78,20 +90,32 @@ export const Register = () => {
             return;
         }
 
+        const formData = new FormData();
+        formData.append('name', username);
+        formData.append('email', email);
+        formData.append('password', password);
+        formData.append('confirmPassword', confirmpassword);
+        formData.append('department', department);
+        formData.append('team', team);
+        
+        if (customSticker) {
+            // Convert base64 to blob
+            fetch(customSticker)
+                .then(res => res.blob())
+                .then(blob => {
+                    formData.append('sticker', blob, `${username}.png`);
+                    submitForm(formData);
+                });
+        } else {
+            formData.append('sticker', selectedSticker);
+            submitForm(formData);
+        }
+    };
+
+    const submitForm = (formData) => {
         fetch('http://localhost:3000/users', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                name: username,
-                email: email,
-                password: password,
-                confirmPassword: confirmpassword,
-                department: department,
-                team: team,
-                sticker: selectedSticker
-            })
+            body: formData
         })
         .then(response => response.json())
         .then(data => {
@@ -233,9 +257,27 @@ export const Register = () => {
                                     src={`/stickers/${sticker}`} 
                                     alt={`Sticker ${index + 1}`} 
                                     className={selectedSticker === sticker ? "sticker selected" : "sticker"}
-                                    onClick={() => setSelectedSticker(sticker)}
+                                    onClick={() => {
+                                        setSelectedSticker(sticker);
+                                        setCustomSticker(null);
+                                    }}
                                 />
                             ))}
+                            {currentPage === totalPages && (
+                                <label className={`sticker custom-sticker ${selectedSticker === 'custom' ? 'selected' : ''}`}>
+                                    <input
+                                        type="file"
+                                        accept="image/*"
+                                        onChange={handleCustomStickerUpload}
+                                        style={{ display: 'none' }}
+                                    />
+                                    {customSticker ? (
+                                        <img src={customSticker} alt="Custom sticker" className="sticker" />
+                                    ) : (
+                                        <div className="plus-square">+</div>
+                                    )}
+                                </label>
+                            )}
                         </div>
                         {/* Paginação */}
                         <nav aria-label="Sticker pagination" className="mt-2">
