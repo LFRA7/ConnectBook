@@ -1,16 +1,13 @@
 import express from 'express';
 import cors from 'cors';
-import { JSONFilePreset } from 'lowdb/node';
 import jwt from 'jsonwebtoken';
 import cron from 'node-cron';
+import User from './Models/User.js';
+import './db.js';
 
 const app = express();
-const defaultData = { users: [] }
 const port = 3000;
 const SECRET_KEY = 'tfvygbuhnijmokgvbhn';
-
-// Set up lowdb with a JSON file adapter
-const db = await JSONFilePreset('db.json', defaultData);
 
 // Enable CORS
 app.use(cors());
@@ -21,8 +18,13 @@ app.use(express.json());
 app.use('/stickers', express.static('public/stickers'));
 
 // GET endpoint to retrieve all users
-app.get('/users', (req, res) => {
-    res.json(db.data.users);
+app.get('/users', async (req, res) => {
+    try {
+        const users = await User.find({});
+        res.json(users);
+    } catch (error) {
+        res.status(500).json({ error: 'Erro ao buscar usuários' });
+    }
 });
 
 // POST endpoint to add a new user
@@ -46,53 +48,71 @@ app.post('/users', async (req, res) => {
         return res.status(400).json({ error: 'A password deve ter no mínimo 6 caracteres.' });
     }
 
-    // Check if email already exists
-    const emailExists = db.data.users.some(user => user.email === email);
-    if (emailExists) {
-        return res.status(400).json({ error: 'Email já está em uso.' });
+    try {
+        // Check if email already exists
+        const emailExists = await User.findOne({ email });
+        if (emailExists) {
+            return res.status(400).json({ error: 'Email já está em uso.' });
+        }
+
+        // Check if username already exists
+        const usernameExists = await User.findOne({ name });
+        if (usernameExists) {
+            return res.status(400).json({ error: 'Nome de usuário já está em uso.' });
+        }
+
+        // Random rarity based on weighted probability
+        function getRandomRarity() {
+            const rand = Math.random();
+            if (rand < 0.50) return 'common';       // 50%
+            else if (rand < 0.75) return 'rare';    // 25%
+            else if (rand < 0.93) return 'epic';    // 18%
+            else return 'legendary';                // 7%
+        }
+
+        const rarity = getRandomRarity();
+
+        // Create new user
+        const user = new User({
+            name,
+            email,
+            password,
+            confirmPassword,
+            department,
+            team,
+            sticker,
+            rarity,
+            credits: 100
+        });
+
+        await user.save();
+        res.status(201).json(user);
+    } catch (error) {
+        res.status(500).json({ error: 'Erro ao criar usuário' });
     }
-
-    // Check if email or username already exists
-    const usernameExists = db.data.users.some(user => user.name === name);
-    if (usernameExists) {
-        return res.status(400).json({ error: 'Nome de usuário já está em uso.' });
-    }
-
-    // Random rarity based on weighted probability
-    function getRandomRarity() {
-        const rand = Math.random();
-        if (rand < 0.50) return 'common';       // 50%
-        else if (rand < 0.75) return 'rare';    // 25%
-        else if (rand < 0.93) return 'epic';    // 18%
-        else return 'legendary';                // 7%
-    }
-
-    const rarity = getRandomRarity();
-
-    // Add the new user to the database
-    const user = { name, email, password, confirmPassword, department, team, sticker, rarity, credits: 100 };
-    db.data.users.push(user);
-    await db.write();
-    res.status(201).json(user);
 });
 
 // POST endpoint to handle login
-app.post('/login', (req, res) => {
+app.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
     if (!email || !password) {
         return res.status(400).json({ error: 'Por favor, forneça email e senha.' });
     }
 
-    const user = db.data.users.find(user => user.email === email);
-    if (!user || user.password !== password) {
-        return res.status(400).json({ error: 'Credenciais inválidas.' });
+    try {
+        const user = await User.findOne({ email });
+        if (!user || user.password !== password) {
+            return res.status(400).json({ error: 'Credenciais inválidas.' });
+        }
+
+        // Gerar Token JWT
+        const token = jwt.sign({ email: user.email, name: user.name }, SECRET_KEY, { expiresIn: '1h' });
+
+        res.status(200).json({ message: 'Login bem-sucedido', token });
+    } catch (error) {
+        res.status(500).json({ error: 'Erro ao fazer login' });
     }
-
-    // Gerar Token JWT
-    const token = jwt.sign({ email: user.email, name: user.name }, SECRET_KEY, { expiresIn: '1h' });
-
-    res.status(200).json({ message: 'Login bem-sucedido', token });
 });
 
 // Middleware para verificar token
@@ -109,26 +129,30 @@ const authenticateToken = (req, res, next) => {
 };
 
 // Rota protegida: /shop
-app.get('/shop', authenticateToken, (req, res) => {
-    const user = db.data.users.find(u => u.email === req.user.email);
+app.get('/shop', authenticateToken, async (req, res) => {
+    try {
+        const user = await User.findOne({ email: req.user.email });
 
-    if (!user) {
-        return res.status(404).json({ error: 'Colaborador não encontrado' });
+        if (!user) {
+            return res.status(404).json({ error: 'Colaborador não encontrado' });
+        }
+
+        res.json({
+            message: `Hello, ${user.name}`,
+            credits: user.credits,
+        });
+    } catch (error) {
+        res.status(500).json({ error: 'Erro ao buscar dados da loja' });
     }
-
-    res.json({
-        message: `Hello, ${user.name}`,
-        credits: user.credits,
-    });
 });
 
 // Função para obter uma lista de stickers disponíveis
-const getAvailableStickers = () => {
-    // Retorna todos os stickers disponíveis, incluindo o do próprio utilizador
-    return db.data.users.map(user => ({
+const getAvailableStickers = async () => {
+    const users = await User.find({});
+    return users.map(user => ({
         name: user.name,
         sticker: user.sticker,
-        rarity: user.rarity // Adicionando a raridade do sticker
+        rarity: user.rarity
     }));
 };
 
@@ -136,128 +160,124 @@ const getAvailableStickers = () => {
 app.post('/buy-pack', authenticateToken, async (req, res) => {
     const { packPrice, stickerCount } = req.body;
 
-    const user = db.data.users.find(u => u.email === req.user.email);
-    if (!user) {
-        return res.status(404).json({ error: 'Colaborador não encontrado' });
-    }
+    try {
+        const user = await User.findOne({ email: req.user.email });
+        if (!user) {
+            return res.status(404).json({ error: 'Colaborador não encontrado' });
+        }
 
-    if (user.credits < packPrice) {
-        return res.status(400).json({ error: 'Créditos insuficientes para esta compra.' });
-    }
+        if (user.credits < packPrice) {
+            return res.status(400).json({ error: 'Créditos insuficientes para esta compra.' });
+        }
 
-    user.credits -= packPrice;
+        user.credits -= packPrice;
 
-    const availableStickers = getAvailableStickers();
-    if (availableStickers.length === 0) {
-        return res.status(500).json({ error: "Nenhum sticker disponível para compra." });
-    }
+        const availableStickers = await getAvailableStickers();
+        if (availableStickers.length === 0) {
+            return res.status(500).json({ error: "Nenhum sticker disponível para compra." });
+        }
 
-    let newStickers = [];
-    let repeatedStickers = [];
-    let extraCredits = 0;
+        let newStickers = [];
+        let repeatedStickers = [];
+        let extraCredits = 0;
 
-    availableStickers
-        .sort(() => Math.random() - 0.5)
-        .slice(0, stickerCount)
-        .forEach(sticker => {
-            const alreadyHasSticker = user.stickers?.some(s => s.name === sticker.name);
+        availableStickers
+            .sort(() => Math.random() - 0.5)
+            .slice(0, stickerCount)
+            .forEach(sticker => {
+                const alreadyHasSticker = user.stickers?.some(s => s.name === sticker.name);
 
-            if (alreadyHasSticker) {
-                repeatedStickers.push({
-                    name: sticker.name,
-                    sticker: sticker.sticker,
-                    rarity: sticker.rarity
-                });
-                // Calcular créditos extras com base na raridade
-                switch (sticker.rarity) {
-                    case 'common':
-                        extraCredits += 5;
-                        break;
-                    case 'rare':
-                        extraCredits += 10;
-                        break;
-                    case 'epic':
-                        extraCredits += 15;
-                        break;
-                    case 'legendary':
-                        extraCredits += 20;
-                        break;
+                if (alreadyHasSticker) {
+                    repeatedStickers.push({
+                        name: sticker.name,
+                        sticker: sticker.sticker,
+                        rarity: sticker.rarity
+                    });
+                    // Calcular créditos extras com base na raridade
+                    switch (sticker.rarity) {
+                        case 'common':
+                            extraCredits += 5;
+                            break;
+                        case 'rare':
+                            extraCredits += 10;
+                            break;
+                        case 'epic':
+                            extraCredits += 15;
+                            break;
+                        case 'legendary':
+                            extraCredits += 20;
+                            break;
+                    }
+                } else {
+                    newStickers.push({
+                        name: sticker.name,
+                        sticker: sticker.sticker,
+                        rarity: sticker.rarity
+                    });
                 }
-            } else {
-                newStickers.push({
-                    name: sticker.name,
-                    sticker: sticker.sticker,
-                    rarity: sticker.rarity
-                });
-            }
+            });
+
+        if (!user.stickers) {
+            user.stickers = [];
+        }
+        user.stickers.push(...newStickers.map(s => ({
+            name: s.name,
+            sticker: s.sticker
+        })));
+
+        user.credits += extraCredits;
+
+        await user.save();
+
+        res.json({
+            message: `Compra realizada! Créditos restantes: ${user.credits}`,
+            credits: user.credits,
+            newStickers,
+            repeatedStickers,
+            extraCredits
         });
-
-    if (!user.stickers) {
-        user.stickers = [];
+    } catch (error) {
+        res.status(500).json({ error: 'Erro ao processar compra' });
     }
-    user.stickers.push(...newStickers.map(s => ({
-        name: s.name,
-        sticker: s.sticker
-    })));
-
-    user.credits += extraCredits;
-
-    await db.write();
-
-    res.json({
-        message: `Compra realizada! Créditos restantes: ${user.credits}`,
-        credits: user.credits,
-        newStickers,
-        repeatedStickers,
-        extraCredits
-    });
 });
-
-
-
-// Rota protegida: /departments
-app.get('/departments', authenticateToken, (req, res) => {
-    res.json({ departments: departments });
-
-    res.json({
-        credits: user.credits,
-    })
-});
-
 
 // Rota protegida: /profile
-app.get('/profile', authenticateToken, (req, res) => {
-    const user = db.data.users.find(u => u.email === req.user.email);
+app.get('/profile', authenticateToken, async (req, res) => {
+    try {
+        const user = await User.findOne({ email: req.user.email });
 
-    if (!user) {
-        return res.status(404).json({ error: 'Colaborador não encontrado' });
+        if (!user) {
+            return res.status(404).json({ error: 'Colaborador não encontrado' });
+        }
+
+        // Mapear os stickers para incluir a raridade correta
+        const stickersWithRarity = await Promise.all((user.stickers || []).map(async sticker => {
+            const originalUser = await User.findOne({ name: sticker.name });
+            return {
+                ...sticker.toObject(),
+                rarity: originalUser ? originalUser.rarity : 'common'
+            };
+        }));
+
+        res.json({ 
+            name: user.name,
+            credits: user.credits,
+            stickers: stickersWithRarity
+        });
+    } catch (error) {
+        res.status(500).json({ error: 'Erro ao buscar perfil' });
     }
-
-    // Mapear os stickers para incluir a raridade correta
-    const stickersWithRarity = (user.stickers || []).map(sticker => {
-        // Encontrar o usuário original que possui este sticker
-        const originalUser = db.data.users.find(u => u.name === sticker.name);
-        return {
-            ...sticker,
-            rarity: originalUser ? originalUser.rarity : 'common' // Se não encontrar o usuário, usa common 
-        };
-    });
-
-    res.json({ 
-        name: user.name,
-        credits: user.credits,
-        stickers: stickersWithRarity
-    });
 });
 
 // Distribuir créditos todos os dias de 24 em 24 horas
 cron.schedule('0 0 * * *', async () => {
-    console.log('Distributing credits to all users...');
-    db.data.users.forEach(user => {
-        user.credits += 100;
-    });
-    await db.write();
-    console.log('Credits distributed successfully!');
+    try {
+        console.log('Distributing credits to all users...');
+        await User.updateMany({}, { $inc: { credits: 100 } });
+        console.log('Credits distributed successfully!');
+    } catch (error) {
+        console.error('Error distributing credits:', error);
+    }
 });
 
 // Start the server
