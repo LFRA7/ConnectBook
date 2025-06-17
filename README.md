@@ -18,7 +18,7 @@
 
 - 🎁 Colecionar Stickers: utilizadores recebem créditos diários para abrir pacotes de stickers;
 - 👨‍💼 Stickers de Colaboradores: os stickers representam membros reais da empresa;
-- 🔁 Gestão de Duplicados: stickers repetidos podem ser convertidos em créditos adicionais;
+- 🔁 Gestão de Duplicados: stickers repetidos são convertidos em créditos adicionais;
 - 📦 Sistema de Pacotes: aquisição de stickers via pacotes aleatórios;
 - 🧑‍🤝‍🧑 Foco na Equipa: promove a interação e familiaridade entre colaboradores remotos;
 - 🔐 Autenticação Segura: login com JWT garantindo proteção dos dados do usuário;
